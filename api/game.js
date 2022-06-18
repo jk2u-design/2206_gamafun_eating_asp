@@ -22,7 +22,7 @@ $('#start_game').on("click", function () {
                     alert(rs.msg)
                 }
                 else {
-                    if (getData('game') == '2') iwannaplayagame()
+                    iwannaplayagame()
                 }
                 $('#btn_gameover').hide()
                 $('#btn_repeat').show()

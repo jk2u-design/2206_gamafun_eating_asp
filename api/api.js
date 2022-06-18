@@ -70,3 +70,10 @@ apt.api.getUserMission = function (data, _cb) {
     var type = 'POST';
     this.ajax(url, type, data, _cb);
 };
+
+//派獎
+apt.api.CampaignReceive = function (data, _cb) {
+    var url = '/User/CampaignReceive';
+    var type = 'POST';
+    this.ajax(url, type, data, _cb);
+};

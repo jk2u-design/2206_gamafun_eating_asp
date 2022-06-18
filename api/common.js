@@ -1,4 +1,5 @@
 ﻿var inapp = false;
+var isProd = false;
 function GetToken() {
     if (sessionStorage.getItem('opendata') == null) { return ""; }
     else { return sessionStorage.getItem('opendata'); }
@@ -45,9 +46,11 @@ function loadingJS(src, callback) {
 window.onload = function () {
     if (document.location.hostname.toLowerCase() == "gamafun.beanfun.com") {
         //正式站
+        isProd = true;
         loadingJS('https://beangochat.blob.core.windows.net/beango-static-prod/sdk/beanfun.min.js', CheckInApp)
     }
     else {
+        isProd = false;
         loadingJS('https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js', CheckInApp)
     }
     if (getbfd()) {

@@ -6,25 +6,7 @@ $(function () {
         $('.mask').show();
         $('.check_usebeans').show();
        $('body,html').css('overflow', 'hidden')
-        // 點擊消耗豆子
-        $('.use_gold,.use_silver').click(function (e) {
-            e.preventDefault();
-            $('.current').addClass('selected');
-            $('.mask').addClass('transparent');//底色隱藏，避免重複點選
-            $('.check_usebeans').hide();
-            $('body,html').css('overflow', 'auto')
 
-            $('.poking_item').children('span').hide();
-      
-            // 打開寶物視窗
-             setTimeout(function () {
-                $('.mask').hide().removeClass('transparent');
-                $('.check_prize').fadeIn(500);
-                $('.check_poking').hide();
-                $(".bg").fireworks();
-              
-            },1500)
-        })
             
     })
     // x關閉彈窗
@@ -115,4 +97,24 @@ function random_hint_2() {
 function cal_vh(){
 var h =$('.pop_up.type2').height();
 $('.wrapper').css('min-height', h+150)
+}
+
+function show1() {
+    // 點擊消耗豆子
+    $('.current').addClass('selected');
+    $('.mask').addClass('transparent');//底色隱藏，避免重複點選
+    $('.check_usebeans').hide();
+    $('body,html').css('overflow', 'auto')
+
+    $('.poking_item').children('span').hide();
+}
+function show2() {
+    // 打開寶物視窗
+    setTimeout(function () {
+        $('.mask').hide().removeClass('transparent');
+        $('.check_prize').fadeIn(500);
+        $('.check_poking').hide();
+        $(".bg").fireworks();
+
+    }, 1500)
 }
