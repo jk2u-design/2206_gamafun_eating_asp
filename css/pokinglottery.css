@@ -1,0 +1,661 @@
+body,
+html {
+  background: #000;
+}
+
+body *,
+html * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#hdlogo img {
+  width: auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn_purple,
+.btn_green,
+.btn_orange,
+.btn_shadow_purple {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: #000;
+}
+
+.wrapper {
+  margin-top: 65px;
+  width: 100%;
+  min-height: calc(100vh - 65px);
+  position: relative;
+}
+
+.wrapper .bg {
+  position: fixed;
+  background: url(../images/pokinglottery/bg_l.png), url(../images/pokinglottery/bg_r.png), url(../images/pokinglottery/bg.jpg) no-repeat;
+  background-size: 20vw,20vw, cover;
+  background-position: top 70px left, top 70px right, bottom center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapper .container {
+  max-width: 1100px;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0 50px;
+  position: relative;
+}
+
+.pokinglottery_list .title {
+  display: block;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto 50px;
+}
+
+.pokinglottery_list .btn_green,
+.pokinglottery_list .btn_orange {
+  width: 250px;
+  height: 75px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  text-align: center;
+}
+
+.pokinglottery_list .btn_green .text,
+.pokinglottery_list .btn_orange .text {
+  font-size: 30px;
+  line-height: 75px;
+}
+
+.pokinglottery_list .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.pokinglottery_list .list li {
+  width: 50%;
+  padding: 0 2%;
+}
+
+.pokinglottery_list .list li .opt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pokinglottery_list .list li .opt .box {
+  border: 4px solid;
+  background: #000;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  padding: 10px 10px 6px;
+  margin-bottom: 30px;
+}
+
+.pokinglottery_list .list li .opt .box_s {
+  width: 160px;
+  height: 160px;
+  border: 3px solid;
+  border-radius: 12px;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #2b185d;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8) inset;
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8) inset;
+}
+
+.pokinglottery_list .list li .opt .box_s span {
+  display: block;
+  color: #fff;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.pokinglottery_list .list li .opt1 .box {
+  border-color: #05b0ae;
+  -webkit-box-shadow: 0 0 13px 8px rgba(5, 176, 174, 0.7);
+          box-shadow: 0 0 13px 8px rgba(5, 176, 174, 0.7);
+}
+
+.pokinglottery_list .list li .opt1 .box_s {
+  width: 32%;
+  border-color: #05b0ae;
+}
+
+.pokinglottery_list .list li .opt2 .box {
+  border-color: #ecb87b;
+  -webkit-box-shadow: 0 0 13px 8px rgba(236, 184, 123, 0.7);
+          box-shadow: 0 0 13px 8px rgba(236, 184, 123, 0.7);
+}
+
+.pokinglottery_list .list li .opt2 .box_s {
+  width: 32%;
+  border-color: #ecb87b;
+}
+
+.pokinglottery_list .info {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px black, 0 0 5px black;
+}
+
+.pokinglottery_list .info .br {
+  display: none;
+}
+
+.pokinglottery_list .info a {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.pokinglottery_list .btn_area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.pokinglottery .container {
+  padding-top: 50px;
+}
+
+.pokinglottery h1 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pokinglottery .poking_outter {
+  width: 560px;
+  height: 560px;
+  margin: 30px auto;
+  background: url(../images/pokinglottery/box_bg.svg) center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 4px solid #dbfbef;
+  -webkit-box-shadow: 0 0 40px rgba(106, 239, 219, 0.5);
+          box-shadow: 0 0 40px rgba(106, 239, 219, 0.5);
+}
+
+.pokinglottery .poking {
+  width: calc(480px - 16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 4px solid #9de8c6;
+  -webkit-box-shadow: 0 0 10px rgba(141, 255, 187, 0.5);
+          box-shadow: 0 0 10px rgba(141, 255, 187, 0.5);
+}
+
+.pokinglottery .poking_item {
+  width: calc(160px - 8px);
+  height: calc(160px - 8px);
+  border: 4px solid #9de8c6;
+  background: url(../images/logo.svg) #282828 no-repeat;
+  background-size: 120px;
+  background-position: center;
+  -webkit-box-shadow: 0 0 10px rgba(141, 255, 187, 0.5) inset;
+          box-shadow: 0 0 10px rgba(141, 255, 187, 0.5) inset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.pokinglottery .poking_item span {
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  font-size: 18px;
+  background: #ffb32e;
+  padding: 5px 8px;
+  border-radius: 18px;
+  color: #fff;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  animation: hint_ani 0.5s infinite alternate-reverse;
+}
+
+.pokinglottery .poking_item span::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 5px 0 5px;
+  border-color: #ffb22e transparent transparent transparent;
+}
+
+.pokinglottery .poking_item img {
+  width: 80%;
+}
+
+.pokinglottery .poking_item.selected {
+  background: url(../images/pokinglottery/selected.svg) #282828 no-repeat !important;
+  background-size: 120px;
+  background-position: center center;
+}
+
+.pokinglottery .poking_item:hover {
+  background-color: #191717;
+}
+
+.pokinglottery .notice {
+  font-size: 20px;
+  text-align: center;
+  color: yellow;
+  margin-bottom: 30px;
+}
+
+.pokinglottery .prize {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pokinglottery .btn_area {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+
+.pokinglottery .check_prize {
+  display: none;
+  padding-top: 100px;
+  max-width: 800px;
+  width: 800px;
+}
+
+.pokinglottery .check_prize .content {
+  position: relative;
+  padding: 40px 0;
+  background: #333046;
+  border: 5px solid #7134ad;
+  border-radius: 20px;
+}
+
+.pokinglottery .check_prize .content .congrate {
+  position: absolute;
+  width: 230px;
+  top: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pokinglottery .check_prize .content .title1 {
+  font-size: 30px;
+  line-height: 100px;
+  color: #fff;
+  text-align: center;
+}
+
+.pokinglottery .check_prize .content .title2 {
+  font-size: 20px;
+  line-height: 100px;
+  color: #fff;
+  text-align: center;
+}
+
+.pokinglottery .check_prize .content .prize_img {
+  width: 290px;
+  margin: 0 auto;
+}
+
+.pokinglottery.poking_game .poking_outter {
+  width: 720px;
+  height: 560px;
+  border: 4px solid #fbf1db;
+  -webkit-box-shadow: 0 0 40px rgba(251, 181, 32, 0.5);
+          box-shadow: 0 0 40px rgba(251, 181, 32, 0.5);
+}
+
+.pokinglottery.poking_game .poking {
+  width: calc(640px - 24px);
+  border: 4px solid #fbf1db;
+  -webkit-box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+          box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+}
+
+.pokinglottery.poking_game .poking_item {
+  border: 4px solid #fbf1db;
+  -webkit-box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+          box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+}
+
+@-webkit-keyframes hint_ani {
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: 2px;
+  }
+}
+
+@keyframes hint_ani {
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: 2px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper .container {
+    width: 100%;
+  }
+  .pokinglottery_list .list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .pokinglottery_list .list li {
+    width: 45%;
+    padding: 0;
+  }
+  .pokinglottery_list .list li .opt .box_s {
+    width: 13.5vw;
+    height: 13.5vw;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .wrapper .bg {
+    background: url(../images/pokinglottery/bg_m.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+  .wrapper .container {
+    width: 96%;
+    margin: 20px auto;
+  }
+  .pokinglottery_list .btn_green,
+  .pokinglottery_list .btn_orange {
+    width: 200px;
+    height: 65px;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    text-align: center;
+  }
+  .pokinglottery_list .btn_green .text,
+  .pokinglottery_list .btn_orange .text {
+    font-size: 24px;
+    line-height: 65px;
+  }
+  .pokinglottery_list .title {
+    width: 90%;
+    margin: 0 auto 30px;
+  }
+  .pokinglottery_list .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+  .pokinglottery_list .list li {
+    width: 400px;
+    margin-bottom: 30px;
+  }
+  .pokinglottery_list .list li .opt h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .pokinglottery_list .list li .opt .box {
+    margin-bottom: 10px;
+    border: 3px solid;
+  }
+  .pokinglottery_list .list li .opt .box_s {
+    width: 120px;
+    height: 120px;
+    border: 2px solid;
+  }
+  .pokinglottery_list .list li .opt1 h2 {
+    text-shadow: 0 0 5px #05b0ae;
+  }
+  .pokinglottery_list .list li .opt1 .box {
+    border-color: #078e94;
+    -webkit-box-shadow: 0 0 10px 4px rgba(5, 176, 174, 0.7);
+            box-shadow: 0 0 10px 4px rgba(5, 176, 174, 0.7);
+  }
+  .pokinglottery_list .list li .opt1 .box_s {
+    border-color: #078e94;
+  }
+  .pokinglottery_list .list li .opt2 h2 {
+    text-shadow: 0 0 5px #f9d2a4;
+  }
+  .pokinglottery_list .list li .opt2 .box {
+    border-color: #ecb87b;
+    -webkit-box-shadow: 0 0 10px 4px rgba(236, 184, 123, 0.7);
+            box-shadow: 0 0 10px 4px rgba(236, 184, 123, 0.7);
+  }
+  .pokinglottery_list .list li .opt2 .box_s {
+    border-color: #ecb87b;
+  }
+  .pokinglottery_list .info {
+    width: 75%;
+    margin: 0 auto 5px;
+    font-size: 14px;
+    text-align: left;
+  }
+  .pokinglottery_list .info .br {
+    display: block;
+  }
+  .pokinglottery_list .info .br_h {
+    display: none;
+  }
+  .pokinglottery .poking_outter {
+    width: 80vw;
+    height: 80vw;
+  }
+  .pokinglottery .poking {
+    width: calc(69vw - 8px);
+    border: 2px solid #9de8c6;
+  }
+  .pokinglottery .poking_item {
+    width: calc(23vw - 4px);
+    height: calc(23vw - 4px);
+    background-size: 15vw;
+    border: 2px solid #9de8c6;
+  }
+  .pokinglottery .poking_item.selected {
+    background-size: 15vw;
+  }
+  .pokinglottery .check_prize .content .congrate {
+    width: 50%;
+    max-width: 230px;
+    top: -7.5%;
+  }
+  .pokinglottery .check_prize .content .title1 {
+    font-size: 20px;
+    line-height: 60px;
+  }
+  .pokinglottery .check_prize .content .title2 {
+    font-size: 16px;
+    line-height: 60px;
+  }
+  .pokinglottery .check_prize .content .btn_area {
+    margin-top: 20px;
+  }
+  .pokinglottery.poking_game .poking_outter {
+    width: 80vw;
+    height: 102.8vw;
+  }
+  .pokinglottery.poking_game .poking {
+    width: calc(69vw - 8px);
+    border: 2px solid #fbf1db;
+    -webkit-box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+            box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+  }
+  .pokinglottery.poking_game .poking_item {
+    width: calc(23vw - 4px);
+    height: calc(23vw - 4px);
+    border: 2px solid #fbf1db;
+    -webkit-box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+            box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pokinglottery_list .list li {
+    width: 70vw;
+  }
+  .pokinglottery_list .list li .opt h2 {
+    font-size: 24px;
+  }
+  .pokinglottery_list .list li .opt .box_s {
+    width: 21vw;
+    height: 21vw;
+  }
+  .pokinglottery .container {
+    padding-top: 20px;
+  }
+  .pokinglottery h1 {
+    font-size: 20px;
+  }
+  .pokinglottery .poking_outter {
+    width: 90vw;
+    height: 90vw;
+  }
+  .pokinglottery .poking {
+    width: calc(81vw - 8px);
+    border: 2px solid #9de8c6;
+  }
+  .pokinglottery .poking_item {
+    width: calc(27vw - 4px);
+    height: calc(27vw - 4px);
+    background-size: 20vw;
+    border: 2px solid #9de8c6;
+  }
+  .pokinglottery .poking_item span {
+    left: -5px;
+    font-size: 14px;
+  }
+  .pokinglottery .notice {
+    font-size: 15px;
+  }
+  .pokinglottery .check_prize {
+    margin: 50px auto;
+    padding-top: 60px;
+  }
+  .pokinglottery .check_prize.poking_game .poking_outter {
+    width: 90vw;
+    height: 115.7vw;
+  }
+  .pokinglottery .check_prize.poking_game .poking {
+    width: calc(81vw - 8px);
+    border: 2px solid #fbf1db;
+    -webkit-box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+            box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+  }
+  .pokinglottery .check_prize.poking_game .poking_item {
+    width: calc(27vw - 4px);
+    height: calc(27vw - 4px);
+    border: 2px solid #fbf1db;
+    background-size: contain;
+    -webkit-box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+            box-shadow: 0 0 10px 2px rgba(251, 181, 32, 0.5);
+  }
+  @-webkit-keyframes hint_ani {
+    0% {
+      top: -10px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+  @keyframes hint_ani {
+    0% {
+      top: -10px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+}

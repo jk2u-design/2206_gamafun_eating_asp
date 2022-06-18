@@ -1,6 +1,423 @@
+﻿<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <h1>TEST</h1>
-    </body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <title>橘子嘉年華 - 夏日招橘令</title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- meta -->
+    <meta name="description" content="橘子嘉年華 - 夏日招橘令" />
+    <meta name="keywords" content="">
+    <meta name="robots" content="NOODP">
+    <meta name="googlebot" content="NOODP">
+    <meta name="googlebot" content="NOODP, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=8,IE=9,IE=10,IE=11,IE=EDGE" /><!-- 強制IE非相容性 -->
+    <!-- FB meta -->
+    <meta property="og:title" content="橘子嘉年華 - 夏日招橘令" />
+    <meta property="og:description" content="橘子嘉年華 - 夏日招橘令">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="images/fb_share.jpg">
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="524" />
+    <meta property="og:site_name" content="橘子嘉年華">
+    <!--<meta property="fb:app_id" content="" />-->
+    <!-- shortcut icon -->
+    <link rel="SHORTCUT ICON" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    <link href="css/allstyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <!-- loading -->
+    <div class="se-pre-con" id="overlay">
+        <div class="img">
+            <img src="images/loading.png" alt="loading">
+            <div id="progstat"></div>
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <header></header>
+
+    <div id="open_anim">
+        <span class="gamagame lev_lt_bt"><img src="images/index/sign_gamagame.png"></span>
+        <span class="jollybuy lev_lt_tp"><img src="images/index/sign_jollybuy.png"></span>
+        <span class="gash lev_lt_bt"><img src="images/index/sign_gash.png"></span>
+        <span class="group lev_lt_bt"><img src="images/index/sign_group.png"></span>
+        <span class="gamapay lev_rt_bt"><img src="images/index/sign_gamapay.png"></span>
+        <span class="comic lev_rt_tp"><img src="images/index/sign_comic.png"></span>
+        <span class="gamania lev_rt_tp"><img src="images/index/sign_gamania.png"></span>
+        <span class="beanfun lev_rt_bt"><img src="images/index/sign_beanfun.png"></span>
+        <span class="signs_a aa lev_lt_tp"><img src="images/index/signs_1.png"></span>
+        <span class="signs_b bb lev_lt_tp"><img src="images/index/signs_2.png"></span>
+        <span class="signs_c dd lev_lt_tp"><img src="images/index/signs_3.png"></span>
+        <span class="signs_d aa lev_lt_bt"><img src="images/index/signs_4.png"></span>
+        <span class="signs_e cc lev_lt_tp"><img src="images/index/signs_5.png"></span>
+        <span class="signs_f cc lev_lt_bt"><img src="images/index/signs_6.png"></span>
+        <span class="signs_g bb lev_rt_bt"><img src="images/index/signs_7.png"></span>
+        <span class="signs_h aa lev_rt_tp"><img src="images/index/signs_8.png"></span>
+        <span class="signs_i dd lev_rt_tp"><img src="images/index/signs_9.png"></span>
+        <span class="signs_j dd lev_rt_tp"><img src="images/index/signs_10.png"></span>
+        <span class="signs_k aa lev_rt_bt"><img src="images/index/signs_11.png"></span>
+        <span class="signs_l cc lev_rt_bt"><img src="images/index/signs_12.png"></span>
+        <span class="signs_m bb lev_rt_tp"><img src="images/index/signs_13.png"></span>
+    </div>
+
+    <div id="kv">
+        <div class="kv_slogan">
+            <img class="sing_light" src="images/index/kv_slogan_light.png">
+            <img class="main" src="images/index/kv_slogan.png">
+        </div>
+        <div class="btns">
+            <a class="btn_purple" data-fancybox data-type="ajax" href="beanfun_card.html">
+                <span class="text">卡友加碼</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+            </a>
+            <a class="btn_orange gohash" href="#event">
+                <span class="text">大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+            </a>
+            <a class="btn_purple gohash" href="#gamashow">
+                <span class="text">大橘擂台</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+            </a>
+        </div>
+        <div class="invitation">
+            <input id="invite_code" placeholder="輸入邀請碼領豆">
+            <button id="invite_send">領豆</button>
+        </div>
+        <div class="kv_dn_mask"></div>
+        <div class="kv_left_house"></div>
+        <div class="kv_right_house"></div>
+    </div>
+
+    <div id="middle">
+        <div class="center">
+            <div class="title_info">
+                <span class="lv1"><span data-text="逛夜市抽好康"></span></span>
+                <span class="infos">橘主委駕到 今夏讓你笑<br>8大攤位 22項任務 金豆銀豆都是寶<br>大橘夜市戳戳樂 越戳越過癮</span>
+                <a class="btn_light_purple gohash" href="#event">
+                    <span class="text">逛起來<span class="material-icons">double_arrow</span></span>
+                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                </a>
+            </div>
+            <img class="full" src="https://via.placeholder.com/1100x450">
+        </div>
+        <div class="center">
+            <div class="title_info">
+                <span class="lv1"><span data-text="大橘擂台"></span></span>
+                <span class="infos">6款人氣遊戲 × 原子少年實況接力<br>天天8點都是PARTY TIME</span>
+                <a class="btn_light_purple gohash" href="#gamashow">
+                    <span class="text">節目表<span class="material-icons">double_arrow</span></span>
+                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                </a>
+            </div>
+            <img class="full" src="https://via.placeholder.com/1100x500">
+        </div>
+        <div class="center gocomic">
+            <div class="title_info">
+                <span class="lv1"><span data-text="夏日時光 番外篇"></span></span>
+                <span class="infos"><img class="full" src="https://via.placeholder.com/500x250"></span>
+                <a class="btn_light_purple" href="javascript:;">
+                    <span class="text">搶先看<span class="material-icons">double_arrow</span></span>
+                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a name="event"></a>
+    <div id="event">
+        <div class="center">
+            <div class="big_sign_title">
+                <span class="bigsign_bar"><img src="images/index/big_sign_1.png"></span>
+                <span class="bigsign_info">7/11(一)-7/17(日)23:59<br>完成攤位任務，累積金豆＆銀豆，即可至大橘戳戳樂抽大獎！<br>戳戳樂加碼獎：7/16(六)23:59前完成1次戳戳樂可加碼再抽大橘金幣10枚！(999純金/市價25,000元)<br>*戳戳樂加碼獎將於7/17(日)直播節目現場抽出得獎名單</span>
+            </div>
+            <div class="map_block">
+                <a class="map_lotto" href="pokinglottery_list.html">
+                    <img class="pc" src="images/index/map_lotto_pc.png">
+                    <img class="mb" src="images/index/map_lotto_mb.png">
+                </a>
+                <span class="map_lnk" href="javascript:;">
+                    <img class="start" src="images/index/map_brand_1.gif">
+                </span>
+                <a class="map_lnk" href="game.html">
+                    <img class="brand" src="images/index/map_brand_2.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="gash.html">
+                    <img class="brand" src="images/index/map_brand_3.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="jollybuy.html">
+                    <img class="brand" src="images/index/map_brand_4.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="gamapay.html">
+                    <img class="brand" src="images/index/map_brand_5.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="atomboyz.html">
+                    <img class="brand" src="images/index/map_brand_6.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="novel.html">
+                    <img class="brand" src="images/index/map_brand_7.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="game_beans.html">
+                    <img class="brand" src="images/index/map_brand_8.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="game_bottle.html">
+                    <img class="brand" src="images/index/map_brand_9.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="beanfun.html">
+                    <img class="brand" src="images/index/map_brand_10.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="comics.html">
+                    <img class="brand" src="images/index/map_brand_11.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+                <a class="map_lnk" href="javascript:;">
+                    <img class="brand" src="images/index/map_brand_12.png">
+                    <img class="mission_done" src="images/index/mission_done.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a name="gamashow"></a>
+    <div id="gama_show">
+        <div class="center">
+            <div class="big_sign_title">
+                <span class="bigsign_bar"><img src="images/index/big_sign_2.png"></span>
+                <span class="bigsign_info">今晚一起戰起來！觀賞直播拿好禮！<br>讓人緊張又刺激的直播節目免費線上看<br>超神遊戲操作、超爽娛樂體驗<br>眾多精彩遊戲陪你玩瘋橘子嘉年華</span>
+            </div>
+            <div id="program_tab">
+                <div class="tab_program">
+                    <a id="gamashow_0714" class="tabs active" href="#gamashow_0714">7/14 (四)<br>20:00</a>
+                    <a id="gamashow_0715" class="tabs" href="#gamashow_0715">7/15 (五)<br>20:00</a>
+                    <a id="gamashow_0716" class="tabs" href="#gamashow_0716">7/16 (六)<br>20:00</a>
+                    <a id="gamashow_0717" class="tabs" href="#gamashow_0717">7/17 (日)<br>20:00</a>
+                </div>
+                <div class="showlist owl-carousel owl-theme">
+                    <div class="program_lists" data-hash="gamashow_0714">
+                        <img class="people" src="https://via.placeholder.com/1100x300?text=7/14">
+                        <div class="lnks">
+                            <a class="addevents" href="javascript:;"><span class="material-icons">calendar_month</span>加入行事曆</a>
+                            <a class="btn_pink" href="javascript:;">
+                                <span class="text">FB觀看<span class="material-icons">double_arrow</span></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                            </a>
+                        </div>
+                        <ul class="table">
+                            <li><p class="time">20:00</p><p class="title">彈射世界生放送</p><p class="info">華麗來賓重磅登場<br>主持人：解婕翎 / 來賓：懶貓、大丸</p></li>
+                            <li><p class="time">20:05</p><p class="title">彈珠PK賽</p><p class="info">大橘夜市PK賽 即刻開打！</p></li>
+                            <li><p class="time">20:15</p><p class="title">彈射世界</p><p class="info">彈向嶄新的冒險大陸，繁中改版全服大放送！</p></li>
+                            <li><p class="time">20:45</p><p class="title">彈射奪寶戰</p><p class="info">虛寶加碼大放送</p></li>
+                            <li class="last_border"><p class="time">21:00</p><p class="title">大局戳戳樂</p><p class="info">金豆加碼送</p></li>
+                        </ul>
+                    </div>
+                    <div class="program_lists" data-hash="gamashow_0715">
+                        <img class="people" src="https://via.placeholder.com/1100x300?text=7/15">
+                        <div class="lnks">
+                            <a class="addevents" href="javascript:;"><span class="material-icons">calendar_month</span>加入行事曆</a>
+                            <a class="btn_pink" href="javascript:;">
+                                <span class="text">FB觀看<span class="material-icons">double_arrow</span></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                            </a>
+                        </div>
+                        <ul class="table">
+                            <li><p class="time">20:00</p><p class="title">原子少年</p><p class="info">原力覺醒行星初現・看見不一樣的少年<br>主持人：解婕翎、何美 / 來賓：原子少年</p></li>
+                            <li><p class="time">20:15</p><p class="title">原子少年大橘夜市出任務</p><p class="info">XXXXXX</p></li>
+                            <li><p class="time">21:00</p><p class="title">女友視角挑戰</p><p class="info">XXXXXX</p></li>
+                            <li class="last_border"><p class="time">21:00</p><p class="title">嘉年華灑豆派對</p><p class="info">XXXX</p></li>
+                        </ul>
+                    </div>
+                    <div class="program_lists" data-hash="gamashow_0716">
+                        <img class="people" src="https://via.placeholder.com/1100x300?text=7/16">
+                        <div class="lnks">
+                            <a class="addevents" href="javascript:;"><span class="material-icons">calendar_month</span>加入行事曆</a>
+                            <a class="btn_pink" href="javascript:;">
+                                <span class="text">FB觀看<span class="material-icons">double_arrow</span></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                            </a>
+                        </div>
+                        <ul class="table">
+                            <li><p class="time">20:00</p><p class="title">天堂M</p><p class="info">狙擊之箭・成為神射手<br>主持人： / 來賓：</p></li>
+                            <li><p class="time">20:15</p><p class="title">《天堂M》旗幟戰菁英賽第六季</p><p class="info">XXXX</p></li>
+                            <li><p class="time">21:05</p><p class="title">XXXX</p><p class="info">XXXX</p></li>
+                            <li class="last_border"><p class="time">21:00</p><p class="title">嘉年華灑豆派對</p><p class="info">XXXX</p></li>
+                        </ul>
+                    </div>
+                    <div class="program_lists" data-hash="gamashow_0717">
+                        <img class="people" src="https://via.placeholder.com/1100x300?text=7/17">
+                        <div class="lnks">
+                            <a class="addevents" href="javascript:;"><span class="material-icons">calendar_month</span>加入行事曆</a>
+                            <a class="btn_pink" href="javascript:;">
+                                <span class="text">FB觀看<span class="material-icons">double_arrow</span></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                            </a>
+                        </div>
+                        <ul class="table">
+                            <li><p class="time">20:00</p><p class="title">新楓之谷</p><p class="info">XXXX<br>主持人：解婕翎、何美 / 來賓：原子少年</p></li>
+                            <li><p class="time">20:15</p><p class="title">XXXX</p><p class="info">全新海外副本・探險隊開啟冒險新篇章</p></li>
+                            <li><p class="time">21:00</p><p class="title">XXXX</p><p class="info">XXXXXX</p></li>
+                            <li class="last_border"><p class="time">21:00</p><p class="title">抽大獎</p><p class="info">XXXX</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news">
+        <div class="center">
+            <span class="lv1"><span data-text="活動資訊"></span></span>
+            <div class="slider_content">
+                <div class="news_slide">
+                    <div class="slider"><a class="child" href="javascript:;"><img src="https://via.placeholder.com/380x250?text=1"></a></div>
+                    <div class="slider"><a class="child" href="javascript:;"><img src="https://via.placeholder.com/380x250?text=2"></a></div>
+                    <div class="slider"><a class="child" href="javascript:;"><img src="https://via.placeholder.com/380x250?text=3"></a></div>
+                    <div class="slider"><a class="child" href="javascript:;"><img src="https://via.placeholder.com/380x250?text=4"></a></div>
+                    <div class="slider"><a class="child" href="javascript:;"><img src="https://via.placeholder.com/380x250?text=5"></a></div>
+                    <div class="slider"><a class="child" href="javascript:;"><img src="https://via.placeholder.com/380x250?text=6"></a></div>
+                </div>
+                <div class="slide_arrow">
+                    <span class="prev"><span class="material-icons-round">chevron_left</span></span>
+                    <span class="next"><span class="material-icons-round">chevron_right</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="rules"></a>
+    <div id="rules_board">
+        <div class="center">
+            <span class="lv2"><span data-text="活動辦法"></span></span>
+            <div class="rules_page">
+                <div class="rules_con">
+                    <div class="rules_tab">
+                        <a id="introduction" class="tabs active" href="#introduction">活動公告</a>
+                        <a id="event_rules" class="tabs" href="#event_rules">大橘夜市任務</a>
+                        <a id="notice" class="tabs" href="#notice">注意事項</a>
+                    </div>
+                    <div class="rules_info owl-carousel owl-theme">
+                        <div data-hash="introduction" class="section">
+                            <div class="rules_title">
+                                <p>活動簡介</p>
+                                <span class="line"></span>
+                            </div>
+                            <ul class="ul_a">
+                                <li>一、活動簡介</li>
+                                <li>本活動為「遊戲橘子數位科技股份有限公司」、樂點股份有限公司、有閑數位科技股份有限公司、橘子支行動支付股份有限公司、蟻力股份有限公司(認同卡)共同發起，以下簡稱「主辦單位」主辦，參與本活動須遵守本「活動注意事項」所述之條款內容，及其所有縣市、地方等適用法律與規範。若對條款內容和／或本活動相關之一般問題，請聯絡客服 02-21926100(分機2)，參加本次活動時，即表示您同意並遵守本注意事項與規範之條款內容，並符合下列所有資格要求。</li>
+                                <li>
+                                    <ul class="ul_b">
+                                        <li>活動主題：2022橘子嘉年華 夏日召橘令(以下簡稱本活動)</li>
+                                        <li>活動期間：2022/07/11(一)-2022/07/17(日)</li>
+                                        <li>參加資格：本活動僅限於設籍於台灣、金門、澎湖、馬祖地區者且同意beanfun!會員條款之用戶參加。倘若由於國家或當地法律而不允許參與者參與本活動，主辦單位對此概不負責。</li>
+                                        <li>領獎資格：若因參加本活動並符合獎項贏取資格，須確認已年滿16歲；若未滿20歲，則須確保父母、法定監護人、或其他負責之成年人（以下通稱為「監督人」）以代理參加者名義，詳讀並同意本注意事項與規範內之條款內容，方可參加活動。因此，本活動將強制要求參加人或其監督人需繳交書面許可文件。</li>
+                                    </ul>
+                                </li>
+                                <li>二、節目說明</li>
+                                <li>
+                                    <ul class="ul_b">
+                                        <li>本活動相關工作人員入場館時，悉應遵守以下防疫措施：<br>- 入場時須全程佩戴「口罩」。<br>- 採單一檢查點出入口管制進出，入場須配合量測體溫、手部消毒等防疫工作，如出現未戴口罩、發燒、呼吸道症狀、腹瀉或嗅、味覺異常時，主辦單位有權謝絕入場。</li>
+                                        <li>播出節目及演出名單以實際播出為準</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-hash="event_rules" class="section">
+                            <div class="rules_title">
+                                <p>大橘夜市任務</p>
+                                <span class="line"></span>
+                            </div>
+                            <ul class="ul_a">
+                                <li>一、活動說明</li>
+                                <li>活動期間至2022橘子嘉年華夏日召橘令活動頁，登入beanfun!帳號，或直接登入beanfun! APP ，並完成大橘夜市各攤位任務，即可獲得該任務指定贈送之金豆或銀豆，累積金豆10顆或銀豆30顆，可至大橘戳戳樂戳獎，每次僅能點選一格扣金豆10顆或銀豆30顆戳出獎項，獎項將直接派送至【beanfun!領獎中心】</li>
+                                <li>大橘金幣加碼抽：7/11(一)-7/16(六)單一帳戶完成1次大橘戳戳樂，可獲得大橘金幣抽獎資格，本活動總計贈送10名(999純金/市價25,000元)，中獎名單將於7/17(日)直播節目公佈</li>
+                                <li>二、各攤位任務說明</li>
+                                <li>
+                                    <ul class="ul_b">
+                                        <li>beanfun!攤位任務說明<br>任務：<br>任務：</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-hash="notice" class="section">
+                            <div class="rules_title">
+                                <p>注意事項</p>
+                                <span class="line"></span>
+                            </div>
+                            <ul class="ul_c">
+                                <li>獎項詳細內容與規格皆以實物為準，得獎人不得要求獎項更換或轉讓，如遇產品缺貨或其他不可抗力之事由，主辦單位得保留更換等值獎品之權利，不另行告知。</li>
+                                <li>所有獎勵包含之GASH點數、零用金、有閑優惠券皆有使用期限，以系統顯示為主，請得獎者留意，逾期未使用將無法重新補發。</li>
+                                <li>本活動獎項與獎勵序號以實際送出為準，恕不得轉讓他人，亦不得折讓現金或轉換其他贈品，一旦得獎者領取獎項後，若有遺失或被竊，本公司不發給任何證明或補償。所有獎項日後之使用與維護，主辦單位與遊戲橘子數位科技股份有限公司概不負責。</li>
+                                <li>本活動僅限於設籍於台灣、金門、澎湖、馬祖地區者參加，實體獎項配送地址以中獎人所填資料之地址為準，主辦單位不負贈品無法送達之責任。</li>
+                                <li>依中華民國稅法規定，機會中獎年度累積價值超過新臺幣1,000元(含)者，將併入中獎人個人年度綜合所得稅申報；若獎項金額超過新臺幣20,000元者，本公司可能需先代扣繳機會中獎稅(獎項金額之10%)，中獎人須自行負擔並先繳付該稅金後，始得兌領獎項；若未能依法於兌換期限前繳納應繳稅額，即視為自動放棄得獎資格；不接受開立扣繳憑單者，亦同。若因不可歸責主辦單位因素，致中獎人無法完成領獎事宜，視同放棄領獎資格，中獎人不得異議。本活動獎勵部分將透過beanfun!中背包小幫手發送得獎通知，請留意領取時間及使用期間，以系統顯示為主，逾期未領取將無法重新補發。所有獎項日後之使用與維護，遊戲橘子數位科技股份有限公司概不負責。</li>
+                                <li>1元零用金等同1元新台幣，使用【beanfun!錢包】，可在橘子支付所適用的商家，如全家便利商店、萊爾富、美廉社、台灣大車隊、有閑購物等，付款時100%折抵、折抵無上限。【beanfun!橘子支付】供具有台灣國籍人士申請，若外國人有在台居留證可與橘子支付客服聯繫協助人工申請（需先完成台灣手機及email驗證）。</li>
+                                <li>為求活動之公平及公正，參加者若以惡意之電腦程式或其他明顯違反活動公平性之方式，意圖混淆或影響活動結果者，一經本公司察覺得立即收回所獲贈品，並保留法律追訴權力。</li>
+                                <li>依據個人資料保護法，參加本活動視為瞭解及同意主辦單位為抽獎及行銷活動之需要進行蒐集、處理及利用其個人資料（僅限電話、email等資訊）。參加者如欲閱覽、變更、刪除個資或要求主辦單位停止蒐集、處理及利用個人資料，請通知主辦單位。</li>
+                                <li>遊戲橘子數位科技股份有限公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利。</li>
+                                <li>其他未盡事宜，悉依中華民國相關法令辦理</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer></footer>
+
+</body>
+
 </html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+<!-- OwlCarousel2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet" type="text/css" charset="utf-8" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- slick -->
+<link rel="stylesheet" type="text/css" href="https:////cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript" src="https:////cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="js/allstyle.js"></script>
+<script src="js/index.js"></script>
+<script src="api/common.js"></script>
+<script src="api/api.js"></script>
+<script src="api/invitecode.js"></script>
+<script>
+    $(function () {
+        $('header').load('include_files/header.html');
+    })
+</script>
+

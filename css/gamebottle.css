@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+* {margin:0px; padding:0px;}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+@font-face {
+	font-family: 'xinyi';
+	src: /*local('文鼎新藝體'), 
+	     local('文鼎新藝體'), */
+	     url('../images/fonts/WenDingXinYi.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	     url('../images/fonts/WenDingXinYi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+	font-display: swap;
+}
+
+body, html {position:relative; font-size:16px; font-family:'Noto Sans TC','微軟正黑體','Microsoft Jhenghei',sans-serif; font-weight:400; color:#2f2d2d; overflow-x:hidden;}
+a, input, button {text-decoration:none; outline:none !important;}
+a:hover, a:focus, a:active {text-decoration:none; cursor:pointer !important; outline:none !important;}
+ul, li {list-style:none;}
+
+#wrapper {position:relative; width:100vw; height:calc(var(--vh, 1vh) * 100); background:url(../images/game_bottle/bg.jpg) top center no-repeat; background-size:cover; background-attachment:fixed; overflow:hidden;}
+
+#fireworks {position:absolute; width:100vw; height:100vh; top:0; left:0;}
+/* canvas {z-index:1;} */
+
+
+/*---------- scroll bar ----------*/
+body::-webkit-scrollbar {position:relative; width: 10px; z-index:99;}
+body::-webkit-scrollbar-thumb {background: #666; border-radius: 20px;}
+body::-webkit-scrollbar-track {background: #ddd; border-radius: 20px;}
+
+
+/*---------- 起始畫面 ----------*/
+#stage {position:fixed; width:100vw; height:calc(var(--vh, 1vh) * 100); top:0; left:0; z-index:0;}
+#stage .ground {position:absolute; width:100vw; height:35vh; top:65vh; left:0; background:url(../images/game_bottle/bg_ground.png) top center no-repeat; background-size:cover; z-index:0;}
+/*#stage .left_sign {position:absolute; height:100vh; width:auto; top:0; left:0; z-index:1;}
+#stage .right_sign {position:absolute; height:100vh; width:auto; top:0; right:0; z-index:1;}*/
+#stage .left_sign {position:absolute; height:100vh; width:40vw; top:0; left:0; z-index:1; background:url(../images/game_bottle/bg_left.png) top left no-repeat; background-size:auto 100%;}
+#stage .right_sign {position:absolute; height:100vh; width:40vw; top:0; right:0; z-index:1; background:url(../images/game_bottle/bg_right.png) top right no-repeat; background-size:auto 100%;}
+
+#start {position:relative; height:calc(var(--vh, 1vh) * 100); display:flex; flex-wrap:wrap; justify-content:center; z-index:3; overflow-y:auto; overflow-x:hidden;}
+#start .slogan {height:22vh; max-height:225px; width:auto; margin:12vh 500px 0px 500px;}
+#start .stage {position:relative; width:70%; overflow:hidden; margin-top:3vh;}
+#start .bottles {display:inline-block; white-space: nowrap; width:100%;}
+#start .bottles img {display:inline-block; vertical-align:bottom; width:8%; max-width:93px;}
+#start .option {position:relative; width:100%; margin-top:3vh; text-align:center;}
+#start .rules {margin-top:30px; padding-bottom:50px;}
+#start .rules p:nth-child(1) {font-size:20px; color:yellow; text-align:center; font-weight:500; margin-bottom:16px;}
+#start .rules p:nth-child(2) {font-size:16px; color:white; text-align:center; margin-bottom:16px;}
+#start .rules p:nth-child(3) {font-size:12px; color:white; text-align:center; margin-bottom:16px;}
+#start::-webkit-scrollbar {position:relative; width: 10px; z-index:10;}
+#start::-webkit-scrollbar-thumb {background: #666; border-radius: 20px; z-index:10;}
+#start::-webkit-scrollbar-track {background: #ddd; border-radius: 20px; z-index:10;}
+
+/*.btn_shadow_purple {display:inline-block; height:56px; position:relative; background:#221732; border-radius:10px; margin:0px 20px; padding:6px 30px; box-shadow:4px 4px 5px 1px rgb(26 11 44), 4px 4px 0px 1px rgb(146 69 215); transform: translate(0px, 0px) skew(-10deg, 0deg); -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.btn_shadow_purple .text {font-size:24px; line-height:56px; color:white; font-family:'xinyi'; text-align:center; text-shadow: 0px 0px 10px rgba(145,44,251,1);}
+.btn_shadow_purple:before {display:block; content:''; width:90%; height:80%; border:1px solid white; border-radius:8px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); box-shadow:0px 0px 3px 2px rgba(145,44,251,0.7), inset 0px 0px 3px 2px rgba(145,44,251,0.7); -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
+.btn_shadow_purple:after {display:block; content:''; width:83%; height:65%; border:1px solid white; border-radius:6px; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); box-shadow:0px 0px 3px 2px rgba(145,44,251,0.7), inset 0px 0px 3px 2px rgba(145,44,251,0.7); -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out;}
+.btn_shadow_purple .tp_lt,
+.btn_shadow_purple .tp_rt,
+.btn_shadow_purple .bt_lt,
+.btn_shadow_purple .bt_rt {width:5px; height:5px; border-radius:10px; border:1px solid white; position:absolute; box-shadow:0px 0px 3px 2px rgba(145,44,251,0.7), inset 0px 0px 3px 2px rgba(145,44,251,0.7);}
+.btn_shadow_purple .tp_lt {top:15px; left:15px;}
+.btn_shadow_purple .tp_rt {top:15px; right:15px;}
+.btn_shadow_purple .bt_lt {bottom:15px; left:15px;}
+.btn_shadow_purple .bt_rt {bottom:15px; right:15px;}
+.btn_shadow_purple:hover::before, .btn_shadow_purple:hover::after {box-shadow:0px 0px 3px 2px rgba(145,44,251,1), inset 0px 0px 3px 2px rgba(145,44,251,1),0px 0px 3px 2px rgba(145,44,251,0.5), inset 0px 0px 3px 2px rgba(145,44,251,0.5);}*/
+
+
+
+/*---------- 開始前倒數 ----------*/
+#start_count {position:relative; width:100vw; height:100vh; z-index:1;}
+#start_count p {font-size:200px; color:white; text-align:center; padding-top:calc(45vh - 100px); font-family:Arial;}
+#start_count p.game_tip {position:absolute; top:60vh; left:50%; transform:translate(-50%,-50%); z-index:5; text-align:center; font-size:20px; color:white;}
+
+
+
+
+/*---------- 遊戲畫面 ----------*/
+#games {position:relative; width:70%; height:auto; margin:auto; z-index:3; opacity:0;}
+#gamestage {position:absolute; width:100%; height:250px; top:calc(65vh - 230px); overflow:hidden;}
+#target {display:block; width:100px; height:95px; position:absolute; top:73%; left:calc(50% - 50px); transform:translate(-50%,-50%);}
+#target img {position:absolute; width:95px; height:auto; right:-47px;}
+
+#gamestage .bt_a, #gamestage .bt_b {display:block; width:93px; height:146px; background:url(../images/game_bottle/bottle_a.png) center no-repeat; position:absolute; right:-100px; bottom:-10px;}
+#gamestage .bt_c {display:block; width:93px; height:211px; background:url(../images/game_bottle/bottle_b.png) center no-repeat; position:absolute; right:-100px; bottom:-10px;}
+
+#gameinfo {padding-top:10vh;}
+#gameinfo p {color:white; text-align:center; font-size:24px; line-height:34px; text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);}
+#gameinfo #score {font-size:100px; font-family:Arial; font-weight:bold; margin-top:10vh;}
+
+.game_tip {position:absolute; top:80vh; left:50%; transform:translate(-50%,-50%); z-index:5; text-align:center; font-size:20px; color:white;}
+
+/* #shoot {position:absolute; top:80vh; left:50%; transform:translate(-50%,-50%) skew(-10deg, 0deg); margin:0px; z-index:5;} */
+
+#shoot {position:absolute; top:0; left:-15vw; width:100vw; height:100vh; z-index:10;}
+
+
+
+/*---------- 遊戲結束 ----------*/
+#gameover {display:flex; position:relative; z-index:5; justify-content:center; flex-wrap:wrap;}
+#gameover .congrate {margin-bottom:50px; margin-top:15vh;}
+#gameover p {width:100%; text-align:center; color:white; font-size:24px; line-height:34px; text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);}
+#gameover .total {font-size:100px; line-height:140px; font-family:Arial; font-weight:bold;}
+#gameover .finalscore {font-family:Arial;}
+#gameover .get img {vertical-align:middle; width:60px;}
+#gameover .option {margin-top:10vh;}
+
+
+
+/*---------- 排行榜 ----------*/
+.fancybox__content {width:80vw; background:none;}
+#winner {color:white;}
+#winner h1 {font-size:40px; line-height:60px; text-align:center; font-weight:500;}
+#winner table {border-collapse:collapse; border-spacing:0; width:100%; max-width:650px; margin:50px auto;}
+#winner table td {border:0px; padding:10px 5px; text-align:center; font-size:18px;}
+#winner table th {border:0px; padding:10px 5px; font-weight:400; font-size:18px;}
+#winner table td.medal img {width:40px;}
+#winner table td.medal {width:50px; text-align:right;}
+#winner table td.number {width:50px; font-size:30px; font-family:Arial; font-weight:bold; font-style:italic;}
+#winner table td.bonus img {width:30px; vertical-align:middle;}
+#winner table td.score, #winner table td.bonus {font-family:Arial;}
+#winner table td.name span {display:block; overflow:hidden; width:120px; margin:auto; text-overflow:ellipsis; white-space:nowrap;}
+#winner .atten {font-size:16px; text-align:center; color:yellow;}
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    /*#wrapper {height:95vh;}*/
+
+    /*#stage .left_sign {left:-35vw; opacity:0.6;}
+    #stage .right_sign {right:-35vw; opacity:0.6;}*/
+
+    #stage {background-color: rgba(23,7,81,0.6);}
+
+    #stage .left_sign {width:70vw; background-size:contain; background-position:top 30px left; opacity:0.6;}
+    #stage .right_sign {width:70vw; background-size:contain; background-position:top 30px right; opacity:0.6;}
+
+    /*#start {height:100%;}*/
+    #start .slogan {width:80% !important; height:auto !important; margin:15vh auto 0px auto;}
+    #start .stage {width:100%; margin-top:1vh;}
+    #start .bottles img {width:15%;}
+
+    #start .rules {width:70%; padding-bottom:0px; margin-top:20px;}
+    #start .rules p:nth-child(1) {font-size:18px; margin-bottom:10px;}
+    #start .rules p:nth-child(2) {font-size:15px; margin-bottom:10px;}
+    #start .rules p:nth-child(3) {font-size:12px; margin-bottom:10px;}
+
+    /*.btn_shadow_purple {height:45px; margin:0px 10px;}
+    .btn_shadow_purple .text {font-size:20px; line-height:45px;}*/
+
+    #start_count p {font-size:80px;}
+
+    #games {width:100%; height:calc(var(--vh, 1vh) * 100);}
+
+    #gameinfo {padding-top:80px;}
+    #gameinfo #score {margin-top:6vh;}
+
+    #gamestage .bt_a, #gamestage .bt_b {width:80px; height:126px; background-size:cover;}
+    #gamestage .bt_c {width:80px; height:182px; background-size:cover;}
+
+    #target {width:60px; height:80px; top:80%; left:calc(50% - 30px);}
+    #target img {width:80px; right:-40px;}
+
+    #shoot {left:0; -webkit-tap-highlight-color:transparent;}
+
+    #gameover .congrate {margin-top:70px; margin-bottom:1vh; width:150px;}
+    #gameover p {font-size:16px; line-height:30px;}
+    #gameover p small {display:block; width:80%; margin:auto; font-size:14px; line-height:18px;}
+    #gameover .total {font-size:80px; line-height:100px;}
+    #gameover .option {margin-top:5vh; display:flex; flex-wrap:wrap; justify-content:center;}
+    #gameover .btn_shadow_purple {width:100px; margin-bottom:5px; text-align:center;}
+
+    .fancybox__content {width:auto; padding:15px;}
+    #winner table {margin:20px auto;}
+    #winner table td.medal {width:40px;}
+    #winner table td.medal img {width:35px;}
+    #winner table td.number {font-size:26px;}
+    #winner table th {font-size:16px; padding:5px;}
+    #winner table td {font-size:16px; padding:5px;}
+    #winner table td.bonus {text-align:left;}
+    #winner table td.name span {width:100px;}
+
+    #winner .atten {font-size:14px;}
+    
+
+}

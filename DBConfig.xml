@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Megasilver>
+    <DBConnect>
+        <Data SysName="DBConn" Script="" ConnStr="Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun;" />
+    </DBConnect>
+</Megasilver>
+

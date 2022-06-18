@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台log紀錄－橘子嘉年華</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a id="hdlogo" href="javascript:;"><img src="../images/logo.svg"></a>
+        <div class="nav">
+            <a class="nav_item" href="tracking.html">數據追蹤</a>
+            <a class="nav_item active" href="log_history.html">log紀錄</a>
+            <a class="nav_item logout" href="javascript:void(0)" id="Logout">登出</a>
+        </div>
+    </header>
+    <div class="wrapper1">
+        <div class="container">
+            <h1>log紀錄</h1>
+            <table class="table table_search">
+                <tr>
+                    <th class="col-7">
+                        <div class="form_group input2">
+                            <label>派送豆子時間：</label>
+                            <input type="text" class="timepicker" autocomplete="off" placeholder="發送開始時間" id="startDate"><span>-</span>
+                            <input type="text" class="timepicker" autocomplete="off" placeholder="發送結束時間" id="endDate">
+                        </div>
+                        <div class="form_group">
+                            <label>OPID搜尋：</label>
+                            <input type="text" autocomplete="off" placeholder="請輸入OPID" id="open_id">
+                        </div>
+                        <div class="form_group">
+                            <label>類別：</label>
+                            <select id="ddl_adid">
+                                <option value="">全部</option>
+                                <option value="23">夏日神射手</option>
+                                <option value="24">瘋狂灑豆派對</option>
+                                <option value="901">大橘戳戳樂【大橘獎】</option>
+                                <option value="902">大橘戳戳樂【虛寶獎】天堂月費服</option>
+                                <option value="903">大橘戳戳樂【虛寶獎】天堂免費服</option>
+                                <option value="904">大橘戳戳樂【虛寶獎】天堂國際服</option>
+                                <option value="905">大橘戳戳樂【虛寶獎】天堂M</option>
+                                <option value="906">大橘戳戳樂【虛寶獎】召喚圖板</option>
+                                <option value="907">大橘戳戳樂【虛寶獎】艾爾之光</option>
+                                <option value="908">大橘戳戳樂【虛寶獎】跑跑卡丁車</option>
+                                <option value="909">大橘戳戳樂【虛寶獎】絕對武力</option>
+                                <option value="910">大橘戳戳樂【虛寶獎】新楓之谷</option>
+                                <option value="911">大橘戳戳樂【虛寶獎】新龍之谷</option>
+                                <option value="912">大橘戳戳樂【虛寶獎】新瑪奇</option>
+                                <option value="913">大橘戳戳樂【虛寶獎】彈射世界</option>
+                                <option value="1">beanfun!【佈告欄】</option>
+                                <option value="2">beanfun!【留言板】</option>
+                                <option value="22">橘子嘉年華【VIP邀請碼】</option>
+                                <option value="3">遊戲橘子【零用金轉蛋機】</option>
+                                <option value="3" data-card="1">遊戲橘子【零用金轉蛋機】橘子25認同卡加碼</option>
+                                <option value="4">遊戲橘子【伍登獎】</option>
+                                <option value="5">遊戲橘子【遊戲連簽益】</option>
+                                <option value="6">GASH【每日領豆任務】</option>
+                                <option value="7">GASH【滿額優惠送金豆】</option>
+                                <option value="7" data-card="1">GASH【滿額優惠送金豆】橘子25認同卡</option>
+                                <option value="8">有閑購物【天天抽盒拿銀豆】</option>
+                                <option value="9">有閑購物【消費滿額送金豆】</option>
+                                <option value="9" data-card="1">有閑購物【消費滿額送金豆】橘子25認同卡加碼</option>
+                                <option value="10">橘子支付【筆筆交易拿銀豆】</option>
+                                <option value="11">橘子支付【橘子滿滿的愛】</option>
+                                <option value="12">橘子支付【愛用帳戶送金豆】</option>
+                                <option value="12" data-card="1">橘子支付【愛用帳戶送金豆】橘子25認同卡</option>
+                                <option value="12" data-card="2">橘子支付【愛用帳戶送金豆】原子少年認同卡</option>
+                                <option value="13">bf!文學星【橘門頁說收藏篇】</option>
+                                <option value="14">bf!文學星【橘門頁說閱讀篇】</option>
+                                <option value="15">bf!文學星【橘門頁說加碼篇】</option>
+                                <option value="16">bf!漫畫星【漫畫辦桌桌收藏先】</option>
+                                <option value="17">bf!漫畫星【漫畫辦桌桌閱讀先】</option>
+                                <option value="18">bf!漫畫星【辦桌桌百讀不厭】</option>
+                                <option value="18" data-card="2">bf!漫畫星【辦桌桌百讀不厭】原子少年認同卡加碼</option>
+                                <option value="19">原子少年【給少年滿滿的愛】</option>
+                                <option value="20">原子少年【我挺原子能量盒】</option>
+                                <option value="20" data-card="2">原子少年【我挺原子能量盒】原子少年認同卡加碼</option>
+                                <option value="21">原子少年【為你的少年拚一團】</option>
+                                <option value="25">7/14 大橘擂台 掃QRC送銀豆</option>
+                                <option value="26">7/15 大橘擂台 掃QRC送銀豆</option>
+                                <option value="27">7/16 大橘擂台 掃QRC送銀豆</option>
+                                <option value="28">7/17 大橘擂台 掃QRC送銀豆</option>
+                            </select>
+                        </div>
+                    </th>
+                    <th class="col-3">
+                        <input class="form_btn" type="submit" value="查詢" id="btn_search">
+                        <!--<input class="form_btn" type="submit" value="下載excel">-->
+                    </th>
+                </tr>
+            </table>
+            <!-- 每一頁最多50筆資料 -->
+            <table class="table" id="tbl_result">
+                <thead>
+                    <tr>
+                        <th>編號</th>
+                        <th>OPID</th>
+                        <th>任務完成時間</th>
+                        <th>派送豆子時間</th>
+                        <th>類別</th>
+                        <th>金豆增減</th>
+                        <th>銀豆增減</th>
+                        <th>詳細資訊</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="page_link">
+                <input type="hidden" id="totals" />
+                <span>第</span>
+                <select id="ddl_page"></select>
+                <span>頁</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./datatables/datatables.min.js"></script>
+<script src="./js/api.js"></script>
+<script>
+    var tmpData = {}
+    $(function () {
+        $('.timepicker').datepicker({ dateFormat: 'yy-mm-dd' }).datepicker('setDate', 'today');
+    })
+    $(document).ready(function () {
+        CheckLogin();
+
+        $("#tbl_result").DataTable({
+            searching: false,
+            paging: false,
+            ordering: false,
+            info: false,
+            autoWidth: false,
+            oLanguage: {
+                "sZeroRecords": "沒有找到符合條件的資料",
+                "sProcessing": "載入中...",
+            },
+            iDisplayLength: 50,// 每頁顯示筆數
+            columns: [
+                { data: 'rowid', width: '50px' },
+                { data: 'open_id', width: '100px' },
+                { data: 'finishtime', width: '130px' },
+                { data: 'InDBDT', width: '130px' },
+                { data: 'ad_name', width: '180px' },
+                { data: 'beans1', width: '50px' },
+                { data: 'beans2', width: '50px' },
+                { data: 'memo', width: '200px' },
+            ]
+        });
+        getLogPages()
+    });
+    $('#ddl_page').on('change', function () {
+        getdata(this.value)
+    });
+    $('#btn_search').on('click', function () {
+        getLogPages()
+    });
+    function getdata(page) {
+        var data = tmpData;
+        data.type = 1;
+        data.page = page;
+        data.total = $('#totals').val();
+
+        apt.api.getUserLog(data, function (rs) {
+            if (rs) {
+                $("#tbl_result").DataTable().clear();
+                $("#tbl_result").DataTable().rows.add(JSON.parse(rs.datas));
+                $("#tbl_result").DataTable().draw();
+            }
+        })
+    }
+    function getLogPages() {
+        var data = {};
+        data.type = 0;
+        data.startDate = $('#startDate').val();
+        data.endDate = $('#endDate').val();
+        data.open_id = $('#open_id').val();
+        data.ad_id = $('#ddl_adid').val();
+        data.card1 = $('#ddl_adid').find(':selected').data('card') == '1' ? '1' : '';
+        data.card2 = $('#ddl_adid').find(':selected').data('card') == '2' ? '1' : '';
+        tmpData = data;
+        apt.api.getUserLog(data, function (rs) {
+            if (rs) {
+                $('#totals').val(rs.totals)
+                $('#ddl_page').empty()
+                for (i = 0, j = rs.pages; i < rs.pages; i++ , j--) {
+                    $('#ddl_page').append('<option value="' + (i + 1) + '">' + (i + 1) + '</option>')
+                }
+                getdata(1)
+            }
+        })
+    }
+</script>

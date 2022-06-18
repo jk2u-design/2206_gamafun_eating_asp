@@ -1,0 +1,55 @@
+2022/06/18 12:18:11.791 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:11.791 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:12.541 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:12.541 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:12.541 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:23.884 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:23.884 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:23.884 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:24.119 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:24.119 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:24.119 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:27.650 [Debug 999 [msDBAPI] msDBModule setDBConn 9]---dbconn 
+2022/06/18 12:18:27.650 [Debug 999 [msDBAPI] msDBModule .ctor 9]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:27.650 [Debug 999 [msDBAPI] msDBModule selectDBConn 9]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:27.775 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:27.775 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:27.775 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:31.666 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:31.666 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:31.666 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:33.650 [Debug 999 [msDBAPI] msDBModule setDBConn 9]---dbconn 
+2022/06/18 12:18:33.650 [Debug 999 [msDBAPI] msDBModule .ctor 9]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:33.650 [Debug 999 [msDBAPI] msDBModule selectDBConn 9]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:39.915 [Debug 999 [msDBAPI] msDBModule setDBConn 9]---dbconn 
+2022/06/18 12:18:39.915 [Debug 999 [msDBAPI] msDBModule .ctor 9]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:39.915 [Debug 999 [msDBAPI] msDBModule selectDBConn 9]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:40.025 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 12:18:40.025 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:40.025 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 12:18:46.244 [Debug 999 [msDBAPI] msDBModule setDBConn 10]---dbconn 
+2022/06/18 12:18:46.244 [Debug 999 [msDBAPI] msDBModule .ctor 10]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 12:18:46.244 [Debug 999 [msDBAPI] msDBModule selectDBConn 10]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:42:30.136 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 15:42:30.136 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:42:31.355 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 15:42:31.355 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:42:31.355 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:42:57.843 [Debug 999 [msDBAPI] msDBModule setDBConn 8]---dbconn 
+2022/06/18 15:42:57.843 [Debug 999 [msDBAPI] msDBModule .ctor 8]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:42:57.843 [Debug 999 [msDBAPI] msDBModule selectDBConn 8]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:42:58.124 [Debug 999 [msDBAPI] msDBModule setDBConn 5]---dbconn 
+2022/06/18 15:42:58.124 [Debug 999 [msDBAPI] msDBModule .ctor 5]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:42:58.124 [Debug 999 [msDBAPI] msDBModule selectDBConn 5]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:43:41.953 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 15:43:41.953 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:43:41.953 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:44:38.265 [Debug 999 [msDBAPI] msDBModule setDBConn 5]---dbconn 
+2022/06/18 15:44:38.265 [Debug 999 [msDBAPI] msDBModule .ctor 5]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:44:38.265 [Debug 999 [msDBAPI] msDBModule selectDBConn 5]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:45:04.359 [Debug 999 [msDBAPI] msDBModule setDBConn 12]---dbconn 
+2022/06/18 15:45:04.359 [Debug 999 [msDBAPI] msDBModule .ctor 12]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:45:04.359 [Debug 999 [msDBAPI] msDBModule selectDBConn 12]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 
+2022/06/18 15:45:10.609 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/18 15:45:10.609 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\www\beanfun\\DBConfig.xml 
+2022/06/18 15:45:10.609 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=.;Initial Catalog=beanfun;Uid=beanfun;Pwd=beanfun; 

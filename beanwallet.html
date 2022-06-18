@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="css/allstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/beanwallet.css">
+</head>
+
+<body>
+
+    <div id="beanwallet">
+
+        <!-- 頭 -->
+        <div class="wallet_head">
+            <div class="lt">
+                <h2>豆子錢包</h2>
+                <h3 class="user_name"></h3>
+            </div>
+            <div class="rt">
+                <h3>目前持有豆子</h3>
+                <div class="total_beans">
+                    <img src="images/bean_gold.svg">
+                    <span>&nbsp;×&nbsp;<span name="goldbeans">00</span></span>
+                    <img src="images/bean_silver.svg">
+                    <span>&nbsp;×&nbsp;<span name="silverbeans">00</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 明細 -->
+        <table id="bean_history" class="wallet_body">
+            <thead>
+                <tr>
+                    <th class="time">時間</th>
+                    <th>項目</th>
+                    <th>數量</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <table style="display:none">
+            <tr id="sample_row" style="display:none">
+                <td>MM/DD<br>HH:MM:SS<br></td>
+                <td>beanfun!【佈告欄】</td>
+                <td>
+                    <div class="prize"><img class="bean_icon" src="images/bean_gold.svg" alt="金豆"><span>×1</span></div>
+                    <div class="prize"><img class="bean_icon" src="images/bean_silver.svg" alt="銀豆"><span>×10</span></div>
+                </td>
+            </tr>
+        </table>
+        <!-- 換頁 -->
+        <ul class="page_list">
+            <li class="bdnone"><button class="ar_l" onclick="pages(-1)">&#9664;</button></li>
+            <li id="sample_Page" style="display:none"><button class="">1</button></li>
+            <li><button class="ar_l"  onclick="pages(1)">&#9654;</button></li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="api/common.js"></script>
+<script src="api/api.js"></script>
+<script src="api/beanwallet.js"></script>

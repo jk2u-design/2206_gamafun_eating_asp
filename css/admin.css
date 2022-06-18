@@ -1,0 +1,366 @@
+body,
+html {
+  color: #fff;
+  background: #290c3f;
+}
+
+body *,
+html * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body a,
+html a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body img,
+html img {
+  display: block;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: #000;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #hdlogo {
+  display: block;
+}
+
+header #hdlogo img {
+  width: auto;
+  height: 49px;
+  margin: 8px 20px;
+}
+
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+header .nav .nav_item {
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+header .nav .nav_item.active {
+  color: #ffe065;
+}
+
+header .nav .nav_item.logout {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+
+header .nav .nav_item.logout:hover {
+  border: 1px solid #ffe065;
+  color: #ffe065;
+}
+
+.wrapper {
+  background: url("../images/admin/bg.jpg") no-repeat #290c3f;
+  background-position: center top;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.slogan {
+  width: 500px;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.login {
+  width: 600px;
+  position: absolute;
+  top: calc(23% + 300px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #1f152e;
+  border: 2px solid #fff;
+  padding: 40px;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 0 10px 2px #f882ff, 0 0 10px 2px #f882ff inset;
+          box-shadow: 0 0 10px 2px #f882ff, 0 0 10px 2px #f882ff inset;
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.login .form_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.login .form_group label {
+  width: 80px;
+  font-size: 18px;
+}
+
+.login .form_group input {
+  width: 400px;
+  font-size: 18px;
+  line-height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  padding: 0 10px;
+  color: #fff;
+  outline: 0;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+
+.login .form_group .view_btn {
+  margin-left: 10px;
+}
+
+.login .login_btn {
+  display: block;
+  width: 140px;
+  height: 40px;
+  font-size: 18px;
+  margin: 0 auto;
+  -webkit-appearance: none;
+  color: #fff;
+  border: 0;
+  background: #a859e7;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.login .login_btn:hover {
+  background: #994dd6;
+}
+
+.login ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 0.7;
+  /* Firefox */
+}
+
+.login :-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 0.7;
+  /* Firefox */
+}
+
+.login ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 0.7;
+  /* Firefox */
+}
+
+.login ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 0.7;
+  /* Firefox */
+}
+
+.login :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.login ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+
+.wrapper1 {
+  margin-top: 65px;
+  background: #fff;
+  color: #383838;
+  min-height: calc(100vh - 65px);
+}
+
+.wrapper1 .container {
+  padding: 60px 20px;
+}
+
+.wrapper1 .container.w1100 {
+  max-width: 1100px;
+}
+
+.wrapper1 h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #2a0d40;
+}
+
+.wrapper1 table {
+  width: 100%;
+  border: 1px solid gainsboro;
+  font-size: 14px;
+}
+
+.wrapper1 table thead {
+  background: #290c3f;
+  color: #fff;
+}
+
+.wrapper1 table tr {
+  border-bottom: 1px solid gainsboro;
+}
+
+.wrapper1 table tr th, .wrapper1 table tr td {
+  padding: 10px;
+  border-right: 1px solid gainsboro;
+  vertical-align: middle;
+}
+
+.wrapper1 table tr th a, .wrapper1 table tr td a {
+  color: #4b1fea;
+  text-decoration: underline;
+}
+
+.wrapper1 table tr th p, .wrapper1 table tr td p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.wrapper1 table tr td {
+  text-align: center;
+}
+
+.wrapper1 .table_search {
+  margin-bottom: 40px;
+}
+
+.wrapper1 .table_search .col-7 {
+  width: 70%;
+}
+
+.wrapper1 .table_search .col-3 {
+  width: 30%;
+}
+
+.wrapper1 .table_search .form_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+.wrapper1 .table_search .form_group label {
+  width: 130px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.wrapper1 .table_search .form_group input, .wrapper1 .table_search .form_group select {
+  width: 450px;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
+
+.wrapper1 .table_search .form_group.input2 input {
+  width: 200px;
+}
+
+.wrapper1 .table_search .form_group.input2 span {
+  width: 50px;
+}
+
+.wrapper1 .table_search .form_btn {
+  display: block;
+  font-size: 16px;
+  width: 200px;
+  height: 40px;
+  background: #290c3f;
+  color: #fff;
+  border-radius: 10px;
+  border: 0;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.wrapper1 .table_search .form_btn:hover {
+  background: #401560;
+}
+
+.wrapper1 .page_link {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper1 .page_link span {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.wrapper1 .page_link select {
+  width: 60px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  margin: 0 4px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
