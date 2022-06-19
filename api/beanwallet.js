@@ -49,14 +49,12 @@ function setTable(page) {
     var dataEnd = (nowPage) * pageMaxLength;
     for (var i = dataStart; i < transLogData.length && i < dataEnd; i++) {
         var item = transLogData[i]
-        var ad_name = ''
         var beans1 = ''
         var beans2 = ''
         var newRow = $('#sample_row').clone()
         $(newRow).attr('id', '').attr('style', '')
         $(newRow).find('td:eq(0)').html(item.InDBDT);
-        ad_name = item.brand_name ? '【' + item.brand_name + '】' + item.ad_name : item.ad_name
-        $(newRow).find('td:eq(1)').html(ad_name);
+        $(newRow).find('td:eq(1)').html(item.ad_name);
 
         beans1 = item.beans1 > 0 ? '×' + item.beans1 : item.beans1
         beans2 = item.beans2 > 0 ? '×' + item.beans2 : item.beans2

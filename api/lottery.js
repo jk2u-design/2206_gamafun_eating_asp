@@ -22,13 +22,13 @@ function lottery(bean) {
         data.ad_id = ad
         apt.api.CampaignReceive(data, function (rs) {
             if (rs) {
-                rs.code = '0000'
                 if (rs.code == '0000') {
                     show1()
                     if (inapp) {
                         BGO.DEEPLINK_JUMP(isProd ? 'https://portal.beanfun.com/app/backpack/reward' : 'https://stg-portal.beanfun.com/app/backpack/reward', false);
                     }
                     else {
+                        $('header').load('include_files/header.html');
                         show2()
                     }
                 }

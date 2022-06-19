@@ -1,16 +1,18 @@
-﻿//共通使用
-//登出按鈕
-$('#Logout').on('click', function () {
-    sessionStorage.clear();
-    window.location.href = 'Login.html';
-})
-function GetToken() {
-    if (sessionStorage.getItem('UserID') == null) { return ""; }
-    else { return sessionStorage.getItem('UserID'); }
-}
+﻿
 function CheckLogin() {
-    if (!GetToken()) {
-        sessionStorage.clear();
+    var uid = localStorage.getItem('UserID');
+    var dt = localStorage.getItem('login');
+    var now = (new Date).getTime();
+
+    if (uid && dt) {
+        var expire = (now - dt) / 1000
+        if (expire > 60 * 60) {
+            localStorage.clear();
+            window.location.href = 'login.html'
+        }
+        localStorage.setItem('login', (new Date).getTime());
+    }
+    else {
         window.location.href = 'login.html'
     }
 }

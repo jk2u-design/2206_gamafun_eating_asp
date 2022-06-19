@@ -5,7 +5,7 @@ $('#start_game').on("click", function () {
     }
     var data = {}
     data.open_id = getbfd()
-    data.game = getData('game')
+    data.game = getSessionData('game')
     apt.api.GameCheck(data, function (rs) {
         if (rs) {
             if (rs.code == '0000') {
@@ -37,11 +37,11 @@ $('#btn_gameover').on("click", function () {
     }
     var data = {}
     data.open_id = getbfd()
-    data.game = getData('game')
+    data.game = getSessionData('game')
     data.startTime = getData('startTime')
     data.gametimeSHA = getData('gametimeSHA')
-    data.beans1 = getData('bean1')
-    data.beans2 = getData('bean2')
+    data.beans1 = getSessionData('bean1')
+    data.beans2 = getSessionData('bean2')
     apt.api.GameRecord(data, function (rs) {
         if (rs) {
             if (rs.code != '0000') {
