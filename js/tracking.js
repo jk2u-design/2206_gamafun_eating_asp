@@ -181,52 +181,38 @@ $(async function () {
             }
         }
 
-        if (key !== undefined) {
-            event.clickInfo = Object.assign(event.clickInfo, info)
-            if (url.indexOf('https') == -1 && key) {
-                urls = getUrl(key)
-                event.clickInfo.url = inApp ? urls.in_app_link : urls.web_link
-            } else {
-                event.clickInfo.url = url
+        // if (key !== undefined) {
+        //     event.clickInfo = Object.assign(event.clickInfo, info)
+        //     if (url.indexOf('https') == -1 && key) {
+        //         urls = getUrl(key)
+        //         event.clickInfo.url = inApp ? urls.in_app_link : urls.web_link
+        //     } else {
+        //         event.clickInfo.url = url
+        //     }
+        // }
+        if (getbfd()) {
+            console.log(element.data.BGOdeeplink)
+            console.log(element.data.BGOurl)
+            console.log(element.data.Weburl)
+            if(inApp){
+                if(element.data.BGOdeeplink!==""){
+                    event.clickInfo.url = element.data.BGOdeeplink
+                }else if(element.data.BGOurl!==""){
+                    event.clickInfo.url = element.data.BGOurl
+                }
+            }else{
+                event.clickInfo.url = element.data.Weburl
             }
         }
-
         await sender.passEvent(occursEvent('click', event))
 
         // redirect
-        if (key == undefined) {
-            return;
-        }
-        urls = getUrl(key)
-        if (getbfd()) {
-            if (inApp && urls.in_app_link != '') {
-                // leave_webview:bool 是否關閉當前頁面再跳轉
-                //  BGO.deeplink_jump(urls.in_app_link, false)
-            } else {
-                if ($(this).hasClass('btn_qrcode')) {
-                    // 大網電腦版彈出qrcode
-                    if ($(window).width() >= 768) {
-                        var popup_qrcode = $('.check_qrcode .prize_img')
-                        $('.mask').show();
-                        $('.check_qrcode').show();
-                        $('body,html').css('overflow', 'hidden')
-                        if (key == 'mission_beanfun_bulletin') {
-                            popup_qrcode.attr('src', 'images/mission/qrcode_beanfun_bulletin_stg.png')
-                        } else if (key == 'mission_beanfun_comment') {
-                            popup_qrcode.attr('src', 'images/mission/qrcode_beanfun_comment_stg.png')
-                        } else if (key == 'mission_gash_receive') {
-                            popup_qrcode.attr('src', 'images/mission/qrcode_mission_gash_stg.png')
-                        } else if (key == 'mission_novel') {
-                            popup_qrcode.attr('src', 'images/mission/qrcode_mission_novel_stg.png')
-                        }
-                    } else {
-                        //   location.href = urls.web_link;
-                    }
-                } else {
-                    // location.href = urls.web_link;
-                }
-            }
-        }
+        // if (key == undefined) {
+        //     return;
+        // }
+        // urls = getUrl(key)
+
+       
     })
 
     // 戳戳樂頁面

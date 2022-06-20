@@ -323,8 +323,16 @@ img {
 }
 
 .pokinglottery .prize {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+.pokinglottery .prize .pc {
+  display: block;
+}
+
+.pokinglottery .prize .mo {
+  display: none;
 }
 
 .pokinglottery .btn_area {
@@ -693,6 +701,16 @@ img {
     width: 20vw;
     height: 20vw;
     background-size: 17vw;
+  }
+  .pokinglottery .prize {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .pokinglottery .prize .pc {
+    display: none;
+  }
+  .pokinglottery .prize .mo {
+    display: block;
   }
 }
 

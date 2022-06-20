@@ -8,6 +8,7 @@ $(function () {
         location.href = getLoginURL()
     })
     if (getbfd()) {
+        $('#wallet').attr('href', $('#wallet').data('href'))
         var data = {}
         data.open_id = getbfd()
         apt.api.getUserData(data, function (rs) {

@@ -34,6 +34,7 @@ $(function () {
     })
 
 })
+
 // 獎項隨機位置
 function randombox() {
     var str = '';
@@ -84,7 +85,7 @@ function randombox1() {
 
 }
 
-
+// 戳我隨機位置
 function random_hint() {
     var str = '';
     var arr = [];
@@ -100,9 +101,6 @@ function random_hint() {
     }
     $('.poking_item').children('span').hide();
     $('.poking_item:nth-child(' + arr[0] + ')').children('span').show();
-
-
-
 }
 function random_hint_2() {
     var str = '';
@@ -119,9 +117,6 @@ function random_hint_2() {
     }
     $('.poking_item').children('span').hide();
     $('.poking_item:nth-child(' + arr[0] + ')').children('span').show();
-
-
-
 }
 
 

@@ -475,8 +475,8 @@ const getUrl = key => {
             in_app_link: 'https://stg-portal.beanfun.com/app/h5page/2387ac2b28b54602aff22115d26b06b1_oa?url=https%3A%2F%2Falpha-bfweb.beanfun.com%2FBonus&theme=1&title=%E9%A0%98%E8%BD%89%E8%9B%8B%E6%8B%BF%E9%87%91%E8%B1%86',
         },
         'mission_game_login': {
-            web_link: 'https://tw.newlogin.beanfun.com/loginform.aspx?skey=202205f873ebefcc2c43&display_mode=2',
-            in_app_link: '',
+            web_link: 'https://tw.beanfun.com/',
+            in_app_link: 'https://portal.beanfun.com/app/h5page/5b2c64bc9e974b0c92a660c0d942f96e_oa?url=https%3A%2F%2Fbfweb.beanfun.com&theme=1&title=%E9%81%8A%E6%88%B2',
         },
         'mission_game_sign': {
             web_link: 'https://bean.fun/cwpCy',
@@ -488,7 +488,7 @@ const getUrl = key => {
         },
         'mission_gash_reward': {
             web_link: 'https://stage-ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120000',
-            in_app_link: 'https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fstage-ec.gashpoint.com%2FSalePackage%2FIndex%2F5%3FChargeID%3DSA00245%26EC_ID%3DEC021120000&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF',
+            in_app_link: 'https://ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120020',
         },
         'mission_jollybuy_blind': {
             web_link: 'https://dev-www.jollybuy.com/act/playground/',
