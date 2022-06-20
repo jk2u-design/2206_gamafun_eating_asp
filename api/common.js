@@ -16,6 +16,26 @@ function CheckInApp() {
             $('#login_bf').hide()
             $('#login_float').hide()
             inapp = true;
+            apt.api.getBGO({ }, function (rs) {
+                if (rs) {
+                    if (rs.code == '0000') {
+                        BGO.init({token: rs.datas.token,official_account_id: rs.datas.accountid});
+                        BGO.get_me_openid_access_token(rs.datas.clientid, '', function (data) {
+                            if (data.access_token) {
+                                apt.api.APPUserLogin({ access_token: data.access_token}, function (rs) {
+                                    if (rs) {
+                                        if (rs.code == '0000') {
+                                            setData('open_id', rs.datas.open_id)
+                                            setData('username', rs.datas.username)
+                                            setData('open_Key', rs.datas.open_Key)
+                                        }
+                                    }
+                                })
+                            }
+                        });
+                    }
+                }
+            })
         }
     })
 }
@@ -59,7 +79,6 @@ window.onload = function () {
     }
     if (urlParam('code')) {
         apt.api.WebUserLogin({ code: urlParam('code') }, function (rs) {
-            debugger
             if (rs) {
                 if (rs.code == '0000') {
                     setData('open_id', rs.datas.open_id)
@@ -69,7 +88,7 @@ window.onload = function () {
                     if (redirect_uri) {
                         setData('redirect_uri', '')
                         location.href = redirect_uri
-                    }
+                    } 
                 }
             }
         })
@@ -77,6 +96,11 @@ window.onload = function () {
     if (getbfd()) {
         $('#login_bf').hide()
         $('#login_float').hide()
+    }
+    var qrcode = getSessionData('bfqrcode')
+    if (qrcode) {
+        sessionStorage.clear()
+        getqrcode(qrcode)
     }
 };
 //取得opendata
@@ -112,3 +136,19 @@ String.format = function (src) {
         return args[i];
     });
 };
+
+function getqrcode(campaignID) {
+    var data = {}
+    data.open_id = getbfd()
+    data.campaignID = campaignID
+    apt.api.QRCode(data, function (rs) {
+        if (rs) {
+            if (rs.code == '0000') {
+                $('header').load('include_files/header.html');
+            }
+            else {
+                alert(rs.msg)
+            }
+        }
+    })
+}

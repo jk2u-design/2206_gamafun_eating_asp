@@ -51,10 +51,11 @@ function setTable(page) {
         var item = transLogData[i]
         var beans1 = ''
         var beans2 = ''
+        var ad_name = (item.card1 == '0' && item.card1 == '0') ? item.ad_name : item.ad_name + ' ' + item.memo
         var newRow = $('#sample_row').clone()
         $(newRow).attr('id', '').attr('style', '')
         $(newRow).find('td:eq(0)').html(item.InDBDT);
-        $(newRow).find('td:eq(1)').html(item.ad_name);
+        $(newRow).find('td:eq(1)').html(ad_name);
 
         beans1 = item.beans1 > 0 ? '×' + item.beans1 : item.beans1
         beans2 = item.beans2 > 0 ? '×' + item.beans2 : item.beans2

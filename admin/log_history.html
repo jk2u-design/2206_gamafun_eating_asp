@@ -65,19 +65,19 @@
                                 <option value="1">beanfun!【佈告欄】</option>
                                 <option value="2">beanfun!【留言板】</option>
                                 <option value="22">橘子嘉年華【VIP邀請碼】</option>
-                                <option value="3">遊戲橘子【零用金轉蛋機】</option>
+                                <option value="3" data-card="0">遊戲橘子【零用金轉蛋機】</option>
                                 <option value="3" data-card="1">遊戲橘子【零用金轉蛋機】橘子25認同卡加碼</option>
                                 <option value="4">遊戲橘子【伍登獎】</option>
                                 <option value="5">遊戲橘子【遊戲連簽益】</option>
                                 <option value="6">GASH【每日領豆任務】</option>
-                                <option value="7">GASH【滿額優惠送金豆】</option>
+                                <option value="7" data-card="0">GASH【滿額優惠送金豆】</option>
                                 <option value="7" data-card="1">GASH【滿額優惠送金豆】橘子25認同卡</option>
                                 <option value="8">有閑購物【天天抽盒拿銀豆】</option>
-                                <option value="9">有閑購物【消費滿額送金豆】</option>
+                                <option value="9" data-card="0">有閑購物【消費滿額送金豆】</option>
                                 <option value="9" data-card="1">有閑購物【消費滿額送金豆】橘子25認同卡加碼</option>
                                 <option value="10">橘子支付【筆筆交易拿銀豆】</option>
                                 <option value="11">橘子支付【橘子滿滿的愛】</option>
-                                <option value="12">橘子支付【愛用帳戶送金豆】</option>
+                                <option value="12" data-card="0">橘子支付【愛用帳戶送金豆】</option>
                                 <option value="12" data-card="1">橘子支付【愛用帳戶送金豆】橘子25認同卡</option>
                                 <option value="12" data-card="2">橘子支付【愛用帳戶送金豆】原子少年認同卡</option>
                                 <option value="13">bf!文學星【橘門頁說收藏篇】</option>
@@ -85,10 +85,10 @@
                                 <option value="15">bf!文學星【橘門頁說加碼篇】</option>
                                 <option value="16">bf!漫畫星【漫畫辦桌桌收藏先】</option>
                                 <option value="17">bf!漫畫星【漫畫辦桌桌閱讀先】</option>
-                                <option value="18">bf!漫畫星【辦桌桌百讀不厭】</option>
+                                <option value="18" data-card="0">bf!漫畫星【辦桌桌百讀不厭】</option>
                                 <option value="18" data-card="2">bf!漫畫星【辦桌桌百讀不厭】原子少年認同卡加碼</option>
                                 <option value="19">原子少年【給少年滿滿的愛】</option>
-                                <option value="20">原子少年【我挺原子能量盒】</option>
+                                <option value="20" data-card="0">原子少年【我挺原子能量盒】</option>
                                 <option value="20" data-card="2">原子少年【我挺原子能量盒】原子少年認同卡加碼</option>
                                 <option value="21">原子少年【為你的少年拚一團】</option>
                                 <option value="25">7/14 大橘擂台 掃QRC送銀豆</option>
@@ -192,14 +192,13 @@
         data.endDate = $('#endDate').val();
         data.open_id = $('#open_id').val();
         data.ad_id = $('#ddl_adid').val();
-        data.card1 = $('#ddl_adid').find(':selected').data('card') == '1' ? '1' : '';
-        data.card2 = $('#ddl_adid').find(':selected').data('card') == '2' ? '1' : '';
+        data.card = $('#ddl_adid').find(':selected').data('card') >= 0 ? $('#ddl_adid').find(':selected').data('card') : '';
         tmpData = data;
         apt.api.getUserLog(data, function (rs) {
             if (rs) {
                 $('#totals').val(rs.totals)
                 $('#ddl_page').empty()
-                for (i = 0, j = rs.pages; i < rs.pages; i++ , j--) {
+                for (i = 0; i < rs.pages; i++) {
                     $('#ddl_page').append('<option value="' + (i + 1) + '">' + (i + 1) + '</option>')
                 }
                 getdata(1)

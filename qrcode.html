@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script src="api/common.js"></script>
+<script>
+    var cid = urlParam('cid')
+    if (cid) {
+        sessionStorage.setItem('bfqrcode', cid)
+        location.href = getLoginURL()
+    }
+   
+</script>
