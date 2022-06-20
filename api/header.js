@@ -24,5 +24,11 @@ $(function () {
             }
         })
     }
+    else {
+        $('#wallet').on('click', function () {
+            setData('redirect_uri', location.href)
+            location.href = getLoginURL()
+        })
+    }
 })
 
