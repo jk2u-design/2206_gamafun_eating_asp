@@ -59,22 +59,16 @@ window.onload = function() {
 
 $(function(){
 	
-	//$('header').load('include_files/header.html')
+	$('header').load('include_files/header.html')
 	$('footer').load('include_files/footer.html');
 
 
 	//開場動畫
 	$('#kv').addClass('openanim');
 	$('header').hide(0);
-	//$('.kv_slogan').hide(0);
 	$('#kv .btns').hide(0);
 	$('#kv .invitation').hide(0);
 	$('.kv_dn_mask').hide(0);
-	//$('.kv_left_house').hide(0);
-	//$('.kv_right_house').hide(0);
-	//$('#middle').hide(0);
-	//$('#event').hide(0);
-	//$('#gamashow').hide(0);
 
 	var gamagame = gsap.timeline();
 		gamagame.to('.gamagame', {opacity:0, duration:0.15, delay:1});
@@ -346,19 +340,6 @@ $(function(){
         pullDrag: false
     });
 
-	// var showhash = window.location.hash.substring(1);
-    // var showhashid = ('#' + showhash);
-    // var notshow = ".tab_program a:not(#"+showhash+")"
-    // var tabshow = ".tab_program a#"+showhash+""
-    // if(window.location.hash === showhashid)
-    // {
-    //     $(notshow).removeClass('active');
-    //     $(tabshow).addClass('active');
-    //     $("html,body").animate({
-    //         scrollTop: $('#gama_show').offset().top
-    //     })
-    // };
-
 	var show_tab_a = ('gamashow_0714')
 	var show_tab_a_id = ('#' + show_tab_a)
 	var not_show_a = ".tab_program a:not(#"+show_tab_a+")"
@@ -370,42 +351,6 @@ $(function(){
 			scrollTop: $('#gama_show').offset().top
 		})
 	};
-
-	// var show_tab_b = ('gamashow_0715')
-	// var show_tab_b_id = ('#' + show_tab_b)
-	// var not_show_b = ".tab_program a:not(#"+show_tab_b+")"
-	// var tab_show_b = ".tab_program a#"+show_tab_b+""
-	// if(window.location.hash === show_tab_b_id) {
-	// 	$(not_show_b).removeClass('active');
-	// 	$(tab_show_b).addClass('active');
-	// 	$("html,body").animate({
-	// 		scrollTop: $('#gama_show').offset().top
-	// 	})
-	// };
-
-	// var show_tab_c = ('gamashow_0716')
-	// var show_tab_c_id = ('#' + show_tab_c)
-	// var not_show_c = ".tab_program a:not(#"+show_tab_c+")"
-	// var tab_show_c = ".tab_program a#"+show_tab_c+""
-	// if(window.location.hash === show_tab_c_id) {
-	// 	$(not_show_c).removeClass('active');
-	// 	$(tab_show_c).addClass('active');
-	// 	$("html,body").animate({
-	// 		scrollTop: $('#gama_show').offset().top
-	// 	})
-	// };
-
-	// var show_tab_d = ('gamashow_0717')
-	// var show_tab_d_id = ('#' + show_tab_d)
-	// var not_show_d = ".tab_program a:not(#"+show_tab_d+")"
-	// var tab_show_d = ".tab_program a#"+show_tab_d+""
-	// if(window.location.hash === show_tab_d_id) {
-	// 	$(not_show_d).removeClass('active');
-	// 	$(tab_show_d).addClass('active');
-	// 	$("html,body").animate({
-	// 		scrollTop: $('#gama_show').offset().top
-	// 	})
-	// };
 
 	for(i=0;i<$(".tab_program a").length;i++){	
 		$(".tab_program a:eq("+i+")").click({id:i},function(e){
@@ -463,41 +408,6 @@ $(function(){
         pullDrag: false
     });
 
-	// var rules_tab_a = ('introduction')
-	// var rules_tab_a_id = ('#' + rules_tab_a)
-	// var not_rules_a = ".rules_tab a:not(#"+rules_tab_a+")"
-	// var tab_rules_a = ".rules_tab a#"+rules_tab_a+""
-	// if(window.location.hash === rules_tab_a_id) {
-	// 	$(not_rules_a).removeClass('active');
-	// 	$(tab_rules_a).addClass('active');
-	// 	$("html,body").animate({
-	// 		scrollTop: $('#rules_board').offset().top
-	// 	})
-	// };
-
-	// var rules_tab_b = ('event_rules')
-	// var rules_tab_b_id = ('#' + rules_tab_b)
-	// var not_rules_b = ".rules_tab a:not(#"+rules_tab_b+")"
-	// var tab_rules_b = ".rules_tab a#"+rules_tab_b+""
-	// if(window.location.hash === rules_tab_b_id) {
-	// 	$(not_rules_b).removeClass('active');
-	// 	$(tab_rules_b).addClass('active');
-	// 	$("html,body").animate({
-	// 		scrollTop: $('#rules_board').offset().top
-	// 	})
-	// };
-
-	// var rules_tab_c = ('notice')
-	// var rules_tab_c_id = ('#' + rules_tab_c)
-	// var not_rules_c = ".rules_tab a:not(#"+rules_tab_c+")"
-	// var tab_rules_c = ".rules_tab a#"+rules_tab_c+""
-	// if(window.location.hash === rules_tab_c_id) {
-	// 	$(not_rules_c).removeClass('active');
-	// 	$(tab_rules_c).addClass('active');
-	// 	$("html,body").animate({
-	// 		scrollTop: $('#rules_board').offset().top
-	// 	})
-	// };
 
 	for(i=0;i<$(".rules_tab a").length;i++){	
 		$(".rules_tab a:eq("+i+")").click({id:i},function(e){

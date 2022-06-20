@@ -42,8 +42,14 @@ body::-webkit-scrollbar-track {background: #ddd; border-radius: 20px;}
 
 #start {position:relative; height:calc(var(--vh, 1vh) * 100); display:flex; flex-wrap:wrap; justify-content:center; z-index:3; overflow-y:auto; overflow-x:hidden;}
 #start .slogan {height:22vh; max-height:225px; width:auto; margin:12vh 500px 0px 500px;}
-#start .stage {position:relative; width:70%; overflow:hidden; margin-top:3vh;}
-#start .bottles {display:inline-block; white-space: nowrap; width:100%;}
+#start .slogan img {width:100%;}
+#start .stage {position:relative; width:70%; overflow:hidden; margin-top:3vh; transform: translate3d(0, 0, 0);}
+#start .bottles {display:inline-block; white-space: nowrap; width:100%; transform: translate3d(0, 0, 0); animation: moveSlideshow 30s linear infinite;}
+@keyframes moveSlideshow {
+    100% { 
+      transform: translateX(-70%);  
+    }
+  }
 #start .bottles img {display:inline-block; vertical-align:bottom; width:8%; max-width:93px;}
 #start .option {position:relative; width:100%; margin-top:3vh; text-align:center;}
 #start .rules {margin-top:30px; padding-bottom:50px;}
@@ -150,6 +156,7 @@ body::-webkit-scrollbar-track {background: #ddd; border-radius: 20px;}
 
     /*#start {height:100%;}*/
     #start .slogan {width:80% !important; height:auto !important; margin:15vh auto 0px auto;}
+    #start .slogan img {width:100%;}
     #start .stage {width:100%; margin-top:1vh;}
     #start .bottles img {width:15%;}
 

@@ -4,10 +4,10 @@
 
 body, html {position:relative; font-size:16px; font-family:'Noto Sans TC','微軟正黑體','Microsoft Jhenghei',sans-serif; font-weight:400; overflow-x:hidden;}
 a, input, button {text-decoration:none; outline:none !important;}
-button:hover, button:focus, button:active {text-decoration:none; cursor:pointer !important; outline:none !important;}
+a:hover, a:focus, a:active {text-decoration:none; cursor:pointer !important; outline:none !important;}
 ul, li {list-style:none;}
 
-#beanwallet {padding:50px;
+#beanwallet {padding:50px; max-height:80vh; overflow-y:scroll;
     background: rgb(43,14,64);
     background: -moz-linear-gradient(0deg, rgba(43,14,64,1) 0%, rgba(64,19,106,1) 75%, rgba(21,6,34,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(43,14,64,1) 0%, rgba(64,19,106,1) 75%, rgba(21,6,34,1) 100%);
@@ -20,12 +20,16 @@ ul, li {list-style:none;}
     -webkit-text-stroke: 4px transparent;
 }
 
+#beanwallet::-webkit-scrollbar {position:relative; width: 10px; z-index:99;}
+#beanwallet::-webkit-scrollbar-thumb {background: #666; border-radius: 20px;}
+#beanwallet::-webkit-scrollbar-track {background: #ddd; border-radius: 20px;}
+
 
 .wallet_head {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   
   .wallet_head .lt {
@@ -87,10 +91,10 @@ ul, li {list-style:none;}
 
 .wallet_body {width:100%; border-collapse:separate; border-spacing:0;}
 .wallet_body thead {background:#5b1094;}
-.wallet_body th {font-size:18px; font-weight:500; text-align:center; color:white; padding:30px 0px;}
-.wallet_body th.time {width:180px;}
+.wallet_body th {font-size:18px; font-weight:500; text-align:center; color:white; padding:15px 0px;}
+.wallet_body th.time {width:220px;}
 .wallet_body tr {border-bottom:1px solid white;}
-.wallet_body td {font-size:16px; color:white; text-align:center; padding:20px 0px; border-bottom:1px solid white;}
+.wallet_body td {font-size:16px; color:white; text-align:center; padding:10px 0px; border-bottom:1px solid white;}
 
 .wallet_body .prize {display:inline-block; vertical-align:middle;}
 
@@ -113,44 +117,56 @@ ul, li {list-style:none;}
 
   .page_list li {border-left:1px solid white;}
   .page_list li.bdnone {border:none;}
-
-    .page_list li button {
-        border-color: transparent;
-        background: transparent;
-        display: block;
-        color: #fff;
-        font-size: 16px;
-        padding: 0 10px;
-    }
   
-  .page_list li button:hover {
+  .page_list li a {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  .page_list li a:hover {
     color: #fe919e;
   }
-
-    .page_list li button.active {
-        text-shadow: 0 0 5px #f882ff, 0 0 5px #f882ff;
-    }
   
-  /* .page_list li .ar_l,
+  .page_list li a.active {
+    text-shadow: 0 0 5px #f882ff, 0 0 5px #f882ff;
+  }
+
+  .page_list li button {
+    border-color: transparent;
+    background: transparent;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.page_list li button:hover {
+color: #fe919e;
+}
+
+.page_list li button.active {
+    text-shadow: 0 0 5px #f882ff, 0 0 5px #f882ff;
+}
+  
+  
+  .page_list li .ar_l {
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  .page_list li .ar_l:hover {
+    border-color: transparent #fe919e transparent transparent;
+  }
+  
   .page_list li .ar_r {
-    margin-top: 4px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    vertical-align: middle;
-    border:none;
-  } */
-
-    .page_list li .ar_l {
-        /* border-width: 6px 10px 6px 0; */
-        background: transparent;
-        border-color: transparent;
-    }
+    border-color: transparent transparent transparent #ffffff;
+  }
   
-  /* .page_list li:nth-last-child(1) a::after {
-    display: none;
-  } */
-
+  .page_list li .ar_r:hover {
+    border-color: transparent transparent transparent #fe919e;
+  }
+  
 
 
 

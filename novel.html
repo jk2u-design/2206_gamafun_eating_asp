@@ -4,46 +4,54 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=11" />
-    <title>2022橘子嘉年華⚡️⚡️ 逛夜市抽金幣⚡️⚡️夏日Fun肆玩</title>
+    <title>2022橘子嘉年華✽‿beanfun!文學星</title>
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
     <!-- meta -->
-    <meta name="description" content="2022橘子嘉年華⚡️⚡️ 逛夜市抽金幣⚡️⚡️夏日Fun肆玩" />
-    <meta name="keywords" content="">
+    <meta name="description" content="每天來點故事，讓你拋開所有鳥事，閱讀指定小說再抽Homepod mini。" />
+    <meta name="keywords" content="橘子嘉年華、抽獎、網路文學、小說">
     <meta name="robots" content="NOODP">
     <meta name="googlebot" content="NOODP">
     <meta name="googlebot" content="NOODP, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=7,IE=8,IE=9,IE=10,IE=11,IE=EDGE" /><!-- 強制IE非相容性 -->
     <!-- FB meta -->
-    <meta property="og:title" content="2022橘子嘉年華⚡️⚡️ 逛夜市抽金幣⚡️⚡️夏日Fun肆玩" />
-    <meta property="og:description" content="2022橘子嘉年華⚡️⚡️ 逛夜市抽金幣⚡️⚡️夏日Fun肆玩 | 即日起至7/17百發百中搶銀豆！">
+    <meta property="og:title" content="2022橘子嘉年華✽‿beanfun!文學星" />
+    <meta property="og:description" content="每天來點故事，讓你拋開所有鳥事，閱讀指定小說再抽Homepod mini。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="">
+    <meta property="og:url" content="https://gamafun.beanfun.com/" />
+    <meta property="og:image" content="images/fb_share.jpg">
     <meta property="og:image:width" content="1000" />
     <meta property="og:image:height" content="524" />
-    <meta property="og:site_name" content="2022橘子嘉年華">
+    <meta property="og:site_name" content="橘子嘉年華">
     <!--<meta property="fb:app_id" content="" />-->
     <!-- shortcut icon -->
     <link rel="SHORTCUT ICON" href="images/favicon.ico">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/mission.css">
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/allstyle.js"></script>
 </head>
 
 <body>
+    <!-- loading -->
+    <div class="se-pre-con" id="overlay">
+        <div class="img">
+            <img src="images/loading.png" alt="loading">
+            <div id="progstat"></div>
+            <div id="progress"></div>
+        </div>
+    </div>
     <header></header>
     <div class="wrapper">
+        <div class="bg">
         <div class="container">
             <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
             <!-- 品牌表頭 -->
@@ -56,8 +64,9 @@
                                 <img class="for_h" src="images/mission/logo_novel.png" alt="beanfun文學星">
                             </div>
                             <h2>暢遊小說狂想，體驗各種人生，<br>讀本小說，讓你有「痣」能伸!</h2>
+                            <div class="mission_hint">登入查看任務完成度！</div>
                         </div>
-                        <div class="mission_hint">登入查看任務完成度！</div>
+
                     </div>
                     <div class="icon">
                         <img src="images/mission/icon_novel.png" alt="beanfun文學星">
@@ -83,9 +92,11 @@
                             </div>
                         </div>
                         <div class="rt">
-                            <a class="btn_orange" href="javascript:;">
+                            <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_novel"
+                                data-tracking="click" data-sec="collect" data-event_id="82" data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
                                 <span class="text">執行任務</span>
-                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
                             </a>
                         </div>
                     </li>
@@ -102,9 +113,11 @@
                             </div>
                         </div>
                         <div class="rt">
-                            <a class="btn_orange" href="javascript:;">
+                            <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_novel"
+                                data-tracking="click" data-sec="read" data-event_id="82"  data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
                                 <span class="text">執行任務</span>
-                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
                             </a>
                         </div>
                     </li>
@@ -121,9 +134,11 @@
                             </div>
                         </div>
                         <div class="rt">
-                            <a class="btn_orange" href="javascript:;">
-                                <span class="text">完成任務</span>
-                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                            <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_novel"
+                                data-tracking="click" data-sec="bonus" data-event_id="82"  data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
                             </a>
                         </div>
                     </li>
@@ -140,7 +155,9 @@
                                 <li>每帳號每日限完成一次收藏篇任務</li>
                                 <li>每帳號每日限完成一次閱讀篇任務</li>
                                 <li>金豆加碼需連續三天皆有完成閱讀篇任務才可獲得，每帳號限領取兩次。</li>
-                                <li>Home pod mini(1台,價值新台幣3,000元) 將於2022/07/26(二) 18:00 前抽出乙名得獎者，公布於bf!小說bean淇淋社團，並請得獎者於 2022/08/12(五) 18:00 前與主辦單位聯繫，逾期將視為放棄領獎資格、無法重新補發；本活動將依中華民國稅法，依累計價值併入中獎人個人年度綜合所得稅申報，詳細規定依本站注意事項說明為主</li>
+                                <li>Home pod mini(1台,價值新台幣3,000元) 將於2022/07/26(二) 18:00 前抽出乙名得獎者，公布於bf!小說bean淇淋社團，並請得獎者於
+                                    2022/08/12(五) 18:00
+                                    前與主辦單位聯繫，逾期將視為放棄領獎資格、無法重新補發；本活動將依中華民國稅法，依累計價值併入中獎人個人年度綜合所得稅申報，詳細規定依本站注意事項說明為主</li>
 
                             </ul>
                         </div>
@@ -149,20 +166,39 @@
                 </ul>
             </section>
             <div class="btn_area">
-                <a class="btn_shadow_purple" href="javascript:;">
+                <a class="btn_shadow_purple" href="index.html" data-tracking="click" data-event_id="83">
                     <span class="text">回大橘夜市</span>
-                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                        class="bt_rt"></span>
                 </a>
+            </div>
+            <div class="mask"></div>
+            <!-- 大網QRcode彈出視窗 -->
+            <div class="pop_up type1 check_qrcode">
+                <a href="javascript:void(0)" class="pop_up_close"><img src="images/pokinglottery/close.svg"
+                    alt="close"></a>
+                <div class="content">                    
+                    <h2 class="pop_up_title2">請掃描QRCODE查看</h2>
+                    <img class="prize_img" src="" alt="請掃描QRCODE">
+                </div>
             </div>
         </div>
     </div>
+    <footer></footer>
 </body>
 <script>
     $(function () {
         $('header').load('include_files/header.html');
+        $('footer').load('include_files/footer.html')
     })
 </script>
 <script src="js/mission.js"></script>
+<!-- beanfun -->
+<script src="https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js"></script>
+<script
+    src="https://beangostg.blob.core.windows.net/beango-static-stg/web-tracing-jssdk/web_tracing_sdk.stg.js"></script>
+<script src="js/tracking_events.js"></script>
+<script src="js/tracking.js"></script>
 
 </html>
 <script src="api/common.js"></script>

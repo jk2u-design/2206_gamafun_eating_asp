@@ -7,7 +7,7 @@ a, input, button {text-decoration:none; outline:none !important;}
 a:hover, a:focus, a:active {text-decoration:none; cursor:pointer !important; outline:none !important;}
 ul, li {list-style:none;}
 
-#card {padding:50px;
+#card {padding:50px; max-height:80vh; overflow-y:scroll;
     background: rgb(29,8,62);
     background: -moz-linear-gradient(90deg, rgba(29,8,62,1) 0%, rgba(31,31,81,1) 30%, rgba(31,31,81,1) 70%, rgba(29,8,62,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(29,8,62,1) 0%, rgba(31,31,81,1) 30%, rgba(31,31,81,1) 70%, rgba(29,8,62,1) 100%);
@@ -19,20 +19,24 @@ ul, li {list-style:none;}
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
 }
-#card h2 {font-size:18px; line-height:30px; color:white; text-align:center; margin:50px 0px; font-weight:400;}
+#card h2 {font-size:18px; line-height:26px; color:white; text-align:center; margin:30px 0px; font-weight:400;}
 
 #card section {display:flex; flex-wrap:nowrap; justify-content:center; align-items:flex-start;}
 
-.midline {width:2px; height:800px; background:#5b1094; margin:0px 20px; box-shadow:0px 0px 10px #f882ff; align-self:center;}
+#card::-webkit-scrollbar {position:relative; width: 10px; z-index:99;}
+#card::-webkit-scrollbar-thumb {background: #666; border-radius: 20px;}
+#card::-webkit-scrollbar-track {background: #ddd; border-radius: 20px;}
+
+.midline {width:2px; height:600px; background:#5b1094; margin:0px 20px; box-shadow:0px 0px 10px #f882ff; align-self:center;}
 
 .card_info {margin:0px 30px; position:relative;}
 .cardimg {display:block; width:90%; max-width:370px; margin:0px auto 15px auto;}
-.card_info p {font-size:18px; line-height:34px; color:white; text-align:justify; word-break: break-all; word-wrap: break-word;}
+.card_info p {font-size:18px; line-height:26px; color:white; text-align:justify; word-break: break-all; word-wrap: break-word;}
 .card_info p.purple {color:#da91ff;}
 .card_info .bean {height:24px; margin:0px 3px -5px 3px;}
-.card_info ul {margin:20px 0px 20px 30px;}
-.card_info li {display:list-item; list-style:disc; font-size:18px; line-height:34px; color:white; text-align:justify; word-break: break-all; word-wrap: break-word;}
-.card_info small {display:block; width:100%; font-size:16px; color:orange; text-align:center; margin:20px 0px;}
+.card_info ul {margin:15px 0px 15px 30px;}
+.card_info li {display:list-item; list-style:disc; font-size:18px; line-height:26px; color:white; text-align:justify; word-break: break-all; word-wrap: break-word;}
+.card_info small {display:block; width:100%; font-size:14px; color:orange; text-align:center; margin:20px 0px;}
 .card_info .btn_purple {display:table; margin:20px auto;}
 
 

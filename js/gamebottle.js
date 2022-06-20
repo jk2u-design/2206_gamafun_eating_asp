@@ -93,9 +93,9 @@ $(function(){
     jQuery("#fireworks").before(jQuery("canvas"));
 
     //開場瓶子 --------------------------------------------
-    $('.bottles').append( $('.bottles img').clone() );
-    tl = new TimelineMax({repeat: -1});
-    tl.to( $('.bottles'), 10, { x:-($('.bottles').width()/2), ease: Power0.easeNone });
+    // $('.bottles').append( $('.bottles img').clone() );
+    // tl = new TimelineMax({repeat: -1});
+    // tl.to( $('.bottles'), 10, { x:-($('.bottles').width()/2), ease: Power0.easeNone });
 
     
     //開始遊戲 --------------------------------------------
