@@ -1,7 +1,7 @@
 $(function () {
     var missions = [
-        { done: false, brand_id: "1", ad_id: "1", times: "0", desc: "beanfun!- 佈告欄" },
-        { done: false, brand_id: "1", ad_id: "2", times: "0", desc: "beanfun!- 留言板" },
+        { done: false, brand_id: "1", ad_id: "1", times: "1", desc: "beanfun!- 佈告欄" },
+        { done: false, brand_id: "1", ad_id: "2", times: "1", desc: "beanfun!- 留言板" },
         { done: false, brand_id: "2", ad_id: "3", times: "0", desc: "台灣遊戲橘子-零用金轉蛋機" },
         { done: false, brand_id: "2", ad_id: "4", times: "0", desc: "台灣遊戲橘子-伍登獎" },
         { done: false, brand_id: "2", ad_id: "5", times: "1", desc: "台灣遊戲橘子-遊戲連簽益" },
@@ -9,8 +9,8 @@ $(function () {
         { done: false, brand_id: "3", ad_id: "7", times: "1", desc: "GASH-滿額優惠送金豆" },
         { done: false, brand_id: "4", ad_id: "8", times: "1", desc: "有閑購物-天天抽盒拿銀豆" },
         { done: false, brand_id: "4", ad_id: "9", times: "1", desc: "有閑購物-消費滿額送金豆" },
-        { done: false, brand_id: "5", ad_id: "10", times: "10", desc: "橘子支付-筆筆交易拿銀豆" },
-        { done: false, brand_id: "5", ad_id: "11", times: "0", desc: "橘子支付-橘子滿滿的愛" },
+        { done: false, brand_id: "5", ad_id: "10", times: "0", desc: "橘子支付-筆筆交易拿銀豆" },
+        { done: false, brand_id: "5", ad_id: "11", times: "10", desc: "橘子支付-橘子滿滿的愛" },
         { done: false, brand_id: "5", ad_id: "12", times: "0", desc: "橘子支付-愛用帳戶送金豆" },
         { done: false, brand_id: "6", ad_id: "13", times: "1", desc: "bf!文學星-橘門頁說收藏篇" },
         { done: false, brand_id: "6", ad_id: "14", times: "1", desc: "bf!文學星-橘門頁說閱讀篇" },
@@ -44,7 +44,7 @@ $(function () {
                     $.each(retdata, function (i1, value) {
                         $.each(missions, function (i2, mission) {
                             if (mission.ad_id == value.ad_id) {
-                                if (mission.times > 0 && value.cnt == mission.times) {
+                                if (mission.times > 0 && value.cnt >= mission.times) {
                                     mission.done = true
                                     var item = $('li[data-adid=' + value.ad_id + ']')
                                     if (item) {

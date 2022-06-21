@@ -305,8 +305,10 @@ img {
 }
 
 .pokinglottery .poking_item.selected {
-  background: url(../images/pokinglottery/selected.svg) #282828 no-repeat !important;
-  background-size: 120px;
+  background-image: url(../images/pokinglottery/selected.svg) !important;
+  background-color: #282828;
+  background-repeat: no-repeat;
+  background-size: 90%;
   background-position: center center;
 }
 
@@ -751,6 +753,16 @@ img {
   .pokinglottery .check_prize {
     margin: 50px auto;
     padding-top: 60px;
+  }
+  .pokinglottery .check_prize .content .btn_area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .pokinglottery .check_prize .content .btn_area a {
+    margin-bottom: 10px;
   }
   .pokinglottery.poking_game .poking_outter {
     width: 90vw;

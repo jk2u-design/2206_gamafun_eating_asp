@@ -207,9 +207,10 @@ $(function(){
     var arr_mb = [mbbottle_a, mbbottle_b, mbbottle_c],
         rand_mb = Math.floor(Math.random() * arr_mb.length),
         func_mb = arr_mb[rand_mb];
-
+        
     //判斷是否為手機 /開始遊戲
     function gamerun() {
+	    window.triggerClickEvent('121', {status: 'processing'});
         var mobile_flag = isMobile();
         if (mobile_flag) {
             // 手機開啟
@@ -410,6 +411,7 @@ $(function(){
             //$('.endhide').remove();
             $('#games').remove();
             setTimeout( function() {
+	            window.triggerClickEvent('121', {status: 'game_over'});
                 $("#gameover").fadeIn(500);
                 $("#fireworks").fadeIn(500);
                 sessionStorage.setItem('game', '1')//YT add

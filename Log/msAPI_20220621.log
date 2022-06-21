@@ -1,0 +1,1 @@
+2022/06/21 01:16:59.921 [Debug 100 [msAPI] CommFunc Connect2WebService 13]---[Connect2WebService] url=https://stg-api.beanfun.com/oauth2/v1/token,method=post,Authorization=c15489c1221846d38a7c2a4bba1a6168_oat,body={"grant_type":"authorization_code","code":"oDvWhdg7UI","redirect_uri":"https://stg-gamafun.beanfun.com"} 

@@ -20,26 +20,59 @@
         <span>&nbsp;×&nbsp;<span id="silverbeans">00</span></span>
     </div>
 
-    <a id="mnu"><span></span><span></span><span></span></a>
+    <a id="mnu" data-tracking="click" data-event_id="11" data-info='{"name": "menu"}'><span></span><span></span><span></span></a>
 
-    <a id="login_float"><img src="images/login_btn.png"></a>
+    <a id="login_float" href="javascript:void(0);" data-tracking="click" data-event_id="22"><img src="images/login_btn.png"></div>
 
     <ul id="nav">
-        <li id="login_bf"><a href="javascript:;"><img class="loginicon" src="images/login_icon.svg">立即登入</a></li>
-        <li><a class="nav_hash opn_wallet" data-fancybox data-type="ajax" data-href="beanwallet.html" id="wallet">豆子錢包</a></li>
-        <li><a href="./#event">大橘夜市</a></li>
-        <li><a href="./#gamashow">大橘擂台</a></li>
-        <li><a href="#">夏日時光番外篇</a></li>
-        <li><a href="./#rules">活動辦法</a></li>
+        <li id="login_bf"><a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_login"}'><img class="loginicon" src="images/login_icon.svg">立即登入</a></li>
+        <li><a id="wallet" class="nav_hash opn_wallet" data-fancybox data-type="ajax" data-href="beanwallet.html" data-fancybox data-type="ajax" href="javascript(0)" data-tracking="click" data-event_id="11" data-info='{"name": "menu_wallet"}'>豆子錢包</a></li>
+        <li><a id="hd_hash_event" class="nav_hash" href="./#event" data-tracking="click" data-event_id="11" data-name='menu_nightmarket'>大橘夜市</a></li>
+        <li><a id="hd_hash_gamashow" class="nav_hash" href="./#gamashow" data-tracking="click" data-event_id="11" data-name='menu_arena'>大橘擂台</a></li>
+        <li><a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_extras"}'>夏日時光番外篇</a></li>
+        <li><a id="hd_hash_rules" class="nav_hash" href="./#rules" data-tracking="click" data-event_id="11" data-name='menu_info'>活動辦法</a></li>
         <li class="sns">
-            <a href="#"><img src="images/sns_line.svg"></a>
-            <a href="#"><img src="images/sns_fb.svg"></a>
-            <a href="#"><img src="images/sns_ig.svg"></a>
+            <a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_line"}'><img src="images/sns_line.svg"></a>
+			<a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_facebook"}'><img src="images/sns_fb.svg"></a>
+			<a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_instagram"}'><img src="images/sns_ig.svg"></a>
         </li>
     </ul>
 </body>
 </html>
-<script src="api/common.js"></script>
+<script src="api/common.js?v=001"></script>
 <script src="api/header.js"></script>
 <script src="api/api.js"></script>
-<script src="api/hrefJump.js"></script>
+<script src="api/hrefJump.js?v=001"></script>
+
+<script>
+$(function(){
+	$('#hd_hash_event').click(function(){
+		$('header #mnu').toggleClass('open');
+        $('header #nav').slideToggle();
+		$('html, body').animate({
+			scrollTop: $('#event').offset().top
+		}, 500);
+		return false;
+	});
+    $('#hd_hash_gamashow').click(function(){
+		$('header #mnu').toggleClass('open');
+        $('header #nav').slideToggle();
+		$('html, body').animate({
+			scrollTop: $('#gama_show').offset().top
+		}, 500);
+		return false;
+	});
+    $('#hd_hash_rules').click(function(){
+		$('header #mnu').toggleClass('open');
+        $('header #nav').slideToggle();
+		$('html, body').animate({
+			scrollTop: $('#rules_board').offset().top
+		}, 500);
+		return false;
+	});
+	$('.opn_wallet').click(function(){
+		$('header #mnu').toggleClass('open');
+        $('header #nav').slideToggle();
+	});
+})
+</script>

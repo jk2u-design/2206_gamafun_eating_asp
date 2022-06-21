@@ -145,9 +145,9 @@ $(async function () {
         let sec = element.data('sec')
         let event_id = element.data('event_id')
         let event = getEvent(event_id)
-        let info = element.data('info')
-        let url = element.attr('href')
-        let urls = {}
+
+        let url = event.clickInfo.url
+
         let key = element.data('redirect')
         let name = element.data('name')
         let status = event.pageInfo.status
@@ -180,39 +180,21 @@ $(async function () {
                 event.pageInfo.status = 'logged_in'
             }
         }
-
-        // if (key !== undefined) {
-        //     event.clickInfo = Object.assign(event.clickInfo, info)
-        //     if (url.indexOf('https') == -1 && key) {
-        //         urls = getUrl(key)
-        //         event.clickInfo.url = inApp ? urls.in_app_link : urls.web_link
-        //     } else {
-        //         event.clickInfo.url = url
-        //     }
-        // }
-        if (getbfd()) {
-            console.log(element.data.BGOdeeplink)
-            console.log(element.data.BGOurl)
-            console.log(element.data.Weburl)
-            if(inApp){
-                if(element.data.BGOdeeplink!==""){
-                    event.clickInfo.url = element.data.BGOdeeplink
-                }else if(element.data.BGOurl!==""){
-                    event.clickInfo.url = element.data.BGOurl
+        // url追蹤
+            if (getbfd()) {
+                if (inApp) {
+                    if (element.data.BGOdeeplink !== "") {
+                        event.clickInfo.url = element.data('bgodeeplink')
+                    } else if (element.data.BGOurl !== "") {
+                        event.clickInfo.url = element.data('bgourl')
+                    }
+                } else {
+                    event.clickInfo.url = element.data('weburl')
                 }
-            }else{
-                event.clickInfo.url = element.data.Weburl
             }
-        }
         await sender.passEvent(occursEvent('click', event))
 
-        // redirect
-        // if (key == undefined) {
-        //     return;
-        // }
-        // urls = getUrl(key)
-
-       
+    
     })
 
     // 戳戳樂頁面

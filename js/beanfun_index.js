@@ -3,7 +3,7 @@ $(async function(){
 
     window.triggerClickEvent = (eventId, context) => {
         let event = getEvent(eventId)
-        event.clickInfo = Object.assign(event.clickInfo, context)
+        event.pageInfo = Object.assign(event.pageInfo, context)
         sender.passEvent(occursEvent('click', event))
     }
 

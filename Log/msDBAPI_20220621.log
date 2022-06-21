@@ -1,0 +1,12 @@
+2022/06/21 01:11:38.670 [Debug 999 [msDBAPI] msDBModule setDBConn 7]---dbconn 
+2022/06/21 01:11:38.670 [Debug 999 [msDBAPI] msDBModule .ctor 7]---C:\inetpub\beanfun\\DBConfig.xml 
+2022/06/21 01:11:38.686 [Debug 999 [msDBAPI] msDBModule selectDBConn 7]---Data Source=10.97.128.3;Initial Catalog=JK2U;Uid=jk2u;Pwd=82583858; 
+2022/06/21 01:17:00.437 [Debug 999 [msDBAPI] msDBModule setDBConn 13]---dbconn 
+2022/06/21 01:17:00.437 [Debug 999 [msDBAPI] msDBModule .ctor 13]---C:\inetpub\beanfun\\DBConfig.xml 
+2022/06/21 01:17:00.437 [Debug 999 [msDBAPI] msDBModule selectDBConn 13]---Data Source=10.97.128.3;Initial Catalog=JK2U;Uid=jk2u;Pwd=82583858; 
+2022/06/21 01:17:01.046 [Debug 999 [msDBAPI] msDBModule setDBConn 17]---dbconn 
+2022/06/21 01:17:01.046 [Debug 999 [msDBAPI] msDBModule .ctor 17]---C:\inetpub\beanfun\\DBConfig.xml 
+2022/06/21 01:17:01.046 [Debug 999 [msDBAPI] msDBModule selectDBConn 17]---Data Source=10.97.128.3;Initial Catalog=JK2U;Uid=jk2u;Pwd=82583858; 
+2022/06/21 01:17:01.218 [Debug 999 [msDBAPI] msDBModule setDBConn 17]---dbconn 
+2022/06/21 01:17:01.218 [Debug 999 [msDBAPI] msDBModule .ctor 17]---C:\inetpub\beanfun\\DBConfig.xml 
+2022/06/21 01:17:01.234 [Debug 999 [msDBAPI] msDBModule selectDBConn 17]---Data Source=10.97.128.3;Initial Catalog=JK2U;Uid=jk2u;Pwd=82583858; 

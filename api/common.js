@@ -1,44 +1,16 @@
 ﻿var inapp = false;
 var isProd = false;
-function GetToken() {
-    if (localStorage.getItem('opendata') == null) { return ""; }
-    else { return localStorage.getItem('opendata'); }
-}
-function CheckLogin() {
-    if (!GetToken()) {
-        localStorage.clear();
-        window.location.href = 'login.html'
+$(function () {
+    if (document.location.hostname.toLowerCase() == "gamafun.beanfun.com") {
+        //正式站
+        isProd = true;
+        loadingJS('https://beangochat.blob.core.windows.net/beango-static-prod/sdk/beanfun.min.js', CheckInApp)
     }
-}
-function CheckInApp() {
-    BGO.check_app_exist(function (data) {
-        if (data.result && data.result == 'ok') {
-            $('#login_bf').hide()
-            $('#login_float').hide()
-            inapp = true;
-            apt.api.getBGO({ }, function (rs) {
-                if (rs) {
-                    if (rs.code == '0000') {
-                        BGO.init({token: rs.datas.token,official_account_id: rs.datas.accountid});
-                        BGO.get_me_openid_access_token(rs.datas.clientid, '', function (data) {
-                            if (data.access_token) {
-                                apt.api.APPUserLogin({ access_token: data.access_token}, function (rs) {
-                                    if (rs) {
-                                        if (rs.code == '0000') {
-                                            setData('open_id', rs.datas.open_id)
-                                            setData('username', rs.datas.username)
-                                            setData('open_Key', rs.datas.open_Key)
-                                        }
-                                    }
-                                })
-                            }
-                        });
-                    }
-                }
-            })
-        }
-    })
-}
+    else {
+        isProd = false;
+        loadingJS('https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js', CheckInApp)
+    }
+})
 function urlParam(name) {
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results == null) {
@@ -68,35 +40,6 @@ function loadingJS(src, callback) {
         script.onload = function () { callback() }
 }
 window.onload = function () {
-    if (document.location.hostname.toLowerCase() == "gamafun.beanfun.com") {
-        //正式站
-        isProd = true;
-        loadingJS('https://beangochat.blob.core.windows.net/beango-static-prod/sdk/beanfun.min.js', CheckInApp)
-    }
-    else {
-        isProd = false;
-        loadingJS('https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js', CheckInApp)
-    }
-    if (urlParam('code')) {
-        apt.api.WebUserLogin({ code: urlParam('code') }, function (rs) {
-            if (rs) {
-                if (rs.code == '0000') {
-                    setData('open_id', rs.datas.open_id)
-                    setData('username', rs.datas.username)
-                    setData('open_Key', rs.datas.open_Key)
-                    var redirect_uri = getData('redirect_uri')
-                    if (redirect_uri) {
-                        setData('redirect_uri', '')
-                        location.href = redirect_uri
-                    } 
-                }
-            }
-        })
-    }
-    if (getbfd()) {
-        $('#login_bf').hide()
-        $('#login_float').hide()
-    }
     var qrcode = getSessionData('bfqrcode')
     if (qrcode) {
         sessionStorage.clear()
@@ -123,7 +66,8 @@ function getLoginURL() {
         AccountURL = "https://stg-accounts.beanfun.com";
         client_id = "A35DF2D9-9672-46F3-B2CF-C69283CAFC64";
         //redirect_uri = "https://stg-gamafun.beanfun.com";
-        redirect_uri = 'http://34.80.235.122'
+        //redirect_uri = 'http://34.80.235.122'
+        redirect_uri = document.location.origin
     }
     state = (new Date).getTime()
     url = String.format(url, AccountURL, client_id, redirect_uri, state)
@@ -151,4 +95,36 @@ function getqrcode(campaignID) {
             }
         }
     })
+}
+function CheckInApp() {
+    if (!getbfd()) {
+        BGO.check_app_exist(function (data) {
+            if (data.result && data.result == 'ok') {
+                $('#login_bf').hide()
+                $('#login_float').hide()
+                inapp = true;
+                apt.api.getBGO({}, function (rs) {
+                    if (rs) {
+                        if (rs.code == '0000') {
+                            BGO.init({ token: rs.datas.token, official_account_id: rs.datas.accountid });
+                            BGO.get_me_openid_access_token(rs.datas.clientid, '', function (data) {
+                                if (data.access_token) {
+                                    apt.api.APPUserLogin({ access_token: data.access_token }, function (rs) {
+                                        if (rs) {
+                                            if (rs.code == '0000') {
+                                                setData('open_id', rs.datas.open_id)
+                                                setData('username', rs.datas.username)
+                                                setData('open_Key', rs.datas.open_Key)
+                                                setData('login', (new Date).getTime());
+                                            }
+                                        }
+                                    })
+                                }
+                            });
+                        }
+                    }
+                })
+            }
+        })
+    }
 }

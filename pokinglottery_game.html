@@ -32,6 +32,11 @@
     <!-- shortcut icon -->
     <link rel="SHORTCUT ICON" href="images/favicon.ico">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
     <link rel="stylesheet" href="css/popup.css">
@@ -39,6 +44,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/allstyle.js"></script>
 </head>
 
@@ -116,12 +122,7 @@
                     <span class="text">回上一頁</span>
                     <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
                         class="bt_rt"></span>
-                </a>
-                <a class="btn_shadow_purple rule_btn" href="javascript:void(0);">
-                    <span class="text">獎項列表</span>
-                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                        class="bt_rt"></span>
-                </a>
+                </a> 
             </div>
             <div class="prize"><img src="https://fakeimg.pl/800x220/" alt="橘子嘉年華百萬大獎"></div>
         </div>
@@ -141,6 +142,11 @@
                     </a>
                     <a class="btn_purple  btn_reload"  href="javascript:void(0);" data-tracking="click" data-name="play_again" data-event_id="1217">
                         <span class="text">再戳一次</span>
+                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                            class="bt_rt"></span>
+                    </a>
+                    <a class="btn_purple  btn_reload"  href="./" data-tracking="click" data-name="play_again" data-event_id="1217">
+                        <span class="text">回大橘夜市</span>
                         <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
                             class="bt_rt"></span>
                     </a>
@@ -185,258 +191,7 @@
                 <img class="prize_img" src="images/pokinglottery/qrcode_poking.png" alt="請掃描QRCODE查看獎勵">
             </div>
         </div>
-        <!-- 獎項列表 -->
-        <div class="pop_up type1 rule">
-            <a href="javascript:void(0)" class="pop_up_close">
-                <img src="images/pokinglottery/close.svg" alt="close">
-            </a>
-            <div class="content">
-                <h2 class="pop_up_title2">各遊戲獎勵列表</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="col-1">遊戲名稱</th>
-                            <th class="col-2">獎項</th>
-                            <th class="col-1">備註</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- 天堂月費服 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">天堂月費服<br><span>限量6,140組獎勵</span></td>
-                            <td class="col-2">麥特斯精心製作的好湯*5+麥特斯精心製作的菜餚*5+麥特斯的祝福卷軸*5+仲夏歡樂派對幣*5</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">回憶燈火*1+純白的萬能藥*5+魔女魔力恢復劑*5+仲夏歡樂派對幣*15
-                            </td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">萬能藥(魅力) 箱子*1+仲夏歡樂派對幣*20+回憶蠟燭(活動)*1
-                            </td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 天堂免費服 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">天堂免費服<br><span>限量14,250組獎勵</span></td>
-                            <td class="col-2">麥特斯精心製作的好湯*5+麥特斯精心製作的菜餚*5+麥特斯的祝福卷軸*5+仲夏歡樂派對幣*5</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">回憶燈火*1+純白的萬能藥*5+魔女魔力恢復劑*5+仲夏歡樂派對幣*15
-                            </td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">萬能藥(魅力) 箱子*1+仲夏歡樂派對幣*20+回憶蠟燭(活動)*1
-                            </td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 天堂國際服 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">天堂國際服<br><span>限量13,110組獎勵</span></td>
-                            <td class="col-2">麥特斯精心製作的好湯*5+麥特斯精心製作的菜餚*5+麥特斯的祝福卷軸*5+仲夏歡樂派對幣*5</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">回憶燈火*1+純白的萬能藥*5+魔女魔力恢復劑*5+仲夏歡樂派對幣*15
-                            </td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">萬能藥(魅力) 箱子*1+仲夏歡樂派對幣*20+回憶蠟燭(活動)*1
-                            </td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 絕對武力CSO -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">絕對武力CSO<br><span>限量21,510組獎勵</span></td>
-                            <td class="col-2">雷射開膛手(永久)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">超A服裝角色解碼器*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">活動解碼器*3</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 跑跑卡丁車 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="4">跑跑卡丁車<br><span>限量50,000組獎勵</span></td>
-                            <td class="col-2">復仇者V1(永久)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">碳黑魔音V1(永久)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">稀有零件V1(永久)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">V1碎片*100</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 新龍之谷 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">新龍之谷<br><span>限量20,000組獎勵</span></td>
-                            <td class="col-2">星光雪花斑比*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">技能符文袋子*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">疲勞值恢復劑(6000)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 新瑪奇 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="5">新瑪奇<br><span>限量50,000組獎勵</span></td>
-                            <td class="col-2">魔力賦予保護藥水*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">移動速度40%增加藥水(30分)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">美容專用硬幣*20</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">衣櫥欄位使用券(7天)*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">夥伴壓力緩和糖果(100)*5</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 艾爾之光 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="7">艾爾之光<br><span>限量3,000組獎勵</span></td>
-                            <td class="col-2">隨機吊飾*1</td>
-                            <td class="gm_note col-1" rowspan="7">
-                                <div class="note">
-                                    抽滿一次加碼必得 【露希爾beanfun!主題包*1】，獎勵將於08/07 (日)前派發至背包<br><br>
-                                    ※ 實體獎項請務必於 08/05(五) 前至背包 > 票券內回覆中獎相關資料，逾時視同放棄領獎資格<br><br>
-                                    ※ 實體獎項預計於8月下旬開始安排寄送</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">隨機畫板*1</td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">隨機立牌*1</td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">資料夾*1</td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">零用金$5</td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">零用金$10</td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">零用金$99</td>
-                        </tr>
-                        <!-- 新楓之谷 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">新楓之谷<br><span>限量60,000組獎勵</span></td>
-                            <td class="col-2">旋律硬幣1枚交換券*100</td>
-                            <td class="gm_note col-1" rowspan="3">
-                                <div class="note">
-                                    抽滿五次加碼必得【怪物冰淇淋椅子箱*1】，獎勵將於08/07 (日)前派發至背包<br><br>
-                                    ※ 獎勵期限請依照遊戲內道具說明
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">經驗值2倍券*1</td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">[7天]超級瞬移之石*20</td>
-                        </tr>
-                        <!-- 天堂M -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="7">天堂M<br><span>限量263,500組獎勵</span></td>
-                            <td class="col-2">萬能補充寶石(刻印)*2</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">魔法娃娃製作硬幣箱*3</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">龍之鑽石(活動)*30</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">龍之聖水*10</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">純白的萬能藥*10</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">神秘的變身抽卡包(期間)*2</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">技能卡抽卡包箱(期間)*5</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 彈射世界 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="6">彈射世界<br><span>限量5,011組獎勵</span></td>
-                            <td class="col-2">GASH 10點</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">GASH 10點</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">GASH 30點</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">GASH 100點</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">GASH 1000點</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">GASH 10000點</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <!-- 召喚圖板 -->
-                        <tr>
-                            <td class="gm_name col-1" rowspan="3">召喚圖板<br><span>限量10,000組獎勵</span></td>
-                            <td class="col-2">季節轉蛋券*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">光結晶*1</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                        <tr>
-                            <td class="col-2">體力恢復劑*3</td>
-                            <td class="gm_note col-1"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+
     </div>
     <footer></footer>
 </body>
