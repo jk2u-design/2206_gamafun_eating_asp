@@ -1,0 +1,670 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1c0962;
+}
+
+#hdlogo img {
+  width: auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#fireworks {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 55px;
+  overflow-x: hidden;
+}
+
+.wrapper .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/game_beans/bg_left.png"), url("../images/game_beans/bg_right.png"), url("../images/game_beans/bg.jpg");
+  background-size: 50vh, 50vh, cover;
+  background-position: top 55px left, top 55px right, bottom center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  height: calc(100vh - 55px);
+  height: calc((var(--vh, 1vh) * 100) - 55px);
+  z-index: 1;
+}
+
+.cover .container {
+  padding: 80px 0 0;
+  height: auto;
+}
+
+.cover .cover_logo {
+  width: 74%;
+  max-width: 450px;
+  margin: 0px auto 20px;
+}
+
+.cover .rule {
+  width: 74%;
+  max-width: 450px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 15 px;
+}
+
+.cover .rule h3 {
+  font-size: 24px;
+  color: #f4ec16;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cover .rule h4 {
+  font-size: 20px;
+  color: #f4ec16;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cover .rule p span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cover .rule .note {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.cover .rule img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+}
+
+.game {
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game .container {
+  width: 56vh;
+  position: relative;
+}
+
+.game .bean {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 3.4vw;
+  max-width: 65px;
+  z-index: 10;
+}
+
+.game .bean img {
+  -webkit-animation: beanroatate 3s infinite;
+          animation: beanroatate 3s infinite;
+}
+
+.game .gm {
+  position: absolute;
+  top: 0px;
+  width: 3.4vw;
+  max-width: 65px;
+  height: 1px;
+}
+
+.game .gm1 {
+  left: 0;
+}
+
+.game .gm2 {
+  left: 90%;
+}
+
+.game .user {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20%;
+  max-width: 115px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.game .user .hint {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  color: #fff;
+  -webkit-text-stroke: 1px #f98e2d;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.game .user .hint.on {
+  opacity: 1;
+}
+
+.game .score_area {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.game .score_area .time {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.game .game_score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 40px;
+}
+
+.game .game_score .item {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.game .game_score .item:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.game .game_score .item .img_bean {
+  width: 80px;
+  margin: 0;
+}
+
+.game .game_score .item span {
+  display: block;
+  color: #fff;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game .game_score .item span::before {
+  content: "×";
+}
+
+.game .toucharea {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game .toucharea .btn_lt,
+.game .toucharea .btn_rt {
+  width: 50%;
+  height: 100%;
+}
+
+.game .toucharea .btn_lt.on,
+.game .toucharea .btn_rt.on {
+  -webkit-animation: tt 0.1s;
+          animation: tt 0.1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes tt {
+  from {
+    background: rgba(200, 200, 200, 0.1);
+  }
+  to {
+    background: rgba(200, 200, 200, 0);
+  }
+}
+
+@keyframes tt {
+  from {
+    background: rgba(200, 200, 200, 0.1);
+  }
+  to {
+    background: rgba(200, 200, 200, 0);
+  }
+}
+
+@-webkit-keyframes beanroatate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@keyframes beanroatate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@-webkit-keyframes hintfade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hintfade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.result {
+  display: none;
+}
+
+.result .container {
+  padding: 80px 0 0;
+}
+
+.result .congrate {
+  width: 245px;
+  margin: 0 auto 20px;
+}
+
+.result h3 {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result .game_score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 40px;
+}
+
+.result .game_score .item {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.result .game_score .item:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.result .game_score .item .img_bean {
+  width: 80px;
+  margin: 0;
+}
+
+.result .game_score .item span {
+  display: block;
+  color: #fff;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.result .game_score .item span::before {
+  content: "×";
+}
+
+.result .result_score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 40px;
+}
+
+.result .result_score .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.result .result_score .item .img_bean {
+  width: 120px;
+  margin: 0;
+}
+
+.result .result_score .item .img_x {
+  width: 50px;
+}
+
+.result .result_score .item span {
+  display: block;
+  width: 80px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin-left: 10;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.result .rule p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.btn_zone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn_zone a {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.start_count {
+  display: none;
+  position: relative;
+  width: 100vw;
+  z-index: 1;
+}
+
+.start_count .readystart {
+  font-size: 200px;
+  color: white;
+  text-align: center;
+  padding-top: calc(45vh - 100px);
+  font-family: Arial;
+}
+
+.start_count .howtoplay {
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+}
+
+.start_count .howtoplay img {
+  width: 120px;
+  margin: 20px auto;
+}
+
+.start_count .howtoplay p {
+  text-align: center;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1600px) {
+  .cover .container {
+    padding: 2vh 0 0;
+    height: auto;
+  }
+  .cover .cover_logo {
+    width: 50%;
+    max-width: 320px;
+    margin: 0px auto 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .wrapper .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/game_beans/bg_left.png"), url("../images/game_beans/bg_right.png"), url("../images/game_beans/bg_m.jpg");
+    background-size: 70vw, 70vw, cover;
+    background-position: top 55px left, top 55px right, bottom center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+  .wrapper .container {
+    width: 100%;
+    min-height: auto;
+  }
+  .shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), color-stop(40%, rgba(0, 0, 0, 0)), color-stop(60%, rgba(0, 0, 0, 0)), color-stop(6040%, rgba(0, 0, 0, 0)));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 6040%);
+  }
+  .cover .container {
+    padding: 5% 0 0;
+  }
+  .cover .cover_logo {
+    width: 65%;
+    margin: 0 auto 2%;
+  }
+  .cover .rule {
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  .cover .rule h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  }
+  .cover .rule h4 {
+    font-size: 18px;
+  }
+  .cover .rule p {
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  }
+  .game .bean {
+    width: 45px;
+  }
+  .game .gm {
+    position: absolute;
+    top: 0px;
+    width: 6vw;
+  }
+  .game .score_area {
+    top: 5%;
+  }
+  .game .score_area .time {
+    font-size: 20px;
+  }
+  .game .game_score {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 90%;
+    margin: 0 auto 40px;
+  }
+  .game .game_score .item {
+    width: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .game .game_score .item .img_bean {
+    width: 50px;
+  }
+  .game .game_score .item span {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .result .container {
+    padding: 5% 0 0;
+  }
+  .result .congrate {
+    width: 45vw;
+    max-width: 250px;
+    margin: 0 auto 2%;
+  }
+  .result h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .result .game_score {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 90%;
+    margin: 0 auto 40px;
+  }
+  .result .game_score .item {
+    width: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .result .game_score .item .img_bean {
+    width: 45px;
+  }
+  .result .game_score .item span {
+    width: 40px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .result .btn_zone {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .result .btn_zone a {
+    margin-bottom: 10px;
+  }
+  .start_count .readystart {
+    font-size: 80px;
+    padding-top: calc(10vh);
+  }
+  .start_count .howtoplay {
+    bottom: 2%;
+  }
+  .start_count .howtoplay p {
+    font-size: 12px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+}

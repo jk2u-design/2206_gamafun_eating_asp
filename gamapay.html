@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -56,197 +56,200 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-            <div class="container">
-                <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-                <!-- 品牌表頭 -->
-                <section>
-                    <input hidden id="brand_id" value="5" />
-                    <div class="brand_head">
 
-                        <div class="info">
-                            <div class="chat_box">
-                                <div class="brand_logo">
-                                    <img class="for_w" src="images/mission/logo_gamapay.png" alt="橘子支付">
-                                </div>
-                                <h2>
-                                    結合社群服務與支付的行動錢包<br>串起遊戲生活圈，讓你逛夜市暢行無阻
-                                </h2>
-                                <div class="mission_hint">登入查看任務完成度！</div>
-                            </div>
-                            
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section>
+            <input hidden id="brand_id" value="5" />
+            <div class="brand_head">
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_w" src="images/mission/logo_gamapay.png" alt="橘子支付">
                         </div>
-                        <div class="icon">
-                            <img src="images/mission/icon_gamapay.png" alt="橘子支付">
-                            <h3>大橘夜市的錢包</h3>
-                        </div>
-
+                        <h2>
+                            結合社群服務與支付的行動錢包<br>串起遊戲生活圈，讓你逛夜市暢行無阻
+                        </h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
-
-                </section>
-                <!-- 任務列表 -->
-                <section>
-                    <ul class="mission_list">
-                        <li class="mission_item" data-adid="11">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>橘子滿滿的愛</h3>
-                                    <div class="times  type1">一天十次</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>轉帳(轉出)給好友可獲得銀豆1顆，每日每帳戶最高可獲得銀豆10顆</p>
-                                </div>
-                            </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gamapay_transfer" data-tracking="click" data-sec="transfer" data-event_id="72" data-Weburl="https://www.gamapay.com.tw/beanfun/event/202207_live/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fwww.gamapay.com.tw%2Fbeanfun%2Fevent%2F202207_live%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="mission_item" data-adid="12">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>愛用帳戶送金豆</h3>
-                                    <div class="times type2">不限次數</div>
-                                    <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>至全通路使用“帳戶交易”可獲得金豆1顆，指定通路可獲得加碼好禮</p>
-                                    <div class="gama_card">
-                                        <p>擁有橘子25認同卡再加碼金豆一顆</p>
-                                        <div class="item">
-                                            <img src="images/mission/gamacard.png" alt="橘子認同卡">
-                                            <p>×１</p>
-                                        </div>
-                                    </div>
-                                    <div class="gama_card">
-                                        <p>擁有原子少年認同卡再加碼金豆一顆</p>
-                                        <div class="item">
-                                            <img src="images/mission/atomboyzcard.png" alt="原子少年認同卡">
-                                            <p>×１</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gamapay_account" data-tracking="click" data-sec="account" data-event_id="72" data-Weburl="https://www.gamapay.com.tw/beanfun/event/202207_live/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fwww.gamapay.com.tw%2Fbeanfun%2Fevent%2F202207_live%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="mission_item" data-adid="10">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>筆筆交易拿銀豆</h3>
-                                    <div class="times  type2">不限次數</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>至全通路使用“信用卡交易”，可獲得銀豆1顆</p>
-                                </div>
-                            </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gamapay_credicard" data-tracking="click" data-sec="credicard" data-event_id="72" data-Weburl="https://www.gamapay.com.tw/beanfun/event/202207_live/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fwww.gamapay.com.tw%2Fbeanfun%2Fevent%2F202207_live%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <div class="line"></div>
-                    </ul>
-                </section>
-                <!-- 注意事項 -->
-                <section>
-                    <ul class="notice_list">
-                        <li class="notice_item">
-                            <h3 class="notice_sub">活動辦法</h3>
-                            <div class="detail">
-                                <ul class="notice_ul">
-                                    <li>擁有橘子25認同卡及原子少年認同卡，使用beanfun!橘子支付完成一筆帳戶交易即完成任務，加碼獲得一顆金豆。</li>
-                                    <li>使用beanfun!橘子支付完成一筆轉帳(轉出)即完成任務，可獲得一顆銀豆，每帳戶每日限10顆銀豆。</li>
-                                    <li>使用beanfun!橘子支付完成一筆帳戶交易即完成任務，可獲得一顆金豆，每日不限次數</li>
-                                    <li>使用beanfun!橘子支付完成一筆信用卡交易即完成任務，可獲得一顆銀豆，每日不限次數。</li>
-                                    <li>活動任務獲得之豆子每20分鐘更新一次，若仍未獲得豆子請於20分鐘後後重整頁面 。</li>
-                                    <li>
-                                        另有銀行新綁定活動、指定通路(7-ELEVEN、GASH、有閑購物、清心福全、茶湯會、不要對我尖叫、必可蜜、鬍子茶)消費可獲得加碼好禮，活動詳情請關注beanfun!爽聊官方社團【行動支付-橘子支付】。
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="notice_item">
-                            <h3 class="notice_sub">注意事項</h3>
-                            <div class="detail">
-                                <ul class="notice_ul">
-                                    <li>
-                                        須從beanfun!申請/登入橘子支付會員：
-                                        <ul class="sec_ul">
-                                            <li>註1：申請-註冊beanfun!並完成橘子支付實名認證成功</li>
-                                            <li>註2：登入-從beanfun!點選「橘子支付」完成手機驗證</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        beanfun! 橘子支付支援支付方式：
-                                        <ul class="sec_ul">
-                                            <li>銀行信用卡：支援任一銀行VISA、MasterCard、JCB等卡別</li>
-                                            <li>
-                                                銀行連結帳戶：土地銀行、上海商銀、中華郵政、中國信託、王道銀行、玉山銀行、台新銀行、台中銀行、兆豐銀行、永豐銀行、高雄銀行、第一銀行、凱基銀行、新光銀行、彰化銀行，另可設定自動儲值
-                                            </li>
-                                            <li>現金儲值：可至全家便利商店FamiPort、美廉社、台新銀行ATM QRCode現金儲值</li>
-                                            <li>轉帳儲值：ATM提款機與WebATM網路銀行</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        會員若有beanfun!註冊等相關問題請洽beanfun!客服專線：<a
-                                            href="tel:0221926100">(02)2192-6100</a>選2-beanfun!
-                                    </li>
-                                    <li>
-                                        會員若有beanfun!橘子支付申請、登入或交易等相關問題，請洽橘子支付客服專線<a
-                                            href="0221926100">(02)2192-6100</a>選5-橘子支付
-                                    </li>
-                                    <li>本活動以實際成功交易計算，若因付款失敗、交易取消、退貨而未達活動金額或任務，該筆交易將不列入計算資格範圍</li>
-                                    <li>本活動計算累計金額排除使用零用金消費、菸品、代收、網購取貨、代銷、代售，如遇商品折扣或以商品折價券、商品提貨券等折抵消費，將以最終折扣後掃碼付款金額計算
-                                    </li>
-                                    <li>本活動贈送之零用金或贈品不得要求轉換、轉讓或折換現金</li>
-                                    <li>使用零用金消費之訂單申請退貨，零用金有效期限已過且退款成功，零用金將不再回補</li>
-                                    <li>本活動為限量回饋,如達上述上限，將停止活動優惠</li>
-                                    <li>
-                                        本活動如贈與紅利、回饋金或零用金予使用者，您同意本公司於兌換之特定目的必要範圍內
-                                        (含申報課稅等事宜)得將您個人資料提供予本活動商品或服務之參加廠商進行蒐集、處理及利用
-                                    </li>
-                                    <li>
-                                        本活動贈送之零用金1元等同於新臺幣1元，可於消費時100％折抵訂單金額；本活動之零用金不得使用於菸酒或其他法令不得促銷之商品，合作通路之促銷商品如無法使用零用金折抵，將以通路官方公告為準
-                                    </li>
-                                    <li>
-                                        依個人資料保護法規定，您瞭解並同意本公司為抽獎及行銷活動之目的內進行蒐集、處理及利用個人資料(僅限電話、email等資訊)。參加者如欲閱覽、變更、刪除個資或要求主辦單位停止蒐集、處理及利用個人資料，請通知主辦單位
-                                    </li>
-                                    <li>
-                                        若有因電腦、網路、電話、技術或其他不可歸責於本公司之事由，而使您登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況，本公司不負擔任何法律責任。其他未盡事宜，悉依中華民國相關法令及本公司會員條款辦理。且橘子支行動支付(股)公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利，詳細活動內容與執行情形以橘子支付官方粉絲團及beanfun!爽聊官方社團【行動支付-橘子支付】公告為主
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-                <div class="btn_area">
-                    <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="73">
-                        <span class="text">回大橘夜市</span>
-                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                            class="bt_rt"></span>
-                    </a>
+                    <div class="icon">
+                        <img src="images/mission/icon_gamapay.png" alt="橘子支付">
+                        <h3>大橘夜市的錢包</h3>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section class="sec_bg">
+            <div class="container">
+                <!-- 任務列表 -->
+                <ul class="mission_list">
+                    <li class="mission_item" data-adid="11">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>橘子滿滿的愛</h3>
+                                <div class="times  type1">一天十次</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
+                            </div>
+                            <div class="content_box">
+                                <p>轉帳(轉出)給好友可獲得銀豆1顆，每日每帳戶最高可獲得銀豆10顆</p>
+                            </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gamapay_transfer"
+                                data-tracking="click" data-sec="transfer" data-event_id="72"
+                                data-Weburl="https://www.gamapay.com.tw/beanfun/event/202207_live/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fwww.gamapay.com.tw%2Fbeanfun%2Fevent%2F202207_live%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="12">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>愛用帳戶送金豆</h3>
+                                <div class="times type2">不限次數</div>
+                                <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
+                            </div>
+                            <div class="content_box">
+                                <p>至全通路使用“帳戶交易”可獲得金豆1顆，指定通路可獲得加碼好禮</p>
+                                <div class="gama_card">
+                                    <p>擁有橘子25認同卡再加碼金豆一顆</p>
+                                    <div class="item">
+                                        <img src="images/mission/gamacard.png" alt="橘子認同卡">
+                                        <p>×１</p>
+                                    </div>
+                                </div>
+                                <div class="gama_card">
+                                    <p>擁有原子少年認同卡再加碼金豆一顆</p>
+                                    <div class="item">
+                                        <img src="images/mission/atomboyzcard.png" alt="原子少年認同卡">
+                                        <p>×１</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gamapay_account"
+                                data-tracking="click" data-sec="account" data-event_id="72"
+                                data-Weburl="https://www.gamapay.com.tw/beanfun/event/202207_live/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fwww.gamapay.com.tw%2Fbeanfun%2Fevent%2F202207_live%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="10">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>筆筆交易拿銀豆</h3>
+                                <div class="times  type2">不限次數</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
+                            </div>
+                            <div class="content_box">
+                                <p>至全通路使用“信用卡交易”，可獲得銀豆1顆</p>
+                            </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gamapay_credicard"
+                                data-tracking="click" data-sec="credicard" data-event_id="72"
+                                data-Weburl="https://www.gamapay.com.tw/beanfun/event/202207_live/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fwww.gamapay.com.tw%2Fbeanfun%2Fevent%2F202207_live%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="line"></div>
+                </ul>
+                <!-- 注意事項 -->
+                <ul class="notice_list">
+                    <li class="notice_item">
+                        <h3 class="notice_sub">活動辦法</h3>
+                        <div class="detail">
+                            <ul class="notice_ul">
+                                <li>擁有橘子25認同卡及原子少年認同卡，使用beanfun!橘子支付完成一筆帳戶交易即完成任務，加碼獲得一顆金豆。</li>
+                                <li>使用beanfun!橘子支付完成一筆轉帳(轉出)即完成任務，可獲得一顆銀豆，每帳戶每日限10顆銀豆。</li>
+                                <li>使用beanfun!橘子支付完成一筆帳戶交易即完成任務，可獲得一顆金豆，每日不限次數</li>
+                                <li>使用beanfun!橘子支付完成一筆信用卡交易即完成任務，可獲得一顆銀豆，每日不限次數。</li>
+                                <li>活動任務獲得之豆子每20分鐘更新一次，若仍未獲得豆子請於20分鐘後後重整頁面 。</li>
+                                <li>
+                                    另有銀行新綁定活動、指定通路(7-ELEVEN、GASH、有閑購物、清心福全、茶湯會、不要對我尖叫、必可蜜、鬍子茶)消費可獲得加碼好禮，活動詳情請關注beanfun!爽聊官方社團【行動支付-橘子支付】。
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="notice_item">
+                        <h3 class="notice_sub">注意事項</h3>
+                        <div class="detail">
+                            <ul class="notice_ul">
+                                <li>
+                                    須從beanfun!申請/登入橘子支付會員：
+                                    <ul class="sec_ul">
+                                        <li>註1：申請-註冊beanfun!並完成橘子支付實名認證成功</li>
+                                        <li>註2：登入-從beanfun!點選「橘子支付」完成手機驗證</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    beanfun! 橘子支付支援支付方式：
+                                    <ul class="sec_ul">
+                                        <li>銀行信用卡：支援任一銀行VISA、MasterCard、JCB等卡別</li>
+                                        <li>
+                                            銀行連結帳戶：土地銀行、上海商銀、中華郵政、中國信託、王道銀行、玉山銀行、台新銀行、台中銀行、兆豐銀行、永豐銀行、高雄銀行、第一銀行、凱基銀行、新光銀行、彰化銀行，另可設定自動儲值
+                                        </li>
+                                        <li>現金儲值：可至全家便利商店FamiPort、美廉社、台新銀行ATM QRCode現金儲值</li>
+                                        <li>轉帳儲值：ATM提款機與WebATM網路銀行</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    會員若有beanfun!註冊等相關問題請洽beanfun!客服專線：<a
+                                        href="tel:0221926100">(02)2192-6100</a>選2-beanfun!
+                                </li>
+                                <li>
+                                    會員若有beanfun!橘子支付申請、登入或交易等相關問題，請洽橘子支付客服專線<a
+                                        href="0221926100">(02)2192-6100</a>選5-橘子支付
+                                </li>
+                                <li>本活動以實際成功交易計算，若因付款失敗、交易取消、退貨而未達活動金額或任務，該筆交易將不列入計算資格範圍</li>
+                                <li>本活動計算累計金額排除使用零用金消費、菸品、代收、網購取貨、代銷、代售，如遇商品折扣或以商品折價券、商品提貨券等折抵消費，將以最終折扣後掃碼付款金額計算
+                                </li>
+                                <li>本活動贈送之零用金或贈品不得要求轉換、轉讓或折換現金</li>
+                                <li>使用零用金消費之訂單申請退貨，零用金有效期限已過且退款成功，零用金將不再回補</li>
+                                <li>本活動為限量回饋,如達上述上限，將停止活動優惠</li>
+                                <li>
+                                    本活動如贈與紅利、回饋金或零用金予使用者，您同意本公司於兌換之特定目的必要範圍內
+                                    (含申報課稅等事宜)得將您個人資料提供予本活動商品或服務之參加廠商進行蒐集、處理及利用
+                                </li>
+                                <li>
+                                    本活動贈送之零用金1元等同於新臺幣1元，可於消費時100％折抵訂單金額；本活動之零用金不得使用於菸酒或其他法令不得促銷之商品，合作通路之促銷商品如無法使用零用金折抵，將以通路官方公告為準
+                                </li>
+                                <li>
+                                    依個人資料保護法規定，您瞭解並同意本公司為抽獎及行銷活動之目的內進行蒐集、處理及利用個人資料(僅限電話、email等資訊)。參加者如欲閱覽、變更、刪除個資或要求主辦單位停止蒐集、處理及利用個人資料，請通知主辦單位
+                                </li>
+                                <li>
+                                    若有因電腦、網路、電話、技術或其他不可歸責於本公司之事由，而使您登錄之資料有延遲、遺失、錯誤、無法辨識或毀損之情況，本公司不負擔任何法律責任。其他未盡事宜，悉依中華民國相關法令及本公司會員條款辦理。且橘子支行動支付(股)公司保留隨時修改、變更、終止本活動與替換其他等值贈品之權利，詳細活動內容與執行情形以橘子支付官方粉絲團及beanfun!爽聊官方社團【行動支付-橘子支付】公告為主
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="73">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
         </div>
     </div>
+
     <footer></footer>
 </body>
 <script>
@@ -266,4 +269,4 @@
 </html>
 <script src="api/common.js"></script>
 <script src="api/api.js"></script>
-<script src="api/mission.js?v=001"></script>
+<script src="api/mission.js"></script>

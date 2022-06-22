@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
@@ -55,159 +55,154 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-            <div class="container">
-                <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-                <!-- 品牌表頭 -->
-                <section>
-                    <input hidden id="brand_id" value="8" />
-                    <div class="brand_head">
-                        <div class="info">
-                            <div class="chat_box">
-                                <div class="brand_logo">
-                                    <img class="for_h" src="images/mission/logo_atomboyz.png" alt="原子少年">
-                                </div>
-                                <h2>原子少年陪你一起逛夜市，記得每天都來跟我們約會唷！</h2>
-                                <div class="mission_hint">登入查看任務完成度！</div>
-                            </div>
-
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section>
+            <input hidden id="brand_id" value="8" />
+            <div class="brand_head">
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_h" src="images/mission/logo_atomboyz.png" alt="原子少年">
                         </div>
-                        <div class="icon">
-                            <img src="images/mission/icon_atomboyz.png" alt="原子少年">
-                            <h3>星際萌主</h3>
-                        </div>
-
+                        <h2>原子少年陪你一起逛夜市，記得每天都來跟我們約會唷！</h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
+                    <div class="icon">
+                        <img src="images/mission/icon_atomboyz.png" alt="原子少年">
+                        <h3>星際萌主</h3>
+                    </div>
+                </div>
+            </div>
 
-                </section>
+        </section>
+
+        <section class="sec_bg">
+            <div class="container">
                 <!-- 任務列表 -->
-                <section>
-                    <ul class="mission_list">
-                        <li class="mission_item" data-adid="19">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>給少年滿滿的愛</h3>
-                                    <div class="times  type2">一天十次</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>到原子少年投票頁進行投票，可獲得銀豆1顆</p>
-                                </div>
+                <ul class="mission_list">
+                    <li class="mission_item" data-adid="19">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>給少年滿滿的愛</h3>
+                                <div class="times  type2">一天十次</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_atb_vote"
-                                    data-tracking="click" data-sec="vote" data-event_id="102"
-                                    data-Weburl="https://stg-atomboyz.beanfun.com/" data-BGOurl=""
-                                    data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fstg-atomboyz.beanfun.com&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
+                            <div class="content_box">
+                                <p>到原子少年投票頁進行投票，可獲得銀豆1顆</p>
                             </div>
-                        </li>
-                        <li class="mission_item" data-adid="20">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>我挺原子能量盒</h3>
-                                    <div class="times  type2">不限次數</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×10</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>購買原子能量盒乙盒，可獲得銀豆10顆</p>
-                                    <div class="gama_card">
-                                        <p>擁有原子少年認同卡再加碼金豆一顆</p>
-                                        <div class="item">
-                                            <img src="images/mission/atomboyzcard.png" alt="橘子認同卡">
-                                            <p>×１</p>
-                                        </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_atb_vote"
+                                data-tracking="click" data-sec="vote" data-event_id="102"
+                                data-Weburl="https://stg-atomboyz.beanfun.com/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fstg-atomboyz.beanfun.com&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="20">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>我挺原子能量盒</h3>
+                                <div class="times  type2">不限次數</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×10</div>
+                            </div>
+                            <div class="content_box">
+                                <p>購買原子能量盒乙盒，可獲得銀豆10顆</p>
+                                <div class="gama_card">
+                                    <p>擁有原子少年認同卡再加碼金豆一顆</p>
+                                    <div class="item">
+                                        <img src="images/mission/atomboyzcard.png" alt="橘子認同卡">
+                                        <p>×１</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_atb_box"
-                                    data-tracking="click" data-sec="box" data-event_id="102"
-                                    data-Weburl="https://atbmart.beanfun.com/content/atomboyz/event/index_back.html?shortlink=bultvgxy&c=atomboyz202201_atb_gamafunweb_atbbox&pid=atomboyz202201"
-                                    data-BGOurl=""
-                                    data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fatbmart.beanfun.com%2Fcontent%2Fatomboyz%2Fevent%2Findex_back.html%3Fshortlink%3Dbultvgxy%26c%3Datomboyz202201_atb_gamafunweb_atbbox%26pid%3Datomboyz202201&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF%E5%8E%9F%E5%AD%90%E5%B0%91%E5%B9%B4%E4%BB%BB%E5%8B%99">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="mission_item" data-adid="21">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>為你的少年拚一團</h3>
-                                    <div class="times  type2">不限次數</div>
-                                    <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p><span class="impt">原子少年認同卡限定</span>：在有閑原子少年企業店單筆消費滿1000元(含)，可獲得金豆1顆 </p>
-
-                                </div>
-                            </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_atb_consume"
-                                    data-tracking="click" data-sec="consume" data-event_id="102"
-                                    data-Weburl="https://dev-template01.jollybuy.com/" data-BGOurl=""
-                                    data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fdev-template01.jollybuy.com%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_atb_box"
+                                data-tracking="click" data-sec="box" data-event_id="102"
+                                data-Weburl="https://atbmart.beanfun.com/content/atomboyz/event/index_back.html?shortlink=bultvgxy&c=atomboyz202201_atb_gamafunweb_atbbox&pid=atomboyz202201"
+                                data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fatbmart.beanfun.com%2Fcontent%2Fatomboyz%2Fevent%2Findex_back.html%3Fshortlink%3Dbultvgxy%26c%3Datomboyz202201_atb_gamafunweb_atbbox%26pid%3Datomboyz202201&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF%E5%8E%9F%E5%AD%90%E5%B0%91%E5%B9%B4%E4%BB%BB%E5%8B%99">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="21">
                         <div class="line"></div>
-                    </ul>
-                </section>
-                <!-- 注意事項 -->
-                <section>
-                    <ul class="notice_list">
-                        <li class="notice_item">
-                            <h3 class="notice_sub">活動辦法</h3>
-                            <div class="detail">
-                                <ul class="notice_ul">
-                                    <li>
-                                        給少年滿滿的愛：活動期間使用原子少年投票頁進行投票，就送銀豆1顆，一天最多10顆
-                                        <ul class="sec_ul">
-                                            <li>投票頁統一以 beanfun! 帳號登入投票</li>
-                                            <li>在Web投票頁進行投票，不可以投給同一人，在beanfun! APP投票，沒有此限制</li>
-                                            <li>本活動票數顯示可能因為網路或其他因素導致無法更新，所有獲得豆數，皆以系統判讀為準，不得異議</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        我挺原子能量盒：活動期間購買原子少年能量盒乙盒，就送金豆1顆，不限次數！認同卡卡友加碼再回饋
-                                        <ul class="sec_ul">
-                                            <li>原子能量盒僅提供beanfun!會員進行購買，如您尚未成為beanfun!會員請您先完成註冊會員</li>
-                                            <li>付款成功之後，您所購買的能量盒將會直接匯入beanfun! 背包中</li>
-                                            <li>需至少購買一個以上(含一個)原子能量盒，才符合獲獎資格</li>
-                                            <li>活動僅限台灣地區用戶參加</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        為你的少年拚一團：活動期間原子少年卡友在有閑原子少年企業店單筆消費滿1000元(含)，就送金豆1顆，不限次數
-                                        <ul class="sec_ul">
-                                            <li>限擁有原子少年認同卡方可符合資格</li>
-                                            <li>限於有閑購物原子少年企業店消費，滿單筆指定金額，才符合活動資格</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>為你的少年拚一團</h3>
+                                <div class="times  type2">不限次數</div>
+                                <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
                             </div>
-                        </li>
-                    </ul>
-                </section>
-                <div class="btn_area">
-                    <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="103">
-                        <span class="text">回大橘夜市</span>
-                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                            class="bt_rt"></span>
-                    </a>
-                </div>
+                            <div class="content_box">
+                                <p><span class="impt">原子少年認同卡限定</span>：在有閑原子少年企業店單筆消費滿1000元(含)，可獲得金豆1顆 </p>
+
+                            </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_atb_consume"
+                                data-tracking="click" data-sec="consume" data-event_id="102"
+                                data-Weburl="https://dev-template01.jollybuy.com/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fdev-template01.jollybuy.com%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="line"></div>
+                </ul>
+                <!-- 注意事項 -->
+                <ul class="notice_list">
+                    <li class="notice_item">
+                        <h3 class="notice_sub">活動辦法</h3>
+                        <div class="detail">
+                            <ul class="notice_ul">
+                                <li>
+                                    給少年滿滿的愛：活動期間使用原子少年投票頁進行投票，就送銀豆1顆，一天最多10顆
+                                    <ul class="sec_ul">
+                                        <li>投票頁統一以 beanfun! 帳號登入投票</li>
+                                        <li>在Web投票頁進行投票，不可以投給同一人，在beanfun! APP投票，沒有此限制</li>
+                                        <li>本活動票數顯示可能因為網路或其他因素導致無法更新，所有獲得豆數，皆以系統判讀為準，不得異議</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    我挺原子能量盒：活動期間購買原子少年能量盒乙盒，就送金豆1顆，不限次數！認同卡卡友加碼再回饋
+                                    <ul class="sec_ul">
+                                        <li>原子能量盒僅提供beanfun!會員進行購買，如您尚未成為beanfun!會員請您先完成註冊會員</li>
+                                        <li>付款成功之後，您所購買的能量盒將會直接匯入beanfun! 背包中</li>
+                                        <li>需至少購買一個以上(含一個)原子能量盒，才符合獲獎資格</li>
+                                        <li>活動僅限台灣地區用戶參加</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    為你的少年拚一團：活動期間原子少年卡友在有閑原子少年企業店單筆消費滿1000元(含)，就送金豆1顆，不限次數
+                                    <ul class="sec_ul">
+                                        <li>限擁有原子少年認同卡方可符合資格</li>
+                                        <li>限於有閑購物原子少年企業店消費，滿單筆指定金額，才符合活動資格</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </section>
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="103">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
         </div>
     </div>
     <footer></footer>

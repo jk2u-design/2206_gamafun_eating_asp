@@ -21,7 +21,7 @@
     <meta property="og:title" content="2022橘子嘉年華✽‿遊戲橘子" />
     <meta property="og:description" content="天天簽到解任務，金豆、遊戲虛寶、加碼萬元GASH點通通帶回家。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gamafun.beanfun.com/"/>
+    <meta property="og:url" content="https://gamafun.beanfun.com/" />
     <meta property="og:image" content="images/fb_share.jpg">
     <meta property="og:image:width" content="1000" />
     <meta property="og:image:height" content="524" />
@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -56,29 +56,30 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-        <div class="container">
-            <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-            <!-- 品牌表頭 -->
-            <section>
-                <input hidden id="brand_id" value="2"/>
-                <div class="brand_head">
-                    <div class="info">
-                        <div class="chat_box">
-                            <div class="brand_logo">
-                                <img class="for_h" src="images/mission/logo_game.png" alt="遊戲橘子">
-                            </div>
-                            <h2>夜市裡的遊戲最好玩，12款遊戲虛寶、限定周邊拿好拿滿，挑戰超EASY任務GO👉</h2>
-                            <div class="mission_hint">登入查看任務完成度！</div>
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section>
+            <input hidden id="brand_id" value="2" />
+            <div class="brand_head">
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_h" src="images/mission/logo_game.png" alt="遊戲橘子">
                         </div>
+                        <h2>夜市裡的遊戲最好玩，12款遊戲虛寶、限定周邊拿好拿滿，挑戰超EASY任務GO👉</h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
                     <div class="icon"><img src="images/mission/icon_game.png" alt="遊戲橘子">
                         <h3>橘子遊戲機</h3>
                     </div>
                 </div>
-            </section>
+                <div class="info">
+                </div>
+        </section>
+
+        <section class="sec_bg">
             <!-- 任務列表 -->
-            <section>
+            <div class="container">
                 <ul class="mission_list">
                     <li class="mission_item">
                         <div class="line"></div>
@@ -93,7 +94,8 @@
                             </div>
                             <div class="input_box">
                                 <input class="invite_input" type="text" placeholder="輸入邀請碼" id="invite_code" />
-                                <input class="invite_send" type="button" value="送出" id="invite_send" data-tracking="click" data-sec="vip"  data-event_id="42">
+                                <input class="invite_send" type="button" value="送出" id="invite_send"
+                                    data-tracking="click" data-sec="vip" data-event_id="42">
                             </div>
                         </div>
                         <!--<div class="rt">
@@ -119,14 +121,19 @@
                                 <p class="tips">Tips:開啟beanfun!→【遊戲】服務→紅利館</p>
                                 <div class="gama_card">
                                     <p>擁有橘子25認同卡再加碼金豆一顆</p>
-                                    <div class="item"> <img src="images/mission/gamacard.png" alt="橘子認同卡"><p>×１</p></div>
-                            </div>
+                                    <div class="item"> <img src="images/mission/gamacard.png" alt="橘子認同卡">
+                                        <p>×１</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="rt">
-                            <a class="btn_orange" href="javascript:;" data-tracking="click" data-sec="gacha" data-event_id="42" data-Weburl="https://bean.fun/RNp3c" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/2387ac2b28b54602aff22115d26b06b1_oa?url=https%3A%2F%2Falpha-bfweb.beanfun.com%2FBonus&theme=1&title=%E9%A0%98%E8%BD%89%E8%9B%8B%E6%8B%BF%E9%87%91%E8%B1%86">
+                            <a class="btn_orange" href="javascript:;" data-tracking="click" data-sec="gacha"
+                                data-event_id="42" data-Weburl="https://bean.fun/RNp3c" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/2387ac2b28b54602aff22115d26b06b1_oa?url=https%3A%2F%2Falpha-bfweb.beanfun.com%2FBonus&theme=1&title=%E9%A0%98%E8%BD%89%E8%9B%8B%E6%8B%BF%E9%87%91%E8%B1%86">
                                 <span class="text">執行任務</span>
-                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
                             </a>
                             <!-- 已完成按鈕class="btn_green_disab" -->
                             <!--<a class="btn_green_disab" href="javascript:;">
@@ -151,9 +158,13 @@
                             </div>
                         </div>
                         <div class="rt">
-                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_game_login" data-tracking="click" data-sec="login" data-event_id="42" data-Weburl="https://tw.beanfun.com/" data-BGOurl="" data-BGOdeeplink="https://portal.beanfun.com/app/h5page/5b2c64bc9e974b0c92a660c0d942f96e_oa?url=https%3A%2F%2Fbfweb.beanfun.com&theme=1&title=%E9%81%8A%E6%88%B2">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_game_login"
+                                data-tracking="click" data-sec="login" data-event_id="42"
+                                data-Weburl="https://tw.beanfun.com/" data-BGOurl=""
+                                data-BGOdeeplink="https://portal.beanfun.com/app/h5page/5b2c64bc9e974b0c92a660c0d942f96e_oa?url=https%3A%2F%2Fbfweb.beanfun.com&theme=1&title=%E9%81%8A%E6%88%B2">
                                 <span class="text">執行任務</span>
-                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
                             </a>
                         </div>
                     </li>
@@ -166,23 +177,25 @@
                                 <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×5</div>
                             </div>
                             <div class="content_box">
-                                <p>於beanfun!【遊戲】服務完成簽到簿簽到1次，可獲得銀豆5顆</p> 
+                                <p>於beanfun!【遊戲】服務完成簽到簿簽到1次，可獲得銀豆5顆</p>
                                 <p class="tips">Tips:開啟beanfun!→【遊戲】服務→簽到簿</p>
                             </div>
                         </div>
                         <div class="rt">
-                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_game_sign" data-tracking="click" data-sec="sign" data-event_id="42" data-Weburl="https://bean.fun/cwpCy" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/2387ac2b28b54602aff22115d26b06b1_oa?url=https%3A%2F%2Falpha-bfweb.beanfun.com%2Fdailycheckin&theme=1&title=%E9%81%8A%E6%88%B2%E7%B0%BD%E5%88%B0%E9%A0%98%E9%8A%80%E8%B1%86">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_game_sign"
+                                data-tracking="click" data-sec="sign" data-event_id="42"
+                                data-Weburl="https://bean.fun/cwpCy" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/2387ac2b28b54602aff22115d26b06b1_oa?url=https%3A%2F%2Falpha-bfweb.beanfun.com%2Fdailycheckin&theme=1&title=%E9%81%8A%E6%88%B2%E7%B0%BD%E5%88%B0%E9%A0%98%E9%8A%80%E8%B1%86">
                                 <span class="text">執行任務</span>
-                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
-                            </a> 
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
                         </div>
 
                     </li>
                     <div class="line"></div>
                 </ul>
-            </section>
-            <!-- 注意事項 -->
-            <section>
+                <!-- 注意事項 -->
                 <ul class="notice_list">
                     <li class="notice_item">
                         <h3 class="notice_sub">注意事項</h3>
@@ -192,48 +205,50 @@
                                 <li>
                                     各遊戲登入條件
                                     <ul class="sec_ul">
-                                       <li>天堂月：每日登入遊戲</li>
-                                       <li>天堂免：每日登入遊戲</li>
-                                       <li>天堂R：每日登入遊戲，且經驗值有所異動</li>
-                                       <li>天堂月：每日登入遊戲</li>
-                                       <li>CSO：每日登入遊戲，且遊玩超過10分鐘</li>
-                                       <li>KR：每日登入遊戲，且在線時間超過10分鐘</li>
-                                       <li>新龍之谷：每日登入遊戲，且在線時間超過30分鐘</li>
-                                       <li>新瑪奇：每日登入遊戲，且在線時間超過36分鐘</li>
-                                       <li>艾爾之光：每日登入遊戲</li>
-                                       <li>新楓之谷：每日登入遊戲</li>
-                                       <li>天堂Ｍ：每日登入遊戲，且經驗值有所異動</li>
-                                       <li>彈射世界：每日登入遊戲，且等級須為4等以上 </li>
-                                       <li>召喚圖板：前一日04:00 ~ 當日03:59 之間，有完成每日任務（消耗150體力）並有綁定bf! 的玩家</li>
+                                        <li>天堂月：每日登入遊戲</li>
+                                        <li>天堂免：每日登入遊戲</li>
+                                        <li>天堂R：每日登入遊戲，且經驗值有所異動</li>
+                                        <li>天堂月：每日登入遊戲</li>
+                                        <li>CSO：每日登入遊戲，且遊玩超過10分鐘</li>
+                                        <li>KR：每日登入遊戲，且在線時間超過10分鐘</li>
+                                        <li>新龍之谷：每日登入遊戲，且在線時間超過30分鐘</li>
+                                        <li>新瑪奇：每日登入遊戲，且在線時間超過36分鐘</li>
+                                        <li>艾爾之光：每日登入遊戲</li>
+                                        <li>新楓之谷：每日登入遊戲</li>
+                                        <li>天堂Ｍ：每日登入遊戲，且經驗值有所異動</li>
+                                        <li>彈射世界：每日登入遊戲，且等級須為4等以上 </li>
+                                        <li>召喚圖板：前一日04:00 ~ 當日03:59 之間，有完成每日任務（消耗150體力）並有綁定bf! 的玩家</li>
                                     </ul>
                                 </li>
                                 <li>活動所標示之各項達成條件，將依本公司系統紀錄之數據為主，而非玩家自行判定是否達成活動條件</li>
                             </ul>
                         </div>
                     </li>
-
                 </ul>
-            </section>
-            <div class="btn_area">
-                <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="43">
-                    <span class="text">回大橘夜市</span>
-                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span class="bt_rt"></span>
-                </a>
             </div>
+        </section>
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="43">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
         </div>
-    </div></div>
+    </div>
+
     <footer></footer>
 </body>
 <script>
     $(function () {
         $('header').load('include_files/header.html');
         $('footer').load('include_files/footer.html')
-   })
+    })
 </script>
 <script src="js/mission.js"></script>
 <!-- beanfun -->
 <script src="https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js"></script>
-<script src="https://beangostg.blob.core.windows.net/beango-static-stg/web-tracing-jssdk/web_tracing_sdk.stg.js"></script>
+<script
+    src="https://beangostg.blob.core.windows.net/beango-static-stg/web-tracing-jssdk/web_tracing_sdk.stg.js"></script>
 <script src="js/tracking_events.js"></script>
 <script src="js/tracking.js"></script>
 

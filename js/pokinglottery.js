@@ -5,6 +5,7 @@ $(function () {
         $(this).addClass('current')
         $('.mask').show();
         $('.check_usebeans').show();
+        window.triggerClickEvent('1214');
         $('body,html').css('overflow', 'hidden')
 
 
@@ -17,7 +18,7 @@ $(function () {
         $('.pop_up').hide();
         $('body,html').css('overflow', 'auto')
     })
-    $('.check_qrcode_btn').click(function () {
+    $('.btn_qrcode').click(function () {
         $('.mask').show();
         $('.check_qrcode').show();
         $('body,html').css('overflow', 'hidden')
@@ -135,7 +136,9 @@ function show2() {
         $('.mask').hide().removeClass('transparent');
         $('.check_prize').fadeIn(500);
         $('.check_poking').hide();
-        $(".bg").fireworks();
+        //$(".bg").fireworks();
+        $("#fireworks").fireworks();
+		jQuery("#fireworks").before(jQuery("canvas"));
 
     }, 1500)
 }

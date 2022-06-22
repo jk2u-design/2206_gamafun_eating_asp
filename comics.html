@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -56,137 +56,141 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-            <div class="container">
-                <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-                <!-- 品牌表頭 -->
-                <section>
-                    <div class="brand_head">
-                        <input hidden id="brand_id" value="7" />
-                        <div class="info">
-                            <div class="chat_box">
-                                <div class="brand_logo">
-                                    <img class="for_h" src="images/mission/logo_comic.png" alt="beanfun漫畫星">
-                                </div>
-                                <h2>
-                                    你想看的都Fun這!<br>
-                                    多元漫畫化身為本土美食辦桌，要你意猶未盡
-                                </h2>
-                                <div class="mission_hint">登入查看任務完成度！</div>
-                            </div>
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section>
+            <div class="brand_head">
+                <input hidden id="brand_id" value="7" />
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_h" src="images/mission/logo_comic.png" alt="beanfun漫畫星">
                         </div>
-                        <div class="icon">
-                            <img src="images/mission/icon_comic.png" alt="beanfun漫畫星">
-                            <h3>漫畫星辦桌桌</h3>
-                        </div>
-
+                        <h2>
+                            你想看的都Fun這!<br>
+                            多元漫畫化身為本土美食辦桌，要你意猶未盡
+                        </h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
-
-                </section>
-                <!-- 任務列表 -->
-                <section>
-                    <ul class="mission_list">
-                        <li class="mission_item" data-adid="16">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>漫畫辦桌桌收藏先</h3>
-                                    <div class="times  type1">一天一次</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>收藏任一作品，即可獲得銀豆1顆</p>
-                                </div>
+                    <div class="icon">
+                        <img src="images/mission/icon_comic.png" alt="beanfun漫畫星">
+                        <h3>漫畫星辦桌桌</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 任務列表 -->
+        <section class="sec_bg">
+            <div class="container">
+                <ul class="mission_list">
+                    <li class="mission_item" data-adid="16">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>漫畫辦桌桌收藏先</h3>
+                                <div class="times  type1">一天一次</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_comic" data-tracking="click" data-sec="collect" data-event_id="92" data-Weburl="https://comics-star-web-staging.insowe.tech/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=comic">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
+                            <div class="content_box">
+                                <p>收藏任一作品，即可獲得銀豆1顆</p>
                             </div>
-                        </li>
-                        <li class="mission_item" data-adid="17">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>漫畫辦桌桌閱讀先</h3>
-                                    <div class="times  type1">一天一次</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>閱讀任一作品任3話，即可獲得銀豆1顆</p>
-                                </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_comic"
+                                data-tracking="click" data-sec="collect" data-event_id="92"
+                                data-Weburl="https://comics-star-web-staging.insowe.tech/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=comic">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="17">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>漫畫辦桌桌閱讀先</h3>
+                                <div class="times  type1">一天一次</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_comic" data-tracking="click" data-sec="read" data-event_id="92" data-Weburl="https://comics-star-web-staging.insowe.tech/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=comic">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
+                            <div class="content_box">
+                                <p>閱讀任一作品任3話，即可獲得銀豆1顆</p>
                             </div>
-                        </li>
-                        <li class="mission_item" data-adid="18">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>辦桌桌百讀不厭</h3>
-                                    <div class="times type1">最多二次</div>
-                                    <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>連續3日完成閱讀篇任務，加碼送金豆，再抽Home Pod mini</p>
-                                    <div class="gama_card">
-                                        <p>擁有原子少年認同卡再加碼金豆一顆</p>
-                                        <div class="item">
-                                            <img src="images/mission/atomboyzcard.png" alt="橘子認同卡">
-                                            <p>×１</p>
-                                        </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_comic"
+                                data-tracking="click" data-sec="read" data-event_id="92"
+                                data-Weburl="https://comics-star-web-staging.insowe.tech/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=comic">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="18">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>辦桌桌百讀不厭</h3>
+                                <div class="times type1">最多二次</div>
+                                <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
+                            </div>
+                            <div class="content_box">
+                                <p>連續3日完成閱讀篇任務，加碼送金豆，再抽Home Pod mini</p>
+                                <div class="gama_card">
+                                    <p>擁有原子少年認同卡再加碼金豆一顆</p>
+                                    <div class="item">
+                                        <img src="images/mission/atomboyzcard.png" alt="橘子認同卡">
+                                        <p>×１</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_comic" data-tracking="click" data-sec="bonus" data-event_id="92" data-Weburl="https://comics-star-web-staging.insowe.tech/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=comic">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <div class="line"></div>
-                    </ul>
-                </section>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_comic"
+                                data-tracking="click" data-sec="bonus" data-event_id="92"
+                                data-Weburl="https://comics-star-web-staging.insowe.tech/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=comic">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="line"></div>
+                </ul>
                 <!-- 注意事項 -->
-                <section>
-                    <ul class="notice_list">
-                        <li class="notice_item">
-                            <h3 class="notice_sub">活動辦法</h3>
-                            <div class="detail">
-                                <ul class="notice_ul">
-                                    <li>每帳號每日限完成一次收藏篇任務</li>
-                                    <li>每帳號每日限完成一次閱讀篇任務</li>
-                                    <li>金豆加碼需連續三天皆有完成閱讀先任務才可獲得，每帳號限領取兩次</li>
-                                    <li>
-                                        Home pod mini(1台,價值新台幣3,000元) 將於2022/07/26(二) 18:00
-                                        前抽出乙名得獎者，公布於bf!漫畫星bean樂社團，並請得獎者於
-                                        2022/08/12(五)
-                                        18:00前與主辦單位聯繫，逾期將視為放棄領獎資格、無法重新補發；本活動將依中華民國稅法，依累計價值併入中獎人個人年度綜合所得稅申報，詳細規定依本站注意事項說明為主
-                                    </li>
+                <ul class="notice_list">
+                    <li class="notice_item">
+                        <h3 class="notice_sub">活動辦法</h3>
+                        <div class="detail">
+                            <ul class="notice_ul">
+                                <li>每帳號每日限完成一次收藏篇任務</li>
+                                <li>每帳號每日限完成一次閱讀篇任務</li>
+                                <li>金豆加碼需連續三天皆有完成閱讀先任務才可獲得，每帳號限領取兩次</li>
+                                <li>
+                                    Home pod mini(1台,價值新台幣3,000元) 將於2022/07/26(二) 18:00
+                                    前抽出乙名得獎者，公布於bf!漫畫星bean樂社團，並請得獎者於
+                                    2022/08/12(五)
+                                    18:00前與主辦單位聯繫，逾期將視為放棄領獎資格、無法重新補發；本活動將依中華民國稅法，依累計價值併入中獎人個人年度綜合所得稅申報，詳細規定依本站注意事項說明為主
+                                </li>
 
-                                </ul>
-                            </div>
-                        </li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    </ul>
-                </section>
-                <div class="btn_area">
-                    <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="93">
-                        <span class="text">回大橘夜市</span>
-                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                            class="bt_rt"></span>
-                    </a>
-                </div>
+                </ul>
             </div>
+        </section>
+
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="93">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
         </div>
     </div>
     <footer></footer>

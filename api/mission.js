@@ -24,7 +24,7 @@ $(function () {
     ]
     $('.mission_done').hide()
     if (!getbfd()) {
-        $('.btn_orange').on("click", function () {
+        $('[data-adid]').on("click", function () {
             setData('redirect_uri', location.href)
             location.href = getLoginURL()
         })

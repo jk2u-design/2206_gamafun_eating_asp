@@ -28,9 +28,14 @@ $(async function () {
         return ob.records.indexOf(key) !== -1
     }
 
+    //window.triggerClickEvent = (eventId, context) => {
+    //    let event = getEvent(eventId)
+    //    event.clickInfo = Object.assign(event.clickInfo, context)
+    //    sender.passEvent(occursEvent('click', event))
+    //}
     window.triggerClickEvent = (eventId, context) => {
         let event = getEvent(eventId)
-        event.clickInfo = Object.assign(event.clickInfo, context)
+        event.pageInfo = Object.assign(event.pageInfo, context)
         sender.passEvent(occursEvent('click', event))
     }
 
@@ -145,9 +150,7 @@ $(async function () {
         let sec = element.data('sec')
         let event_id = element.data('event_id')
         let event = getEvent(event_id)
-
-        let url = event.clickInfo.url
-
+        let url = ''
         let key = element.data('redirect')
         let name = element.data('name')
         let status = event.pageInfo.status
@@ -181,6 +184,7 @@ $(async function () {
             }
         }
         // url追蹤
+        if (key) {
             if (getbfd()) {
                 if (inApp) {
                     if (element.data.BGOdeeplink !== "") {
@@ -192,17 +196,13 @@ $(async function () {
                     event.clickInfo.url = element.data('weburl')
                 }
             }
+        }
         await sender.passEvent(occursEvent('click', event))
 
-    
+
     })
 
-    // 戳戳樂頁面
-    // $('.use_gold,.use_silver').click(function () {
-    //     setTimeout(async function () {
-    //         await sender.passEvent(occursEvent('view', getEvent('1216')))
-    //     }, 1500)
-    // })
+
 
     // gamebeans.html view追蹤
     $('#start_game').click(function () {

@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
     <link rel="stylesheet" href="css/popup.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -57,119 +57,121 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-            <div class="container">
-                <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-                <!-- 品牌表頭 -->
-                <section>
-                    <input hidden id="brand_id" value="3" />
-                    <div class="brand_head">
-                        <div class="info">
-                            <div class="chat_box">
-                                <div class="brand_logo">
-                                    <img class="for_w" src="images/mission/logo_gash.png" alt="GASH">
-                                </div>
-                                <h2>歡迎來到GASH<br>這裡有最多的獎項，等你來挖掘！</h2>
-                                <div class="mission_hint">登入查看任務完成度！</div>
-                            </div>
-
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section>
+            <input hidden id="brand_id" value="3" />
+            <div class="brand_head">
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_w" src="images/mission/logo_gash.png" alt="GASH">
                         </div>
-                        <div class="icon"><img src="images/mission/icon_gash.png" alt="GASH">
-                            <h3>GASH</h3>
-                        </div>
-
+                        <h2>歡迎來到GASH<br>這裡有最多的獎項，等你來挖掘！</h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
+                    <div class="icon"><img src="images/mission/icon_gash.png" alt="GASH">
+                        <h3>GASH</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                </section>
+        <section class="sec_bg">
+            <div class="container">
                 <!-- 任務列表 -->
-                <section>
-                    <ul class="mission_list">
-                        <li class="mission_item" data-adid="6">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>每日領豆任務</h3>
-                                    <div class="times  type1">一天一次</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>於beanfun！GASH祕寶巡航社團中，指定貼文留言，立即獲得一顆銀豆，再抽五萬大獎！</p>
-                                </div>
+                <ul class="mission_list">
+                    <li class="mission_item" data-adid="6">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>每日領豆任務</h3>
+                                <div class="times  type1">一天一次</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_gash_receive" data-tracking="click" data-sec="receive" data-event_id="52" data-Weburl="https://stg-portal.beanfun.com/app/club/525684534889422848?postId=525685748335120384" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/club/525684534889422848?postId=525685748335120384">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
+                            <div class="content_box">
+                                <p>於beanfun！GASH祕寶巡航社團中，指定貼文留言，立即獲得一顆銀豆，再抽五萬大獎！</p>
                             </div>
-                        </li>
-                        <li class="mission_item" data-adid="7">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>滿額優惠送金豆</h3>
-                                    <div class="times type1">一天一次</div>
-                                    <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>於GASH商城會員專屬區購買「任意點」，期間內首次單筆滿額1,000元加碼贈GASH 50點</p>
-                                    <div class="gama_card">
-                                        <p>擁有橘子25認同卡再加碼金豆一顆</p>
-                                        <div class="item"> <img src="images/mission/gamacard.png" alt="橘子認同卡">
-                                            <p>×１</p>
-                                        </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange btn_qrcode" href="javascript:void(0);"
+                                data-redirect="mission_gash_receive" data-tracking="click" data-sec="receive"
+                                data-event_id="52"
+                                data-Weburl="https://stg-portal.beanfun.com/app/club/525684534889422848?postId=525685748335120384"
+                                data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/club/525684534889422848?postId=525685748335120384">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="mission_item" data-adid="7">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>滿額優惠送金豆</h3>
+                                <div class="times type1">一天一次</div>
+                                <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
+                            </div>
+                            <div class="content_box">
+                                <p>於GASH商城會員專屬區購買「任意點」，期間內首次單筆滿額1,000元加碼贈GASH 50點</p>
+                                <div class="gama_card">
+                                    <p>擁有橘子25認同卡再加碼金豆一顆</p>
+                                    <div class="item"> <img src="images/mission/gamacard.png" alt="橘子認同卡">
+                                        <p>×１</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gash_reward" data-tracking="click" data-sec="reward" data-event_id="52" data-Weburl="https://stage-ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120000" data-BGOurl="https://ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120020" data-BGOdeeplink="">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <div class="line"></div>
-                    </ul>
-                </section>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_gash_reward"
+                                data-tracking="click" data-sec="reward" data-event_id="52"
+                                data-Weburl="https://stage-ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120000"
+                                data-BGOurl="https://ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120020"
+                                data-BGOdeeplink="">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="line"></div>
+                </ul>
                 <!-- 注意事項 -->
-                <section>
-                    <ul class="notice_list">
-                        <li class="notice_item">
-                            <h3 class="notice_sub">注意事項</h3>
-                            <div class="detail">
-                                <ul class="notice_ul">
-                                    <li>每帳號每日限完成一次領豆任務</li>
-                                    <li>於「GASH！祕寶巡航」社團中指定貼文完成留言，才符合獲獎資格</li>
-                                    <li>若有違反社群規範以及惡意圖文留言，經主辦方察覺得立即收回所獲贈品。</li>
-                                    <li>五萬零用金得獎資訊，將於7/20 中午12:00進行公告，並於GASH臉書以及beanfun！「GASH！祕寶巡航」社團中進行公告。</li>
-                                    <li>於GASH商城中，購買指定商品「任意點」，單筆消費超過1000元，才符合獲獎資格。</li>
-                                    <li>若有違反社群規範以及惡意圖文留言，經主辦方察覺得立即收回所獲贈品。</li>
-                                    <li>活動僅限台灣地區用戶參加。</li>
-                                </ul>
-                            </div>
-                        </li>
+                <ul class="notice_list">
+                    <li class="notice_item">
+                        <h3 class="notice_sub">注意事項</h3>
+                        <div class="detail">
+                            <ul class="notice_ul">
+                                <li>每帳號每日限完成一次領豆任務</li>
+                                <li>於「GASH！祕寶巡航」社團中指定貼文完成留言，才符合獲獎資格</li>
+                                <li>若有違反社群規範以及惡意圖文留言，經主辦方察覺得立即收回所獲贈品。</li>
+                                <li>五萬零用金得獎資訊，將於7/20 中午12:00進行公告，並於GASH臉書以及beanfun！「GASH！祕寶巡航」社團中進行公告。</li>
+                                <li>於GASH商城中，購買指定商品「任意點」，單筆消費超過1000元，才符合獲獎資格。</li>
+                                <li>若有違反社群規範以及惡意圖文留言，經主辦方察覺得立即收回所獲贈品。</li>
+                                <li>活動僅限台灣地區用戶參加。</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    </ul>
-                </section>
-                <div class="btn_area">
-                    <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="53">
-                        <span class="text">回大橘夜市</span>
-                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                            class="bt_rt"></span>
-                    </a>
-                </div>
-                <div class="mask"></div>
-                <!-- 大網QRcode彈出視窗 -->
-                <div class="pop_up type1 check_qrcode">
-                    <a href="javascript:void(0)" class="pop_up_close"><img src="images/pokinglottery/close.svg"
-                        alt="close"></a>
-                    <div class="content">                       
-                        <h2 class="pop_up_title2">請掃描QRCODE查看</h2>
-                        <img class="prize_img" src="" alt="請掃描QRCODE">
-                    </div>
-                </div>
+                </ul>
+            </div>
+        </section>
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="53">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
+        </div>
+        <div class="mask"></div>
+        <!-- 大網QRcode彈出視窗 -->
+        <div class="pop_up type1 check_qrcode">
+            <a href="javascript:void(0)" class="pop_up_close"><img src="images/pokinglottery/close.svg" alt="close"></a>
+            <div class="content">
+                <h2 class="pop_up_title2">請掃描QRCODE查看</h2>
+                <img class="prize_img" src="" alt="請掃描QRCODE">
             </div>
         </div>
     </div>

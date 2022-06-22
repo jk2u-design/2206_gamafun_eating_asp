@@ -104,6 +104,7 @@ $(function(){
         $('#start').fadeOut(500);
         $("#fireworks").fadeOut(500);
         $("#start_count").fadeIn(0);
+        window.triggerClickEvent('122', {page: 'acg_shoot_game', status: 'logged_in'});
         setTimeout( function() {
             readystart()
         }, 1000);

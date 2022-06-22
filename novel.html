@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
     <link rel="stylesheet" href="css/popup.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -57,33 +57,30 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-        <div class="container">
-            <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-            <!-- 品牌表頭 -->
-            <section>
-                <div class="brand_head">
-                    <input hidden id="brand_id" value="6" />
-                    <div class="info">
-                        <div class="chat_box">
-                            <div class="brand_logo">
-                                <img class="for_h" src="images/mission/logo_novel.png" alt="beanfun文學星">
-                            </div>
-                            <h2>暢遊小說狂想，體驗各種人生，<br>讀本小說，讓你有「痣」能伸!</h2>
-                            <div class="mission_hint">登入查看任務完成度！</div>
-                        </div>
 
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section>
+            <div class="brand_head">
+                <input hidden id="brand_id" value="6" />
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_h" src="images/mission/logo_novel.png" alt="beanfun文學星">
+                        </div>
+                        <h2>暢遊小說狂想，體驗各種人生，<br>讀本小說，讓你有「痣」能伸!</h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
                     <div class="icon">
                         <img src="images/mission/icon_novel.png" alt="beanfun文學星">
                         <h3>橘門頁說</h3>
                     </div>
-
                 </div>
-
-            </section>
-            <!-- 任務列表 -->
-            <section>
+            </div>
+        </section>
+        <!-- 任務列表 -->
+        <section class="sec_bg">
+            <div class="container">
                 <ul class="mission_list">
                     <li class="mission_item" data-adid="13">
                         <div class="line"></div>
@@ -99,7 +96,10 @@
                         </div>
                         <div class="rt">
                             <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_novel"
-                                data-tracking="click" data-sec="collect" data-event_id="82" data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
+                                data-tracking="click" data-sec="collect" data-event_id="82"
+                                data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book"
+                                data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
                                 <span class="text">執行任務</span>
                                 <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
                                     class="bt_rt"></span>
@@ -120,7 +120,10 @@
                         </div>
                         <div class="rt">
                             <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_novel"
-                                data-tracking="click" data-sec="read" data-event_id="82"  data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
+                                data-tracking="click" data-sec="read" data-event_id="82"
+                                data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book"
+                                data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
                                 <span class="text">執行任務</span>
                                 <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
                                     class="bt_rt"></span>
@@ -141,7 +144,10 @@
                         </div>
                         <div class="rt">
                             <a class="btn_orange btn_qrcode" href="javascript:void(0);" data-redirect="mission_novel"
-                                data-tracking="click" data-sec="bonus" data-event_id="82"  data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
+                                data-tracking="click" data-sec="bonus" data-event_id="82"
+                                data-Weburl="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book"
+                                data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/explore?tab=planet&target=book">
                                 <span class="text">執行任務</span>
                                 <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
                                     class="bt_rt"></span>
@@ -150,9 +156,7 @@
                     </li>
                     <div class="line"></div>
                 </ul>
-            </section>
-            <!-- 注意事項 -->
-            <section>
+                <!-- 注意事項 -->
                 <ul class="notice_list">
                     <li class="notice_item">
                         <h3 class="notice_sub">活動辦法</h3>
@@ -170,27 +174,26 @@
                     </li>
 
                 </ul>
-            </section>
-            <div class="btn_area">
-                <a class="btn_shadow_purple" href="index.html" data-tracking="click" data-event_id="83">
-                    <span class="text">回大橘夜市</span>
-                    <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                        class="bt_rt"></span>
-                </a>
             </div>
-            <div class="mask"></div>
-            <!-- 大網QRcode彈出視窗 -->
-            <div class="pop_up type1 check_qrcode">
-                <a href="javascript:void(0)" class="pop_up_close"><img src="images/pokinglottery/close.svg"
-                    alt="close"></a>
-                <div class="content">                    
-                    <h2 class="pop_up_title2">請掃描QRCODE查看</h2>
-                    <img class="prize_img" src="" alt="請掃描QRCODE">
-                </div>
+        </section>
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="index.html" data-tracking="click" data-event_id="83">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
+        </div>
+        <div class="mask"></div>
+        <!-- 大網QRcode彈出視窗 -->
+        <div class="pop_up type1 check_qrcode">
+            <a href="javascript:void(0)" class="pop_up_close"><img src="images/pokinglottery/close.svg" alt="close"></a>
+            <div class="content">
+                <h2 class="pop_up_title2">請掃描QRCODE查看</h2>
+                <img class="prize_img" src="" alt="請掃描QRCODE">
             </div>
         </div>
-    </div>
-    <footer></footer>
+
+        <footer></footer>
 </body>
 <script>
     $(function () {

@@ -243,15 +243,15 @@ $(async function(){
                 event: 'gamania_acg_game_page_view',
                 pageInfo: {
                     page: pageShoot,
-                    status: ['not_logged_in','logged_in','processing','game_over'],
+                    status: '',
                 },
             },
             '122': {
                 eventId: 5018,
                 event: 'gamania_acg_game_item_click',
                 pageInfo: {
-                    page: pageShoot,
-                    status: ['not_logged_in','logged_in'],
+                   page: '',
+                   status: '',
                 },
                 clickInfo: {
                     type: 'start_btn',

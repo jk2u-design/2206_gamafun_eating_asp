@@ -37,7 +37,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/allstyle.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="css/mission.css?1">
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -56,112 +56,111 @@
     </div>
     <header></header>
     <div class="wrapper">
-        <div class="bg">
-            <div class="container">
-                <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
-                <!-- 品牌表頭 -->
-                <section>
-                    <div class="brand_head">
-                        <input hidden id="brand_id" value="4" />
-                        <div class="info">
-                            <div class="chat_box">
-                                <div class="brand_logo">
-                                    <img class="for_w" src="images/mission/logo_jollybuy.png" alt="有閑購物">
-                                </div>
-                                <h2>
-                                    所有好康都在這，你逛的不只是夜市更是驚喜！<br>
-                                    最好玩的娛樂電商，最新玩具、遊戲主機全都有！
-                                </h2>
-                                <div class="mission_hint">登入查看任務完成度！</div>
-                            </div>
-
+        <h1 class="slogan"><img src="images/mission/slogan.png" alt="橘子嘉年華 夏日召橘令"></h1>
+        <!-- 品牌表頭 -->
+        <section >
+            <div class="brand_head">
+                <input hidden id="brand_id" value="4" />
+                <div class="container">
+                    <div class="chat_box">
+                        <div class="brand_logo">
+                            <img class="for_w" src="images/mission/logo_jollybuy.png" alt="有閑購物">
                         </div>
-                        <div class="icon">
-                            <img src="images/mission/icon_jollybuy.png" alt="有閑購物">
-                            <h3>驚喜盲盒機</h3>
-                        </div>
-
+                        <h2>
+                            所有好康都在這，你逛的不只是夜市更是驚喜！<br>
+                            最好玩的娛樂電商，最新玩具、遊戲主機全都有！
+                        </h2>
+                        <div class="mission_hint">登入查看任務完成度！</div>
                     </div>
-
-                </section>
+                    <div class="icon">
+                        <img src="images/mission/icon_jollybuy.png" alt="有閑購物">
+                        <h3>驚喜盲盒機</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec_bg">
+            <div class="container">
                 <!-- 任務列表 -->
-                <section>
-                    <ul class="mission_list">
-                        <li class="mission_item" data-adid="8">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>天天抽盒拿銀豆</h3>
-                                    <div class="times  type1">一天一次</div>
-                                    <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>至有閑購物「嘉年華大橘盲盒」完成抽盒一次，可獲得銀豆1顆</p>
-                                </div>
+                <ul class="mission_list">
+                    <li class="mission_item" data-adid="8">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>天天抽盒拿銀豆</h3>
+                                <div class="times  type1">一天一次</div>
+                                <div class="prize"><img src="images/bean_silver.svg" alt="銀豆">×１</div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_jollybuy_blind" data-tracking="click" data-sec="blind" data-event_id="62" data-Weburl="https://dev-www.jollybuy.com/act/playground/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fdev-www.jollybuy.com%2Fact%2Fplayground%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
+                            <div class="content_box">
+                                <p>至有閑購物「嘉年華大橘盲盒」完成抽盒一次，可獲得銀豆1顆</p>
                             </div>
-                        </li>
-                        <!-- 完成任務加上class="completed" -->
-                        <li class="mission_item" data-adid="9">
-                            <div class="line"></div>
-                            <div class="lt">
-                                <div class="title_box">
-                                    <h3>消費滿額送金豆</h3>
-                                    <div class="times type1">一天一次</div>
-                                    <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
-                                </div>
-                                <div class="content_box">
-                                    <p>至有閑購物企業店，單筆消費滿$3,000並完成付款，可獲得金豆1顆</p>
-                                    <div class="gama_card">
-                                        <p>擁有橘子25認同卡再加碼金豆一顆</p>
-                                        <div class="item"> <img src="images/mission/gamacard.png" alt="橘子認同卡">
-                                            <p>×１</p>
-                                        </div>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_jollybuy_blind"
+                                data-tracking="click" data-sec="blind" data-event_id="62"
+                                data-Weburl="https://dev-www.jollybuy.com/act/playground/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fdev-www.jollybuy.com%2Fact%2Fplayground%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- 完成任務加上class="completed" -->
+                    <li class="mission_item" data-adid="9">
+                        <div class="line"></div>
+                        <div class="lt">
+                            <div class="title_box">
+                                <h3>消費滿額送金豆</h3>
+                                <div class="times type1">一天一次</div>
+                                <div class="prize"><img src="images/bean_gold.svg" alt="金豆">×１</div>
+                            </div>
+                            <div class="content_box">
+                                <p>至有閑購物企業店，單筆消費滿$3,000並完成付款，可獲得金豆1顆</p>
+                                <div class="gama_card">
+                                    <p>擁有橘子25認同卡再加碼金豆一顆</p>
+                                    <div class="item"> <img src="images/mission/gamacard.png" alt="橘子認同卡">
+                                        <p>×１</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="rt">
-                                <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_jollybuy_consume" data-tracking="click" data-sec="consume" data-event_id="62" data-Weburl="https://dev-www.jollybuy.com/act/202207carnival/" data-BGOurl="" data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fdev-www.jollybuy.com%2Fact%2Fplayground%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
-                                    <span class="text">執行任務</span>
-                                    <span class="tp_lt"></span><span class="tp_rt"></span><span
-                                        class="bt_lt"></span><span class="bt_rt"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <div class="line"></div>
-                    </ul>
-                </section>
+                        </div>
+                        <div class="rt">
+                            <a class="btn_orange" href="javascript:void(0);" data-redirect="mission_jollybuy_consume"
+                                data-tracking="click" data-sec="consume" data-event_id="62"
+                                data-Weburl="https://dev-www.jollybuy.com/act/202207carnival/" data-BGOurl=""
+                                data-BGOdeeplink="https://stg-portal.beanfun.com/app/h5page/c264ad2321b24f32b8eb5dfd2deb28b6_oa?url=https%3A%2F%2Fdev-www.jollybuy.com%2Fact%2Fplayground%2F&theme=1&title=%E6%A9%98%E5%AD%90%E5%98%89%E5%B9%B4%E8%8F%AF">
+                                <span class="text">執行任務</span>
+                                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                                    class="bt_rt"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <div class="line"></div>
+                </ul>
                 <!-- 注意事項 -->
-                <section>
-                    <ul class="notice_list">
-                        <li class="notice_item">
-                            <h3 class="notice_sub">注意事項</h3>
-                            <div class="detail">
-                                <ul class="notice_ul">
-                                    <li>若完成任務未獲得豆子，請於5-10分鐘後重整頁面</li>
-                                    <li>天天抽盒拿銀豆，需於指定盲盒頁完成抽盒，才符合獲得資格，每用戶每日最多獲得一顆銀豆</li>
-                                    <li>消費滿額送金豆，購物訂單需完成付款，才符合獲得資格，每用戶每日最多獲得一顆金豆。</li>
-                                    <li>若擁有橘子25認同卡，完成消費滿額送金豆任務，將額外加碼再獲得金豆一顆，每卡友每日最多獲得一顆。</li>
-                                </ul>
-                            </div>
-                        </li>
+                <ul class="notice_list">
+                    <li class="notice_item">
+                        <h3 class="notice_sub">注意事項</h3>
+                        <div class="detail">
+                            <ul class="notice_ul">
+                                <li>若完成任務未獲得豆子，請於5-10分鐘後重整頁面</li>
+                                <li>天天抽盒拿銀豆，需於指定盲盒頁完成抽盒，才符合獲得資格，每用戶每日最多獲得一顆銀豆</li>
+                                <li>消費滿額送金豆，購物訂單需完成付款，才符合獲得資格，每用戶每日最多獲得一顆金豆。</li>
+                                <li>若擁有橘子25認同卡，完成消費滿額送金豆任務，將額外加碼再獲得金豆一顆，每卡友每日最多獲得一顆。</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    </ul>
-                </section>
-                <div class="btn_area">
-                    <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="63">
-                        <span class="text">回大橘夜市</span>
-                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                            class="bt_rt"></span>
-                    </a>
-                </div>
+                </ul>
             </div>
+        </section>
+        <div class="btn_area">
+            <a class="btn_shadow_purple" href="./" data-tracking="click" data-event_id="63">
+                <span class="text">回大橘夜市</span>
+                <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                    class="bt_rt"></span>
+            </a>
         </div>
     </div>
     <footer></footer>
