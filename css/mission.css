@@ -491,6 +491,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 50px;
+  background: #150622;
 }
 
 @media screen and (max-width: 820px) {
