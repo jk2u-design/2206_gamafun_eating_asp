@@ -1,6 +1,7 @@
 $('#start_game').on("click", function () {
     if (!getbfd()) {
         alert('請您先進行登入喔！')
+        window.triggerClickEvent('122', {page: 'acg_shoot_game', status: 'not_logged_in'});
         return;
     }
     var data = {}

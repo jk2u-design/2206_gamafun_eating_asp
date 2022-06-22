@@ -52,11 +52,12 @@ function getbfd() {
 }
 
 function getLoginURL() {
-    var url = "{0}/oauth2/v1/authorize?response_type=code&prompt=select_account&user_level=5&client_id={1}&scope=openid profile&redirect_uri={2}&state={3}&nonce=abba";
+    var url = "{0}/oauth2/v1/authorize?response_type=code&prompt={4}&user_level=5&client_id={1}&scope=openid profile&redirect_uri={2}&state={3}&nonce=abba";
     var AccountURL = "";
     var client_id = "";
     var redirect_uri = "";
     var state = "";
+    var prompt = ""
     if (isProd) {
         AccountURL = "https://accounts.beanfun.com";
         client_id = "9163F3BD-8C59-4F25-8969-94C62CF374B7";
@@ -69,8 +70,14 @@ function getLoginURL() {
         //redirect_uri = 'http://34.80.235.122'
         redirect_uri = document.location.origin
     }
+    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+        prompt ="password"
+    }
+    else {
+        prompt = "select_account"
+    }
     state = (new Date).getTime()
-    url = String.format(url, AccountURL, client_id, redirect_uri, state)
+    url = String.format(url, AccountURL, client_id, redirect_uri, state, prompt)
     return url
 }
 String.format = function (src) {
@@ -109,7 +116,7 @@ function CheckInApp() {
                             BGO.init({ token: rs.datas.token, official_account_id: rs.datas.accountid });
                             BGO.get_me_openid_access_token(rs.datas.clientid, '', function (data) {
                                 if (data.access_token) {
-                                    apt.api.APPUserLogin({ access_token: data.access_token }, function (rs) {
+                                    apt.api.APPUserLogin({ access_token: data.access_token, username: data.me_profile.nickname }, function (rs) {
                                         if (rs) {
                                             if (rs.code == '0000') {
                                                 setData('open_id', rs.datas.open_id)
