@@ -1,0 +1,88 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src=" https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js" data-desc="測試網址"></script>
+<script src="https://beangochat.blob.core.windows.net/beango-static-prod/sdk/vconsole.min.js"></script>
+<script>VConsole = new VConsole;</script>
+
+<script>
+function get_openid_access_token() {
+	/*************************
+	正式環境
+	【officialAccount id】3401428c3f2c41a99420e3c17b215f37_oa
+	【token】194dcd73235b46faa1d61e07c75fd06f_oat
+	【client id】9163F3BD-8C59-4F25-8969-94C62CF374B7
+
+	測試環境
+	【officialAccount id】c264ad2321b24f32b8eb5dfd2deb28b6_oa
+	【token】c15489c1221846d38a7c2a4bba1a6168_oat
+	【client id】A35DF2D9-9672-46F3-B2CF-C69283CAFC64
+	
+	BGO.get_me_openid_access_token('client_id', '', callback);
+	*************************/
+    BGO.init({
+        token: 'c15489c1221846d38a7c2a4bba1a6168_oat',
+        official_account_id: 'c264ad2321b24f32b8eb5dfd2deb28b6_oa'
+    });
+    BGO.get_me_openid_access_token('A35DF2D9-9672-46F3-B2CF-C69283CAFC64', '', callback);
+};
+var callback = function(data) {
+	/*************************
+	data 的 response:
+	成功：
+	{
+	   "me_profile":{
+		  "chat_id":"xxxxx_oid",
+		  "nickname":"name",    //使用者名稱
+		  "photo":"http://123.png"
+	   },
+	   "access_token":"xxxxxxxx", //帶access_token發送API查詢open_id
+	   "access_token_expired_at":123456
+	}
+	失敗：
+	{
+	   "error":1,
+	   "message":"error message"
+	}
+	*************************/
+    console.log(data);
+	//這一段要換成後端API發送查詢open_id
+	//正式區: https://api.beanfun.com/v1/openid/token/verification?token={{access_token}}
+	//測試區: https://stg-api.beanfun.com/v1/openid/token/verification?token={{access_token}}
+	
+	/*************************
+	API 的 response:
+	{
+	"client_id": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+	"client_name": "beanfun! 小幫手",
+	"expires_at": "2019-04-10T15:19:00.142+08:00",
+	"is_valid": true,
+	"user_id": 1010003000812002701,
+	"open_id": "1010003000812002701",
+	"username": "beanfun"
+	}
+	*************************/
+    getOpenidUrl = 'https://stg-api.beanfun.com/v1/openid/token/verification?token=${data.access_token}'
+    checkUser();
+};
+var checkUser = function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            var res = this.responseText.split(",");
+            $('.openid').text(res[4]);
+        }
+    };
+    console.log(getOpenidUrl);
+    xhttp.open("GET", getOpenidUrl, true);
+    xhttp.send();
+}
+
+$(document).ready(function() {
+    debugger;
+   // get_openid_access_token();
+		//判斷用戶是否存在於 APP 中
+    BGO.check_app_exist(function (data) { console.log(data)})
+    //BGO.deeplink_jump('https://stg-portal.beanfun.com/app/club/459645002734112768?postId=525677374784671744', false)
+    BGO.redirect_uri_by_default_browser('https://ec.gashpoint.com/SalePackage/Index/5?ChargeID=SA00245&EC_ID=EC021120020')
+});
+</script>

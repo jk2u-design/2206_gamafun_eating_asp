@@ -1,5 +1,7 @@
 
 $(function () {
+    console.log('JK2U ------- v.062201')
+    console.log(location.href)
     if (urlParam('code')) {
         apt.api.WebUserLogin({ code: urlParam('code') }, function (rs) {
             if (rs) {
@@ -34,7 +36,7 @@ $(function () {
             //window.location.href = 'login.html'
         }
     }
-    if (getbfd() || inapp) {
+    if (getbfd() || getData('inapp')) {
         $('#login_bf').hide()
         $('#login_float').hide()
     }

@@ -24,7 +24,7 @@ function lottery(bean) {
             if (rs) {
                 if (rs.code == '0000') {
                     show1()
-                    if (inapp) {
+                    if (getData('inapp')) {
                         BGO.DEEPLINK_JUMP(isProd ? 'https://portal.beanfun.com/app/backpack/reward' : 'https://stg-portal.beanfun.com/app/backpack/reward', false);
                     }
                     else {
