@@ -50,7 +50,7 @@ ul, li {list-style:none;}
   
   .wallet_head .lt .user_name {
     font-size: 20px;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     font-weight: 400;
     color:white;
@@ -192,7 +192,6 @@ color: #fe919e;
         font-size: 32px;
       }
       .wallet_head .lt .user_name {
-        width: 100px;
         margin: 0 auto;
         font-size: 16px;
         overflow: hidden;

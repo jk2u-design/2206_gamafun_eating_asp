@@ -92,7 +92,7 @@ header #total_beans span {font-size:18px; font-family:Arial; color:white; font-w
 header #total_beans #goldbeans {margin-right:15px;}
 header #total_beans .wallet {color:white; font-size:15px; margin-right:6px; margin-top:-2px;}
 
-header #user_name {display:block; width:96px; position:absolute; left:190px; top:0px; font-size:16px; line-height:55px; font-family:'Noto Sans TC','微軟正黑體','Microsoft Jhenghei',sans-serif; color:white; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
+header #user_name {display:block; width:160px; position:absolute; left:190px; top:0px; font-size:16px; line-height:55px; font-family:'Noto Sans TC','微軟正黑體','Microsoft Jhenghei',sans-serif; color:white; overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
 /*header #user_name::after {display:block; content:'⋯';}*/
 
 header #login_float {position:absolute; top:60px; right:0px; width:100px;}
