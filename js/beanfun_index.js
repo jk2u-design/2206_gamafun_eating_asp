@@ -17,7 +17,7 @@ $(async function(){
             BUID: 'GAMA-gamania-01',
             property,
             sourceProperty: 'gamania',
-            GTMId: 'GTM-MCJ7BK4', // env
+            GTMId: 'GTM-KRSWL2M', // env
             productName,
         }).then(senderIns => sender = senderIns);
     
@@ -32,8 +32,12 @@ $(async function(){
             inApp = data.result === "ok"
             if (inApp) {
                 BGO.init({
-                    token: 'c15489c1221846d38a7c2a4bba1a6168_oat',
-                    official_account_id: 'c264ad2321b24f32b8eb5dfd2deb28b6_oa'
+                    //測試
+                    //token: 'c15489c1221846d38a7c2a4bba1a6168_oat',
+                    //official_account_id: 'c264ad2321b24f32b8eb5dfd2deb28b6_oa'
+                    //正式
+                    token: '194dcd73235b46faa1d61e07c75fd06f_oat',
+                    official_account_id: '3401428c3f2c41a99420e3c17b215f37_oa'
                 });
                 // in app hidden
                 $('.addevents').hide()
