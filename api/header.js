@@ -1,7 +1,9 @@
 
 $(function () {
-    console.log('JK2U ------- v.062201')
-    console.log(location.href)
+    $('#login_float, #login_bf').on('click', function () {
+        setData('redirect_uri', location.href)
+        location.href = getLoginURL()
+    })
     if (urlParam('code')) {
         apt.api.WebUserLogin({ code: urlParam('code') }, function (rs) {
             if (rs) {
@@ -26,24 +28,20 @@ $(function () {
 
         if (uid && dt) {
             var expire = (now - dt) / 1000
-            if (expire > 60 * 60) {
+            if (expire > 60 * 60 * 24 * 7) {
                 localStorage.clear();
                 //window.location.href = 'login.html'
             }
-            setData('login', (new Date).getTime());
-        }
-        else {
-            //window.location.href = 'login.html'
+            else {
+                setData('login', (new Date).getTime());
+            }
         }
     }
     if (getbfd() || getData('inapp')) {
         $('#login_bf').hide()
         $('#login_float').hide()
     }
-    $('#login_float, #login_bf').on('click', function () {
-        setData('redirect_uri', location.href)
-        location.href = getLoginURL()
-    })
+
     if (getbfd()) {
         $('#wallet').attr('href', $('#wallet').data('href'))
         var data = {}
@@ -52,7 +50,7 @@ $(function () {
             if (rs) {
                 if (rs.code == '0000') {
                     var retdata = JSON.parse(rs.datas)[0]
-                    $('#user_name').text(retdata.username.substring(0, 5))
+                    $('#user_name').text(retdata.username)
                     $('#goldbeans').text(retdata.beans1)
                     $('#silverbeans').text(retdata.beans2)
                     setData('username', retdata.username)
@@ -64,6 +62,7 @@ $(function () {
     }
     else {
         $('#wallet').on('click', function () {
+            $('#wallet').attr('href', 'javascript(0)')
             setData('redirect_uri', location.href)
             location.href = getLoginURL()
         })

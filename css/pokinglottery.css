@@ -24,17 +24,14 @@ img {
   margin: 0 auto;
 }
 
-
-
 #fireworks {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index:-1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-
 
 .btn_purple,
 .btn_green,
@@ -61,7 +58,7 @@ img {
   margin: 0 auto;
   padding: 30px 0;
   position: relative;
-  z-index:1;
+  z-index: 1;
 }
 
 .pokinglottery_list .title {
@@ -278,8 +275,8 @@ img {
   margin: 4px;
   border: 4px solid #078e94;
   border-radius: 20px;
-  background: url(../images/logo.svg) #2b185d no-repeat;
-  background-size: 120px;
+  background: url("../images/event_logo.svg") #2b185d no-repeat;
+  background-size: 100px;
   background-position: center;
   -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8) inset;
           box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.8) inset;
@@ -330,10 +327,10 @@ img {
 }
 
 .pokinglottery .notice {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   text-align: center;
-  color: yellow;
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -413,6 +410,37 @@ img {
 
 .pokinglottery.poking_game .poking_item {
   border: 4px solid #ecb87b;
+}
+
+.pokinglottery .prize_list {
+  padding: 30px 0;
+}
+
+.pokinglottery .prize_list h3 {
+  font-family: 'FakePearl-L';
+  font-weight: normal;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  line-height: 1.5;
+  text-align: center;
+  background: -webkit-linear-gradient(-86deg, #fa8a99 5%, #7e00ff 95%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+}
+
+.pokinglottery .prize_list ul {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.pokinglottery .prize_list ul li {
+  list-style: decimal;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 .pop_up.rule {
@@ -566,7 +594,7 @@ img {
   .pokinglottery .poking_item {
     width: 115px;
     height: 115px;
-    background-size: 80px;
+    background-size: 75px;
   }
   .pokinglottery.poking_game .poking_outter {
     width: 520px;
@@ -727,6 +755,25 @@ img {
   .pokinglottery .prize .mo {
     display: block;
   }
+  .pokinglottery .prize_list {
+    padding: 20px 0;
+  }
+  .pokinglottery .prize_list h3 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .pokinglottery .prize_list ul {
+    width: 95%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding-left: 20px;
+  }
+  .pokinglottery .prize_list ul li {
+    list-style: decimal;
+    color: #fff;
+    line-height: 1.5;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -757,7 +804,7 @@ img {
   .pokinglottery .poking_item {
     width: 25vw;
     height: 25vw;
-    background-size: 20vw;
+    background-size: 18vw;
     border: 2px solid #078e94;
   }
   .pokinglottery .notice {
@@ -801,11 +848,13 @@ img {
   .pop_up.rule p {
     font-size: 14px;
   }
-  .pop_up.rule table th, .pop_up.rule table td {
+  .pop_up.rule table th,
+  .pop_up.rule table td {
     padding: 5px;
     font-size: 14px;
   }
-  .pop_up.rule table th span, .pop_up.rule table td span {
+  .pop_up.rule table th span,
+  .pop_up.rule table td span {
     font-size: 12px;
   }
   @-webkit-keyframes hint_ani {

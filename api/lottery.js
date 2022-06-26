@@ -40,6 +40,10 @@ function lottery(bean) {
     }
 }
 $('[data-href]').on("click", function () {
+    if (!checktime(2)) {
+        alert('✽‿大橘戳戳樂將 於7/11 10:00 正式開戳!!')
+        return;
+    }
     if (!getbfd()) {
         alert('請您先進行登入喔！')
         return;

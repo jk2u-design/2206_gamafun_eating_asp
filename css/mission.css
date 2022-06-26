@@ -408,6 +408,10 @@ img {
   opacity: 1;
 }
 
+.mission_list .btn_orange, .mission_list .btn_green_disab {
+  display: none;
+}
+
 .notice_list {
   display: block;
   padding: 0 0 40px 30px;
@@ -633,14 +637,11 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-  .brand_head .brand_logo {
-    margin-bottom: 10px;
+  .brand_head .chat_box .brand_logo {
+    margin-bottom: 15px;
   }
-  .brand_head .brand_logo img.for_w {
-    width: 65%;
-  }
-  .brand_head .brand_logo img.for_h {
-    width: 100%;
+  .brand_head .chat_box .brand_logo img.for_w, .brand_head .chat_box .brand_logo img.for_h {
+    width: 82%;
     height: auto;
   }
 }

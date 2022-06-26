@@ -1,4 +1,12 @@
 $(function () {
+    $('.mission_done').hide()
+    if (!checktime(0)) {
+        $('[data-adid]>div>a').hide()
+        return;
+    }
+    else {
+        $('[data-adid]>div>a').show()
+    }
     var missions = [
         { done: false, brand_id: "1", ad_id: "1", times: "1", desc: "beanfun!- 佈告欄" },
         { done: false, brand_id: "1", ad_id: "2", times: "1", desc: "beanfun!- 留言板" },
@@ -22,9 +30,9 @@ $(function () {
         { done: false, brand_id: "8", ad_id: "20", times: "0", desc: "原子少年-我挺原子能量盒" },
         { done: false, brand_id: "8", ad_id: "21", times: "0", desc: "原子少年-為你的少年拚一團" }
     ]
-    $('.mission_done').hide()
+    
     if (!getbfd()) {
-        $('[data-adid]').on("click", function () {
+        $('[data-adid]>div>a').on("click", function () {
             setData('redirect_uri', location.href)
             location.href = getLoginURL()
         })

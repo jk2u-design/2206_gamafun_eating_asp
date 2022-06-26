@@ -104,32 +104,51 @@ function getqrcode(campaignID) {
     })
 }
 function CheckInApp() {
-    BGO.check_app_exist(function (data) {
-        if (data.result && data.result == 'ok') {
-            $('#login_bf').hide()
-            $('#login_float').hide()
-            setData('inapp', true)
-            apt.api.getBGO({}, function (rs) {
-                if (rs) {
-                    if (rs.code == '0000') {
-                        BGO.init({ token: rs.datas.token, official_account_id: rs.datas.accountid });
-                        BGO.get_me_openid_access_token(rs.datas.clientid, '', function (data) {
-                            if (data.access_token) {
-                                apt.api.APPUserLogin({ access_token: data.access_token, username: data.me_profile.nickname }, function (rs) {
-                                    if (rs) {
-                                        if (rs.code == '0000') {
-                                            setData('open_id', rs.datas.open_id)
-                                            setData('username', rs.datas.username)
-                                            setData('open_Key', rs.datas.open_Key)
-                                            setData('login', (new Date).getTime());
-                                        }
-                                    }
-                                })
-                            }
-                        });
-                    }
-                }
-            })
+    if (!getbfd() && !getData('inapp')) {
+        BGO.check_app_exist(check_app_exist)
+    }
+}
+var check_app_exist = function (data) {
+    if (data.result && data.result == 'ok') {
+        apt.api.getBGO({}, getBGO)
+    }
+}
+var getBGO = function (rs) {
+    if (rs) {
+        if (rs.code == '0000') {
+            BGO.init({ token: rs.datas.token, official_account_id: rs.datas.accountid });
+            BGO.get_me_openid_access_token(rs.datas.clientid, '', get_me_openid_access_token);
         }
-    })
+    }
+}
+var get_me_openid_access_token = function (data) {
+    if (data.access_token) {
+        apt.api.APPUserLogin({ access_token: data.access_token, username: data.me_profile.nickname }, function (rs) {
+            if (rs) {
+                if (rs.code == '0000') {
+                    $('#login_bf').hide()
+                    $('#login_float').hide()
+                    setData('inapp', true)
+                    setData('open_id', rs.datas.open_id)
+                    setData('username', rs.datas.username)
+                    setData('open_Key', rs.datas.open_Key)
+                    setData('login', (new Date).getTime());
+                }
+            }
+        })
+    }
+}
+function checktime(campaign) {
+    var now = new Date().getTime()
+    var timelimit = null;
+    if (campaign == 0) //任務連結
+        timelimit = new Date('2022-06-26 21:00:00 UTC+8').getTime()
+    else if (campaign == 1) //遊戲
+        timelimit = new Date('2022-06-26 21:00:00 UTC+8').getTime()
+    else if (campaign == 2) //戳戳樂
+        timelimit = new Date('2022-06-26 21:00:00 UTC+8').getTime()
+    if (timelimit > now) {
+        return false;
+    }
+    return true;
 }

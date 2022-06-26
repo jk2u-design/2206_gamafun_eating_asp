@@ -26,7 +26,7 @@
 
     <ul id="nav">
         <li id="login_bf"><a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_login"}'><img class="loginicon" src="images/login_icon.svg">立即登入</a></li>
-        <li><a id="wallet" class="nav_hash opn_wallet" data-fancybox data-type="ajax" data-href="beanwallet.html" data-fancybox data-type="ajax" href="javascript(0)" data-tracking="click" data-event_id="11" data-info='{"name": "menu_wallet"}'>豆子錢包</a></li>
+        <li><a id="wallet" class="nav_hash opn_wallet" data-fancybox data-type="ajax" data-href="beanwallet.html" href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_wallet"}'>豆子錢包</a></li>
         <li><a id="hd_hash_event" class="nav_hash" href="./#event" data-tracking="click" data-event_id="11" data-name='menu_nightmarket'>大橘夜市</a></li>
         <li><a id="hd_hash_gamashow" class="nav_hash" href="./#gamashow" data-tracking="click" data-event_id="11" data-name='menu_arena'>大橘擂台</a></li>
         <li><a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_extras"}'>夏日時光番外篇</a></li>
@@ -72,29 +72,32 @@ $(function(){
         $('header #nav').slideToggle();
 	});
     })
-    function loadingJS(src) {
+    function loadingJS(src, callback) {
         var script = document.createElement('script');
         script.src = src;
         script.type = 'text/javascript';
         document.getElementsByTagName('head')[0].appendChild(script);
+        if (callback)
+            script.onload = function () { callback() }
     }
 </script>
 <script>
-    loadingJS("api/common.js?v=" + (new Date).getTime())
-    loadingJS("api/header.js?v=" + (new Date).getTime())
     loadingJS("api/api.js?v=" + (new Date).getTime())
-    loadingJS("api/hrefJump.js?v=" + (new Date).getTime())
-    var page = window.location.pathname.split("/").pop().split('.')[0]
-    var JS = [{ js: "api/mission.js", Page: ["atomboyz", "beanfun", "game", "gash", "gamapay", "jollybuy", "novel", "comics", "atomboyz", ""] },//任務
-    { js: "api/invitecode.js", Page: ["game", ""] }, //邀請碼
-    { js: "api/game.js", Page: ["game_beans", "game_bottle"] },//遊戲
-    { js: "api/lottery.js", Page: ["pokinglottery", "pokinglottery_game", "pokinglottery_list"] }, //大賞
-    { js: "api/beanwallet.js", Page: ["beanwallet"] } //錢包
-    ]
-    $.each(JS, function (i, item) {
-        if (item.Page.findIndex(x => x == page) > -1) {
-            loadingJS(item.js + "?v=" + (new Date).getTime())
-        }
+    loadingJS("api/common.js?v=" + (new Date).getTime(), function () {
+        loadingJS("api/header.js?v=" + (new Date).getTime())
+        loadingJS("api/hrefJump.js?v=" + (new Date).getTime())
+        var page = window.location.pathname.split("/").pop().split('.')[0]
+        var JS = [{ js: "api/mission.js", Page: ["atomboyz", "beanfun", "game", "gash", "gamapay", "jollybuy", "novel", "comics", "atomboyz", ""] },//任務
+        { js: "api/invitecode.js", Page: ["game", ""] }, //邀請碼
+        { js: "api/game.js", Page: ["game_beans", "game_bottle"] },//遊戲
+        { js: "api/lottery.js", Page: ["pokinglottery", "pokinglottery_game", "pokinglottery_list"] }, //大賞
+        ]
+        $.each(JS, function (i, item) {
+            if (item.Page.findIndex(x => x == page) > -1) {
+                loadingJS(item.js + "?v=" + (new Date).getTime())
+            }
+        })
     })
+
 
 </script>

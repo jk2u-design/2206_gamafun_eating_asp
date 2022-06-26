@@ -1,10 +1,8 @@
 $('a').on("click", function () {
-    debugger
     var web = $(this).data('weburl')
     var BGOurl = $(this).data('bgourl')
     var BGOdeeplink = $(this).data('bgodeeplink')
     var key = $(this).data('redirect') //Qrcode
-    console.log(web + '\n' + BGOurl + '\n' + BGOdeeplink + '\n' + key)
     if ($(this).hasClass("btn_green_disab")) {
         //disable的連結要滾回去
         return;

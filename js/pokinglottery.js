@@ -136,7 +136,6 @@ function show2() {
         $('.mask').hide().removeClass('transparent');
         $('.check_prize').fadeIn(500);
         $('.check_poking').hide();
-        //$(".bg").fireworks();
         $("#fireworks").fireworks();
 		jQuery("#fireworks").before(jQuery("canvas"));
 
