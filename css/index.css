@@ -181,8 +181,11 @@ ul, li {list-style:none;}
 #middle .full {width:100%; height:auto;}
 #middle .full_mb {display:none;}
 
-#middle .gocomic .title_info {align-items:center;}
+#middle .gocomic {box-sizing:border-box; padding:0px 8px;}
+#middle .gocomic .title_info {align-items:center; background:#551D95; border-radius:30px; box-shadow:0px 0px 10px #ea7c23, 0px 0px 10px #ffb97b, 0px 0px 10px #ffb97b, 0px 0px 10px #ffb97b;}
+#middle .gocomic .title_info .lv1 {margin:15px 30px;}
 #middle .gocomic .btn_light_purple {align-self:center;}
+#middle .gocomic .full {margin-bottom:-10px;}
 
 
 
@@ -460,8 +463,10 @@ ul, li {list-style:none;}
     #middle .title_info {flex-wrap:wrap; justify-content:center;}
     #middle .title_info .lv1 {font-size:30px; margin:10px auto;}
     /*#middle .title_info .lv1 span[data-text] {font-size:30px;}*/
-    #middle .infos {width:100%; flex:none; margin-bottom:15px; font-size:15px; line-height:24px; text-align:center; padding-top:0px;}
-    #middle .gocomic .full {width:95vw;}
+    #middle .infos {width:100%; flex:none; margin-bottom:30px; font-size:15px; line-height:24px; text-align:center; padding-top:0px;}
+    #middle .gocomic {padding:10px 0px;}
+    #middle .gocomic .title_info {padding-bottom:10px; background:none; box-shadow:none;}
+    #middle .gocomic .full {width:95vw; background:#551D95; box-shadow:0px 0px 10px #ea7c23, 0px 0px 10px #ffb97b, 0px 0px 10px #ffb97b, 0px 0px 10px #ffb97b; border-radius:20px;}
 
     #middle::after {background:url(../images/index/bg_middle_mb.png) top center no-repeat; background-size:100% auto;}
 

@@ -194,6 +194,7 @@ color: #fe919e;
       .wallet_head .lt .user_name {
         margin: 0 auto;
         font-size: 16px;
+        line-height:30px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
