@@ -27,7 +27,17 @@ img {
   margin: 0 auto;
 }
 
+#fireworks {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .wrapper {
+  position: relative;
   width: 100%;
   margin-top: 55px;
   overflow-x: hidden;
@@ -51,6 +61,7 @@ img {
   margin: 0 auto;
   height: calc(100vh - 55px);
   height: calc((var(--vh, 1vh) * 100) - 55px);
+  z-index: 1;
 }
 
 .cover .container {
@@ -149,11 +160,11 @@ img {
 .game .user {
   position: absolute;
   bottom: 5px;
-  left: 40%;
-  width: 6vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20%;
   max-width: 115px;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
 }
 
 .game .user .hint {
@@ -234,6 +245,65 @@ img {
 
 .game .game_score .item span::before {
   content: "×";
+}
+
+.game .toucharea {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game .toucharea .btn_lt,
+.game .toucharea .btn_rt {
+  width: 50%;
+  height: 100%;
+}
+
+.game .toucharea .btn_lt.on,
+.game .toucharea .btn_rt.on {
+  -webkit-animation: tt 0.1s;
+          animation: tt 0.1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.game .howtoplay {
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 85%;
+}
+
+.game .howtoplay img {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+@-webkit-keyframes tt {
+  from {
+    background: rgba(200, 200, 200, 0.1);
+  }
+  to {
+    background: rgba(200, 200, 200, 0);
+  }
+}
+
+@keyframes tt {
+  from {
+    background: rgba(200, 200, 200, 0.1);
+  }
+  to {
+    background: rgba(200, 200, 200, 0);
+  }
 }
 
 @-webkit-keyframes beanroatate {
@@ -399,7 +469,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .btn_zone a {
@@ -428,11 +498,12 @@ img {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 80%;
+  width: 85%;
 }
 
 .start_count .howtoplay img {
-  width: 200px;
+  width: 100%;
+  max-width: 400px;
   margin: 20px auto;
 }
 
@@ -508,19 +579,12 @@ img {
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
   }
   .game .bean {
-    width: 6vw;
-    min-width: 60px;
-    max-width: 60px;
+    width: 45px;
   }
   .game .gm {
     position: absolute;
     top: 0px;
     width: 6vw;
-  }
-  .game .user {
-    width: 12vw;
-    min-width: 80px;
-    max-width: 100px;
   }
   .game .score_area {
     top: 5%;
@@ -592,7 +656,7 @@ img {
             justify-content: center;
   }
   .result .game_score .item .img_bean {
-    width: 50px;
+    width: 45px;
   }
   .result .game_score .item span {
     width: 40px;

@@ -43,7 +43,6 @@ var getbean1 = 0, getbean2 = 0, lostbean1 = 0, lostbean2 = 0;
 // 豆子1得分
 function goal1() {
     $.each($('.bean1'), function () {
-
         var userTop = user.position().top; //上
         var userBottom = user.position().top + user.height(); //下
         var userLeft = user.position().left; //左
@@ -61,7 +60,7 @@ function goal1() {
                 score1 = parseInt($('.game_num1').text());
                 $(this).remove()
                 $('.hint').addClass('on');
-                setTimeout(function () {  $('.hint').removeClass('on'); }, 500)
+                setTimeout(function () { $('.hint').removeClass('on'); }, 500)
             }
         }
     });
@@ -83,7 +82,7 @@ function goal2() {
             if (userTop < beanBottom && userBottom > beanTop) { //上下重疊              
                 $('.game_num2').text(score2 + 1)
                 score2 = parseInt($('.game_num2').text());
-                $(this).remove();  $('.hint').addClass('on');
+                $(this).remove(); $('.hint').addClass('on');
                 setTimeout(function () { $('.hint').removeClass('on'); }, 500)
             }
         }
@@ -172,10 +171,11 @@ function gameEnd() {
     // 計分
     $('.game_score1').text(score1);
     $('.game_score2').text(score2);
-    // 放煙火
-    $(".firework").fireworks();
-    jQuery(".firework").before(jQuery("canvas"))
+
     $('.bean').remove();
+    // 放煙火
+    $("#fireworks").fireworks();
+    jQuery("#fireworks").before(jQuery("canvas"));
 }
 // 遊戲開始
 function gameStart() {
@@ -192,7 +192,6 @@ function gameStart() {
 }
 var startcount = 5;
 function readystart() {
-
     $('.readystart').html(startcount);
     setTimeout(readystart, 1000);
     startcount -= 1;
@@ -200,11 +199,12 @@ function readystart() {
         $('.readystart').text('START');
     }
 }
+
 function iwannaplayagame() {
     $('.cover').hide();
     $('.start_count').show()
-    readystart()
 
+    readystart()
     setTimeout(function () {
         $('.start_count').hide()
         $('.game').fadeIn(0);
@@ -213,7 +213,7 @@ function iwannaplayagame() {
         checkgm2Dir();
         gameMove = setInterval(gameStart, 100);
         bean1Go = setInterval(inputbean1, 800)
-        bean2Go = setInterval(inputbean2, 8000)
+        bean2Go = setInterval(inputbean2, 8500)
     }, 6000)
 }
 $(function () {
@@ -225,42 +225,58 @@ $(function () {
         window.location.reload();
     })
 
-    // user移動的部分
-    $('html').mousemove(function (e) {
-        var mouse_x = e.pageX;
-        var mouse_y = e.pageY;
-        var user_w = user.width();
+    $('.btn_dir').click(function () {
+
+        $(this).addClass('on').setTimeout
+        setTimeout(function () { $('.btn_dir').removeClass('on') }, 100)
         var con_x = $('.game .container').offset().left;
         var con_w = $('.game .container').width();
+        var user_w = user.width();
+        var user_x = user.position().left;
 
-        //滑鼠在籃子範圍
-        if (mouse_x >= con_x + user_w / 2 && mouse_x <= con_x + con_w - user_w / 2) {
-            //滑鼠在.container之間
-            var mov = mouse_x - con_x - user_w / 2;
-            user.stop(true, false).animate({ left: mov }, 0)
+        if ($(this).hasClass('btn_lt')) {
+            var mov = user_x - user_w / 2
+            if (user_x - user_w / 2 > 0) {
+                user.stop(true, false).animate({ left: mov }, 0)
+            }
+
+        } else if ($(this).hasClass('btn_rt')) {
+            var mov = user_x + user_w * 1.5
+            if (user_x + user_w * 1.5 < con_w) {
+                user.stop(true, false).animate({ left: mov }, 0)
+            }
         }
-        if (mouse_y >= user.offset().top - 50) {
-        }
+
     })
-    $('html').bind("touchmove", function (e) {
-        var touch_x = e.touches[0].clientX;
-        var touch_y = e.touches[0].clientY;
-        var user_w = user.width();
-        var con_x = $('.game .container').offset().left;
-        var con_w = $('.game .container').width();
-        if (touch_x >= con_x + user_w / 2 && touch_x <= con_x + con_w - user_w / 2) {
-            //在.container之間
-            var mov = touch_x - con_x - user_w / 2;
-            user.stop(true, false).animate({ left: mov }, 0)
-        }
-    });
-    // if ($(window).width() >= 768) {
+    // user移動的部分
+    // $('html').mousemove(function (e) {
+    //     var mouse_x = e.pageX;
+    //     var mouse_y = e.pageY;
+    //     var user_w = user.width();
+    //     var con_x = $('.game .container').offset().left;
+    //     var con_w = $('.game .container').width();
 
-    // } else {
-
-
-    // }
-
+    //     //滑鼠在籃子範圍
+    //     if (mouse_x >= con_x + user_w / 2 && mouse_x <= con_x + con_w - user_w / 2) {
+    //         //滑鼠在.container之間
+    //         var mov = mouse_x - con_x - user_w / 2;
+    //         user.stop(true, false).animate({ left: mov }, 0)
+    //     }
+    //     if (mouse_y >= user.offset().top - 50) {
+    //     }
+    // })
+    // $('html').bind("touchmove", function (e) {
+    //     var touch_x = e.touches[0].clientX;
+    //     var touch_y = e.touches[0].clientY;
+    //     var user_w = user.width();
+    //     var con_x = $('.game .container').offset().left;
+    //     var con_w = $('.game .container').width();
+    //     if (touch_x >= con_x + user_w / 2 && touch_x <= con_x + con_w - user_w / 2) {
+    //         //在.container之間
+    //         var mov = touch_x - con_x - user_w / 2;
+    //         user.stop(true, false).animate({ left: mov }, 0)
+    //     }
+    // });
 
 })
 

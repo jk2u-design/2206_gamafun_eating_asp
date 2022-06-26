@@ -177,7 +177,10 @@ $(async function () {
         }
         // 判斷登入
         if (status) {
-            if (!getbfd()) {
+            if(status=='game_over'){
+                event.pageInfo.status = 'game_over'
+            }
+            else if (!getbfd()) {
                 event.pageInfo.status = 'not_logged_in'
             } else {
                 event.pageInfo.status = 'logged_in'
@@ -198,8 +201,6 @@ $(async function () {
             }
         }
         await sender.passEvent(occursEvent('click', event))
-
-
     })
 
 

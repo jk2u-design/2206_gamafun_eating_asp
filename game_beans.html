@@ -42,17 +42,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/allstyle.js"></script>
-  
-<style>
-    .game1{
-        position: fixed;
-        bottom:5px;
-        right:5px;
-        width: 15px;
-        height: 15px;
-    background: rgba(255,255,255,0.5);
-    }
-</style>
+
+
 </head>
 
 <body>
@@ -68,119 +59,124 @@
     <div class="wrapper">
         <div class="bg"></div>
         <div class="shadow"></div>
-        <div class="firework">
-            <!-- 起始畫面 -->
-            <div class="cover">
-                <div class="container">
-                    <img class="cover_logo" src="images/game_beans/beanlogo.svg" alt="瘋狂灑豆派對">
-                    <div class="btn_zone">
-                        <a id="start_game" class="start btn_purple" href="javascript:void(0);" data-tracking="click"
-                            data-event_id="127">
-                            <span class="text">開始遊戲</span>
-                            <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                                class="bt_rt"></span>
-                        </a>
-                    </div>
-                    <div class="rule">
-                        <h3>7/04(一) - 7/17(日) </h3>
-                        <h4>第一場：12:00-12:30<br>第二場：21:00-21:30</h4>
-                        <p>請於15秒內接住從天而降的金豆/銀豆<br>接中多少就送你多少豆子<br>趕快來試手氣!</p>
-                    </div>
+        <!-- 起始畫面 -->
+        <div class="cover">
+            <div class="container">
+                <img class="cover_logo" src="images/game_beans/beanlogo.svg" alt="瘋狂灑豆派對">
+                <div class="btn_zone">
+                    <a id="start_game" class="start btn_purple" href="javascript:void(0);" data-tracking="click"
+                        data-event_id="127">
+                        <span class="text">開始遊戲</span>
+                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                            class="bt_rt"></span>
+                    </a>
                 </div>
-            </div>
-            <!-- 準備開始 -->
-            <div class="start_count">
-                <div class="container">
-                    <p class="readystart">3</p>
-                    <div class="howtoplay">
-                        <p>行動裝置玩家：請觸碰畫面中的籃子左右滑動接取豆子</p>
-                        <p>電腦裝置玩家：請左右移動滑鼠操控籃子接取豆子</p>
-                        <img src="images/game_beans/baseket2.svg" alt="怎麼玩">
-
-                    </div>
-                </div>
-            </div>
-            <!-- 遊戲畫面 -->
-            <div class="game">
-                <div class="container">
-                    <div class="score_area">
-                        <div class="time">
-                            <h3>剩餘時間：<span class="timeNum">15</span>秒</h3>
-                        </div>
-                        <div class="game_score">
-                            <div class="item">
-                                <img class="img_bean" src="images/game_beans/bean_silver.svg" alt="銀豆">
-                                <span class="game_num1">0</span>
-                            </div>
-                            <div class="item">
-                                <img class="img_bean" src="images/game_beans/bean_gold.svg" alt="金豆">
-                                <span class="game_num2">0</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gm1 gm"></div>
-                    <div class="gm2 gm"></div>
-                    <div class="user">
-                        <div class="hint">GET!!</div>
-                        <img src="images/game_beans/baseket.svg" alt="user" draggable="false">
-                    </div>
-                </div>
-            </div>
-            <!-- 結算畫面 -->
-            <div class="result">
-                <div class="container">
-                    <img class="congrate" src="images/game_beans/congrate.svg" alt="恭喜">
-                    <h3>結算後可獲得</h3>
-                    <div class="game_score">
-                        <div id="total_silver" class="item">
-                            <img class="img_bean" src="images/game_beans/bean_silver.svg" alt="銀豆">
-                            <span class="game_score1"></span>
-                        </div>
-                        <div id="total_gold" class="item">
-                            <img class="img_bean" src="images/game_beans/bean_gold.svg" alt="金豆">
-                            <span class="game_score2"></span>
-                        </div>
-                    </div>
-                    <div class="rule">
-                        <p>※每時段可無限次暢玩<br>請於當日21:30前點擊「結算領豆」領取豆子<br>每日僅能領取一次哦!
-                        </p>
-                    </div>
-                    <div class="btn_zone">
-                        <a class="btn_purple return" href="javascript:void(0);" data-tracking="click"
-                            data-event_id="128">
-                            <span class="text">再玩一次</span>
-                            <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                                class="bt_rt"></span>
-                        </a>
-                        <a class="btn_purple" id="btn_gameover" href="javascript:void(0);" data-tracking="click"
-                            data-event_id="129">
-                            <span class="text">結算領豆</span>
-                            <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                                class="bt_rt"></span>
-                        </a>
-                        <!-- 當日已結算換顯示這個按鈕 -->
-                        <a class="btn_purple_disab" href="javascript:;" id="btn_repeat">
-                            <span class="text">今日已結算</span>
-                            <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                                class="bt_rt"></span>
-                        </a>
-                        <a class="btn_purple" href="./" data-tracking="click" data-event_id="1210">
-                            <span class="text">回大橘夜市</span>
-                            <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
-                                class="bt_rt"></span>
-                        </a>
-                    </div>
+                <div class="rule">
+                    <h3>7/04(一) - 7/17(日) </h3>
+                    <h4>第一場：12:00-12:30<br>第二場：21:00-21:30</h4>
+                    <p>請於15秒內接住從天而降的金豆/銀豆<br>接中多少就送你多少豆子<br>趕快來試手氣!</p>
                 </div>
             </div>
         </div>
-        <a href="game_beans1.html" class="game1"></a>
+        <!-- 準備開始 -->
+        <div class="start_count">
+            <div class="container">
+                <p class="readystart">5</p>
+                <div class="howtoplay">                   
+                    <img src="images/game_beans/baseket2.svg" alt="怎麼玩">
+
+                </div>
+            </div>
+        </div>
+        <!-- 遊戲畫面 -->
+        <div class="game">
+            <div class="container">
+                <div class="howtoplay">                   
+                    <img src="images/game_beans/arrow.svg" alt="怎麼玩">
+                </div>
+                <div class="score_area">
+                    <div class="time">
+                        <h3>剩餘時間：<span class="timeNum">15</span>秒</h3>
+                    </div>
+                    <div class="game_score">
+                        <div class="item">
+                            <img class="img_bean" src="images/game_beans/bean_silver.svg" alt="銀豆">
+                            <span class="game_num1">0</span>
+                        </div>
+                        <div class="item">
+                            <img class="img_bean" src="images/game_beans/bean_gold.svg" alt="金豆">
+                            <span class="game_num2">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gm1 gm"></div>
+                <div class="gm2 gm"></div>
+                <div class="user">
+                    <div class="hint">GET!!</div>
+                    <img src="images/game_beans/baseket.svg" alt="user" draggable="false">
+                </div>
+            </div>
+            <div class="toucharea">
+                <div class="btn_dir btn_lt"></div>
+                <div class="btn_dir btn_rt"></div>
+            </div>
+        </div>
+        <!-- 結算畫面 -->
+        <div class="result">
+            <div class="container">
+                <img class="congrate" src="images/game_beans/congrate.svg" alt="恭喜">
+                <h3>結算後可獲得</h3>
+                <div class="game_score">
+                    <div id="total_silver" class="item">
+                        <img class="img_bean" src="images/game_beans/bean_silver.svg" alt="銀豆">
+                        <span class="game_score1"></span>
+                    </div>
+                    <div id="total_gold" class="item">
+                        <img class="img_bean" src="images/game_beans/bean_gold.svg" alt="金豆">
+                        <span class="game_score2"></span>
+                    </div>
+                </div>
+                <div class="rule">
+                    <p>※每時段可無限次暢玩<br>請於當日21:30前點擊「結算領豆」領取豆子<br>每日僅能領取一次哦!
+                    </p>
+                </div>
+                <div class="btn_zone">
+                    <a class="btn_purple return" href="javascript:void(0);" data-tracking="click" data-event_id="128">
+                        <span class="text">再玩一次</span>
+                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                            class="bt_rt"></span>
+                    </a>
+                    <a class="btn_purple" id="btn_gameover" href="javascript:void(0);" data-tracking="click"
+                        data-event_id="129">
+                        <span class="text">結算領豆</span>
+                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                            class="bt_rt"></span>
+                    </a>
+                    <!-- 當日已結算換顯示這個按鈕 -->
+                    <a class="btn_purple_disab" href="javascript:;" id="btn_repeat">
+                        <span class="text">今日已結算</span>
+                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                            class="bt_rt"></span>
+                    </a>
+                    <a class="btn_purple" href="./" data-tracking="click" data-event_id="1210">
+                        <span class="text">回大橘夜市</span>
+                        <span class="tp_lt"></span><span class="tp_rt"></span><span class="bt_lt"></span><span
+                            class="bt_rt"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+        <!-- 煙火 -->
+        <div id="fireworks"></div>
     </div>
+
     <!-- </div> -->
     <script>
         $(function () { $('header').load('include_files/header.html') })
     </script>
 
-    <script src="js/fireworks.js"></script>
+<script src="js/fireworks.js"></script>
     <script src="js/gamebeans.js"></script>
     <!-- beanfun -->
     <script src="https://beangostg.blob.core.windows.net/beango-static-stg/sdk/beanfun.min.js"></script>
