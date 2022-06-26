@@ -506,10 +506,11 @@ ul, li {list-style:none;}
 
     #news::after {height:200%; background:url(../images/index/bg_banner_mb.jpg) top center no-repeat; background-size:100% auto;}
 
-    #news .lv1 {padding:12px; margin:10px auto;}
-    #news .lv1 span[data-text] {font-size:30px;}
+    /*#news .lv1 {padding:12px; margin:10px auto;}
+    #news .lv1 span[data-text] {font-size:30px;}*/
+    #news .lv1 {display:table; font-size:30px; margin:10px auto;}
 
-    .slider_content {margin:15px 0px;}
+    .slider_content {margin:0px;}
     .news_slide {width:80%;}
     .news_slide .child {width:100%;}
     .slide_arrow .material-icons-round {font-size:60px;}
