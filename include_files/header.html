@@ -2,12 +2,9 @@
 <html lang="zh-tw">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/allstyle.js"></script>
+
 </head>
 
 <body>
@@ -39,14 +36,10 @@
 			<a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_facebook"}'><img src="images/sns_fb.svg"></a>
 			<a href="javascript:void(0);" data-tracking="click" data-event_id="11" data-info='{"name": "menu_instagram"}'><img src="images/sns_ig.svg"></a>
         </li>
-       
     </ul>
 </body>
 </html>
-<script src="api/common.js?v=062301"></script>
-<script src="api/header.js?v=062301"></script>
-<script src="api/api.js"></script>
-<script src="api/hrefJump.js?v=062301"></script>
+
 
 <script>
 $(function(){
@@ -78,5 +71,30 @@ $(function(){
 		$('header #mnu').toggleClass('open');
         $('header #nav').slideToggle();
 	});
-})
+    })
+    function loadingJS(src) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.type = 'text/javascript';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+</script>
+<script>
+    loadingJS("api/common.js?v=" + (new Date).getTime())
+    loadingJS("api/header.js?v=" + (new Date).getTime())
+    loadingJS("api/api.js?v=" + (new Date).getTime())
+    loadingJS("api/hrefJump.js?v=" + (new Date).getTime())
+    var page = window.location.pathname.split("/").pop().split('.')[0]
+    var JS = [{ js: "api/mission.js", Page: ["atomboyz", "beanfun", "game", "gash", "gamapay", "jollybuy", "novel", "comics", "atomboyz", ""] },//任務
+    { js: "api/invitecode.js", Page: ["game", ""] }, //邀請碼
+    { js: "api/game.js", Page: ["game_beans", "game_bottle"] },//遊戲
+    { js: "api/lottery.js", Page: ["pokinglottery", "pokinglottery_game", "pokinglottery_list"] }, //大賞
+    { js: "api/beanwallet.js", Page: ["beanwallet"] } //錢包
+    ]
+    $.each(JS, function (i, item) {
+        if (item.Page.findIndex(x => x == page) > -1) {
+            loadingJS(item.js + "?v=" + (new Date).getTime())
+        }
+    })
+
 </script>

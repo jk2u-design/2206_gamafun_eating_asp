@@ -36,7 +36,7 @@ $(async function(){
                     official_account_id: 'c264ad2321b24f32b8eb5dfd2deb28b6_oa'
                 });
                 // in app hidden
-                //$('.addevents').hide()
+                $('.addevents').hide()
             }
         })
     }
