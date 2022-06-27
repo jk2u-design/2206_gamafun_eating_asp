@@ -4,7 +4,7 @@ $('a').on("click", function () {
     var BGOdeeplink = $(this).data('bgodeeplink')
     var key = $(this).data('redirect') //Qrcode
     if ($(this).hasClass("btn_green_disab")) {
-        //disableªº³sµ²­nºu¦^¥h
+        //disableï¿½ï¿½ï¿½sï¿½ï¿½ï¿½nï¿½uï¿½^ï¿½h
         return;
     }
     if (getData('inapp')) {
@@ -22,14 +22,16 @@ $('a').on("click", function () {
                 $('.check_qrcode').show();
                 $('body,html').css('overflow', 'hidden')
                 var popup_qrcode = $('.check_qrcode .prize_img')
-                if (key == 'mission_beanfun_bulletin') {
-                    popup_qrcode.attr('src', 'images/mission/qrcode_beanfun_bulletin_stg.png')
-                } else if (key == 'mission_beanfun_comment') {
-                    popup_qrcode.attr('src', 'images/mission/qrcode_beanfun_comment_stg.png')
+                if (key == 'mission_beanfun_comment') {
+                    popup_qrcode.attr('src', 'images/mission/qrc-1-2.png')                    
+                }else if (key == 'mission_game_gacha') {
+                    popup_qrcode.attr('src', 'images/mission/qrc-2-3.png')
+                }else if (key == 'mission_game_sign') {
+                    popup_qrcode.attr('src', 'images/mission/qrc-2-5.png')
                 } else if (key == 'mission_gash_receive') {
-                    popup_qrcode.attr('src', 'images/mission/qrcode_mission_gash_stg.png')
+                    popup_qrcode.attr('src', 'images/mission/qrc-3-5.png')
                 } else if (key == 'mission_novel') {
-                    popup_qrcode.attr('src', 'images/mission/qrcode_mission_novel_stg.png')
+                    popup_qrcode.attr('src', 'images/mission/qrc-6-12.png')
                 }
             }
             else{

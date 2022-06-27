@@ -47,39 +47,70 @@
 </head>
 
 <body>
-
+	
+    <!-- loading -->
+    <div class="se-pre-con" id="overlay">
+        <div class="img">
+            <img src="images/loading.png" alt="loading">
+            <div id="progstat"></div>
+            <div id="progress"></div>
+        </div>
+    </div>
+    
     <header></header>
+    
+    <div id="bg">
 
-    <div id="ip_special">
-        <div class="left">
-            <div class="comic_block"><img src="images/ipspecial/ip_special_01.png"></div>
-            <div class="comic_block">
-                <span class="text"><p>Blackslow<br>#女孩⼦的夏天 #台V之光</p></span>
-                <img src="images/ipspecial/ip_special_04.jpg">
-            </div>
-            <div class="comic_block">
-                <span class="text"><p>值⾔<br>#泳裝派對福利回#⾝⼼靈淨化</p></span>
-                <img src="images/ipspecial/ip_special_05.jpg">
-            </div>
-        </div>
-        <div class="right">
-            <div class="comic_block">
-                <span class="text"><p>瑞 coon<br>#穿越 #彩虹便便</p></span>
-                <img src="images/ipspecial/ip_special_02.jpg">
-            </div>
-            <div class="comic_block">
-                <span class="text"></span>
-                <img src="images/ipspecial/ip_special_03.jpg">
-            </div>
-            <div class="comic_block">
-                <span class="text"></span>
-                <img src="images/ipspecial/ip_special_06.jpg">
-            </div>
-            <div class="comic_block">
-                <span class="text"></span>
-                <img src="images/ipspecial/ip_special_07.jpg">
-            </div>
-        </div>
+	    <div id="ip_special">
+	        <div class="left">
+	            <div class="comic_block"><img src="images/ipspecial/ip_special_01.png"></div>
+	            <div class="comic_block">
+	                <span class="mask"><span class="text">
+	                	<a href="javascript:;">瀕臨絕種團-PREDATOR<span class="material-icons">double_arrow</span></a>
+	                	<p>Blackslow<br>#女孩⼦的夏天 #台V之光</p>
+	                </span></span>
+	                <img src="images/ipspecial/ip_special_04.jpg">
+	            </div>
+	            <div class="comic_block">
+	                <span class="mask"><span class="text">
+	                	<a href="javascript:;">雙馬尾幼女抱著大腿求我穿越這能不答應嗎？<span class="material-icons">double_arrow</span></a>
+						<p>值⾔<br>#泳裝派對福利回 #⾝⼼靈淨化</p>
+	                </span></span>
+	                <img src="images/ipspecial/ip_special_05.jpg">
+	            </div>
+	        </div>
+	        <div class="right">
+	            <div class="comic_block">
+	                <span class="mask"><span class="text">
+	                	<a href="javascript:;">Happy Ending留到穿越之後<span class="material-icons">double_arrow</span></a>
+	                	<p>瑞 coon<br>#穿越 #彩虹便便</p>
+	                </span></span>
+	                <img src="images/ipspecial/ip_special_02.jpg">
+	            </div>
+	            <div class="comic_block">
+	                <span class="mask"><span class="text">
+	                	<a href="javascript:;">食屍鬼<span class="material-icons">double_arrow</span></a>
+	                	<p>黃⾊書刊<br>#夏⽇充電 #我控制不住我的⼿</p>
+	                </span></span>
+	                <img src="images/ipspecial/ip_special_03.jpg">
+	            </div>
+	            <div class="comic_block">
+	                <span class="mask"><span class="text">
+	                	<a href="javascript:;">姑娘壯如山<span class="material-icons">double_arrow</span></a>
+	                	<p>壯如⼭<br>#夏⽇戀曲 #保護海洋⽣態</p>
+	                </span></span>
+	                <img src="images/ipspecial/ip_special_06.jpg">
+	            </div>
+	            <div class="comic_block">
+	                <span class="mask"><span class="text">
+	                	<a href="javascript:;">第二遊戲世界<span class="material-icons">double_arrow</span></a>
+	                	<p>佐渡遼歌界<br>#仙女棒 #夏夜比基尼</p>
+	                </span></span>
+	                <img src="images/ipspecial/ip_special_07.jpg">
+	            </div>
+	        </div>
+	    </div>
+    
     </div>
 
     <footer></footer>
@@ -90,6 +121,58 @@
 
 <script src="js/allstyle.js"></script>
 <script>
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+//loading bar --------------------------------------------
+load();
+function load(){
+	function id(v){return document.getElementById(v); }
+	function loadbar() {
+		var ovrl = id("overlay"),
+			prog = id("progress"),
+			stat = id("progstat"),
+			img = document.images,
+			c = 0;
+			tot = img.length;
+			
+		function imgLoaded(){
+			c += 1;
+			var perc = ((100/tot*c) << 0) +"%";
+			prog.style.width = perc;
+			stat.innerHTML = "Loading "+ perc;
+			if(c===tot) return doneLoading();
+		}
+		function doneLoading(){
+			ovrl.style.opacity = 0;
+			setTimeout(function(){
+				ovrl.style.display = "none";
+			}, 1200);
+		}
+		for(var i=0; i<tot; i++) {
+			var tImg     = new Image();
+				tImg.onload  = imgLoaded;
+                tImg.onerror = imgLoaded;
+                tImg.src     = img[i].src;
+        }
+    }
+	document.addEventListener('DOMContentLoaded', loadbar, false);
+};
+
+window.onload = function() {
+	$(".se-pre-con").delay(1000).fadeOut("slow");
+}
 $(function(){
     $('header').load('include_files/header.html');
 	$('footer').load('include_files/footer.html');
