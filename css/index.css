@@ -466,7 +466,7 @@ ul, li {list-style:none;}
     #middle .infos {width:100%; flex:none; margin-bottom:30px; font-size:15px; line-height:24px; text-align:center; padding-top:0px;}
     #middle .gocomic {padding:10px 0px;}
     #middle .gocomic .title_info {padding-bottom:10px; background:none; box-shadow:none;}
-    #middle .gocomic .full {width:95vw; background:#551D95; box-shadow:0px 0px 10px #ea7c23, 0px 0px 10px #ffb97b, 0px 0px 10px #ffb97b, 0px 0px 10px #ffb97b; border-radius:20px;}
+    #middle .gocomic .full {width:95vw; background:#551D95; box-shadow:0px 0px 6px #ea7c23, 0px 0px 6px #ffb97b, 0px 0px 6px #ffb97b; border-radius:20px;}
 
     #middle::after {background:url(../images/index/bg_middle_mb.png) top center no-repeat; background-size:100% auto;}
 
