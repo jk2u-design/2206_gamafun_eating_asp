@@ -78,7 +78,7 @@
 				</div>
 				<div class="comic_block">
 					<span class="mask1"><span class="text">
-							<a class="btn_qrcode" href="javascript:void(0);" data-redirect="comic1"
+							<a class="btn_qrcode1" href="javascript:void(0);" data-redirect="comic1"
 								data-Weburl="https://portal.beanfun.com/app/h5page/6ee7266cc24540aab5b3013f8f52927e_oa?url=https%3A%2F%2Fnovels-h5.beanfun.com%2F%23%2F2350&theme=1&title=%E5%B0%8F%E8%AA%AA%E4%BB%8B%E7%B4%B9&title=%E6%96%87%E5%AD%B8%E6%98%9F"
 								data-BGOdeeplink="https://portal.beanfun.com/app/h5page/6ee7266cc24540aab5b3013f8f52927e_oa?url=https%3A%2F%2Fnovels-h5.beanfun.com%2F%23%2F2350&theme=1&title=%E5%B0%8F%E8%AA%AA%E4%BB%8B%E7%B4%B9&title=%E6%96%87%E5%AD%B8%E6%98%9F">雙馬尾幼女抱著大腿求我穿越這能不答應嗎？<span
 									class="material-icons">double_arrow</span></a>
@@ -117,7 +117,7 @@
 				</div>
 				<div class="comic_block">
 					<span class="mask1"><span class="text">
-							<a class="btn_qrcode" href="javascript:void(0);" data-redirect="comic2"
+							<a class="btn_qrcode1" href="javascript:void(0);" data-redirect="comic2"
 								data-Weburl="https://portal.beanfun.com/app/h5page/6ee7266cc24540aab5b3013f8f52927e_oa?url=https%3A%2F%2Fnovels-h5.beanfun.com%2F%23%2F2351&theme=1&title=%E5%B0%8F%E8%AA%AA%E4%BB%8B%E7%B4%B9&title=%E6%96%87%E5%AD%B8%E6%98%9F"
 								data-BGOdeeplink="https://portal.beanfun.com/app/h5page/6ee7266cc24540aab5b3013f8f52927e_oa?url=https%3A%2F%2Fnovels-h5.beanfun.com%2F%23%2F2351&theme=1&title=%E5%B0%8F%E8%AA%AA%E4%BB%8B%E7%B4%B9&title=%E6%96%87%E5%AD%B8%E6%98%9F">第二遊戲世界<span
 									class="material-icons">double_arrow</span></a>
@@ -199,47 +199,6 @@
 		$('header').load('include_files/header.html');
 		$('footer').load('include_files/footer.html');
 	})
-	// 頁面跳轉
-	$('a').on("click", function () {
-		var web = $(this).data('weburl')
-		var BGOurl = $(this).data('bgourl')
-		var BGOdeeplink = $(this).data('bgodeeplink')
-		var key = $(this).data('redirect') //Qrcode
-		if ($(this).hasClass("btn_green_disab")) {
-			//disable���s���n�u�^�h
-			return;
-		}
-		if (getData('inapp')) {
-			if (BGOdeeplink) {
-				BGO.deeplink_jump(BGOdeeplink, true)
-			}
-			else {
-				BGO.redirect_uri_by_default_browser(BGOurl)
-			}
-		}
-		else if (web) {
-			if ($(this).hasClass('btn_qrcode') && $(window).width() >= 768) {
-				$('.mask').show();
-				$('.check_qrcode').show();
-				$('body,html').css('overflow', 'hidden')
-				var popup_qrcode = $('.check_qrcode .prize_img')
-				if (key == 'comic1') {
-					// 大手老師 雙馬尾
-					popup_qrcode.attr('src', 'images/ipspecial/qrc-comic1.png')
-				}
-				else if (key == 'comic2') {
-					// 大手老師 第二遊戲
-					popup_qrcode.attr('src', 'images/ipspecial/qrc-comic2.png')
-				}
-				else {
-					location.href = web
-				}
-			}
-
-		}
-	})
-
-
 	// 關閉彈出視窗
 	$('.pop_up_close').click(function (e) {
 		e.preventDefault();
