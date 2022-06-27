@@ -65,9 +65,17 @@
   text-align: center;
 }
 
+.pop_up .content .pop_up_title3 {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #a859e7;
+  text-align: center;
+}
+
 .pop_up .content .prize_img {
+  display: block;
   width: 290px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 .pop_up .content .btn_sec {

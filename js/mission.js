@@ -13,8 +13,8 @@ $(function () {
   })
   $('.pop_up_close').click(function (e) {
     e.preventDefault();
-    var target = $(this)
     $('.mask').hide()
     $('.pop_up').hide()
+    $('body,html').css('overflow', 'auto')
   })
 })

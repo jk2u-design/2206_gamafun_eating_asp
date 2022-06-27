@@ -15,7 +15,7 @@ $('a').on("click", function () {
             BGO.redirect_uri_by_default_browser(BGOurl)
         }
     }
-    else if(web){
+    else if (web) {
         if ($(this).hasClass('btn_qrcode') && $(window).width() >= 768) {
             if (getbfd()) {
                 $('.mask').show();
@@ -23,22 +23,34 @@ $('a').on("click", function () {
                 $('body,html').css('overflow', 'hidden')
                 var popup_qrcode = $('.check_qrcode .prize_img')
                 if (key == 'mission_beanfun_comment') {
-                    popup_qrcode.attr('src', 'images/mission/qrc-1-2.png')                    
-                }else if (key == 'mission_game_gacha') {
+                    //beanfun留言板
+                    popup_qrcode.attr('src', 'images/mission/qrc-1-2.png')
+                } else if (key == 'mission_game_gacha') {
+                    //game 零用金
                     popup_qrcode.attr('src', 'images/mission/qrc-2-3.png')
-                }else if (key == 'mission_game_sign') {
+                } else if (key == 'mission_game_sign') {
+                    //game 連簽益
                     popup_qrcode.attr('src', 'images/mission/qrc-2-5.png')
                 } else if (key == 'mission_gash_receive') {
-                    popup_qrcode.attr('src', 'images/mission/qrc-3-5.png')
+                    //gash 每日領豆任務
+                    popup_qrcode.attr('src', 'images/mission/qrc-3-6.png')
                 } else if (key == 'mission_novel') {
+                    // 文學星
                     popup_qrcode.attr('src', 'images/mission/qrc-6-12.png')
+                } else if (key == 'comic1') {
+                    // 大手老師 雙馬尾
+                    popup_qrcode.attr('src', 'images/ipspecial/qrc-comic1.png')
+                }
+                else if (key == 'comic2') {
+                    // 大手老師 第二遊戲
+                    popup_qrcode.attr('src', 'images/ipspecial/qrc-comic2.png')
                 }
             }
-            else{
+            else {
                 location.href = web
             }
         }
-        else{
+        else {
             location.href = web
         }
     }
